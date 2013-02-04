@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 bloodysnow. All rights reserved.
 //
 
-#import "BSAppDelegate.h"
+#import "AppDelegate.h"
 
 #import "BSFirstViewController.h"
 
 #import "BSSecondViewController.h"
 
-@implementation BSAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
