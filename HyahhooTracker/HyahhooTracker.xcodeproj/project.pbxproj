@@ -33,6 +33,7 @@
 		0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */; };
 		0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */; };
 		0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */; };
+		0DEB7AB616C6885B00E2AA8A /* BSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableCell.xib; sourceTree = "<group>"; };
 		0DEB7AAB16C2B0A300E2AA8A /* BSMainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainTableCell.h; sourceTree = "<group>"; };
 		0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainTableCell.m; sourceTree = "<group>"; };
+		0DEB7AB416C6885B00E2AA8A /* BSSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSegmentedControl.h; sourceTree = "<group>"; };
+		0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSegmentedControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				0DEB7AAB16C2B0A300E2AA8A /* BSMainTableCell.h */,
 				0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */,
 				0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */,
+				0DEB7AB416C6885B00E2AA8A /* BSSegmentedControl.h */,
+				0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				0D1AD1DD16BFEBB600E6A5BE /* BSSecondViewController.m in Sources */,
 				0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */,
 				0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */,
+				0DEB7AB616C6885B00E2AA8A /* BSSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

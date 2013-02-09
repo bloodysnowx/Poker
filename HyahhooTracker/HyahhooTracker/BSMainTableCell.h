@@ -13,7 +13,13 @@
 @property (nonatomic, retain) IBOutlet UILabel* SeatLabel;
 @property (nonatomic, retain) IBOutlet UILabel* NameLabel;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
+@property (nonatomic, retain) IBOutlet UILabel* PFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* VPLabel;
+@property (nonatomic, retain) IBOutlet UILabel* ReraiseLabel;
+@property (nonatomic, retain) IBOutlet UILabel* AFLabel;
+
 // @property (nonatomic, retain) IBOutlet
 +(BSMainTableCell*)create;
 +(NSString*)reuseIdentifier;
+-(IBAction) pushedActionControl:(UISegmentedControl*)sender;
 @end

@@ -45,4 +45,14 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     return CELL_IDENTIFIER;
 }
 
+-(IBAction) pushedActionControl:(UISegmentedControl*)sender
+{
+    NSLog(@"value changed");
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    // [self sendActionsForControlEvents:UIControlEventTouchUpInside];
+}
 @end
