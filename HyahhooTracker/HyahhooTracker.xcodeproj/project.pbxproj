@@ -29,6 +29,10 @@
 		0D1AD1F116BFEBB600E6A5BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1AD1BE16BFEBB600E6A5BE /* Foundation.framework */; };
 		0D1AD1F916BFEBB600E6A5BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1F716BFEBB600E6A5BE /* InfoPlist.strings */; };
 		0D1AD1FC16BFEBB600E6A5BE /* HyahhooTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */; };
+		0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7675D16C2A730009E8B99 /* BSMainViewController.m */; };
+		0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */; };
+		0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */; };
+		0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D1AD1B816BFEBB600E6A5BE /* HyahhooTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyahhooTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D1AD1B816BFEBB600E6A5BE /* hyahhootracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hyahhootracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1AD1BC16BFEBB600E6A5BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D1AD1BE16BFEBB600E6A5BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0D1AD1C016BFEBB600E6A5BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,6 +75,12 @@
 		0D1AD1F816BFEBB600E6A5BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0D1AD1FA16BFEBB600E6A5BE /* HyahhooTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyahhooTrackerTests.h; sourceTree = "<group>"; };
 		0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HyahhooTrackerTests.m; sourceTree = "<group>"; };
+		0DD7675C16C2A730009E8B99 /* BSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainViewController.h; sourceTree = "<group>"; };
+		0DD7675D16C2A730009E8B99 /* BSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainViewController.m; sourceTree = "<group>"; };
+		0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainViewController.xib; sourceTree = "<group>"; };
+		0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableCell.xib; sourceTree = "<group>"; };
+		0DEB7AAB16C2B0A300E2AA8A /* BSMainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainTableCell.h; sourceTree = "<group>"; };
+		0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +120,7 @@
 		0D1AD1B916BFEBB600E6A5BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D1AD1B816BFEBB600E6A5BE /* HyahhooTracker.app */,
+				0D1AD1B816BFEBB600E6A5BE /* hyahhootracker.app */,
 				0D1AD1ED16BFEBB600E6A5BE /* HyahhooTrackerTests.octest */,
 			);
 			name = Products;
@@ -130,6 +140,7 @@
 		0D1AD1C216BFEBB600E6A5BE /* HyahhooTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0DD7675B16C2A705009E8B99 /* ViewController */,
 				0D1AD1CB16BFEBB600E6A5BE /* AppDelegate.h */,
 				0D1AD1CC16BFEBB600E6A5BE /* AppDelegate.m */,
 				0D1AD1D416BFEBB600E6A5BE /* BSFirstViewController.h */,
@@ -180,12 +191,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0DD7675B16C2A705009E8B99 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0DD7675C16C2A730009E8B99 /* BSMainViewController.h */,
+				0DD7675D16C2A730009E8B99 /* BSMainViewController.m */,
+				0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */,
+				0DEB7AAB16C2B0A300E2AA8A /* BSMainTableCell.h */,
+				0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */,
+				0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D1AD1B716BFEBB500E6A5BE /* HyahhooTracker */ = {
+		0D1AD1B716BFEBB500E6A5BE /* hyahhootracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D1AD1FF16BFEBB600E6A5BE /* Build configuration list for PBXNativeTarget "HyahhooTracker" */;
+			buildConfigurationList = 0D1AD1FF16BFEBB600E6A5BE /* Build configuration list for PBXNativeTarget "hyahhootracker" */;
 			buildPhases = (
 				0D1AD1B416BFEBB500E6A5BE /* Sources */,
 				0D1AD1B516BFEBB500E6A5BE /* Frameworks */,
@@ -195,9 +219,9 @@
 			);
 			dependencies = (
 			);
-			name = HyahhooTracker;
+			name = hyahhootracker;
 			productName = HyahhooTracker;
-			productReference = 0D1AD1B816BFEBB600E6A5BE /* HyahhooTracker.app */;
+			productReference = 0D1AD1B816BFEBB600E6A5BE /* hyahhootracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0D1AD1EC16BFEBB600E6A5BE /* HyahhooTrackerTests */ = {
@@ -241,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D1AD1B716BFEBB500E6A5BE /* HyahhooTracker */,
+				0D1AD1B716BFEBB500E6A5BE /* hyahhootracker */,
 				0D1AD1EC16BFEBB600E6A5BE /* HyahhooTrackerTests */,
 			);
 		};
@@ -262,6 +286,8 @@
 				0D1AD1E116BFEBB600E6A5BE /* second@2x.png in Resources */,
 				0D1AD1E416BFEBB600E6A5BE /* BSFirstViewController.xib in Resources */,
 				0D1AD1E716BFEBB600E6A5BE /* BSSecondViewController.xib in Resources */,
+				0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */,
+				0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +326,8 @@
 				0D1AD1CD16BFEBB600E6A5BE /* AppDelegate.m in Sources */,
 				0D1AD1D616BFEBB600E6A5BE /* BSFirstViewController.m in Sources */,
 				0D1AD1DD16BFEBB600E6A5BE /* BSSecondViewController.m in Sources */,
+				0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */,
+				0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +344,7 @@
 /* Begin PBXTargetDependency section */
 		0D1AD1F316BFEBB600E6A5BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D1AD1B716BFEBB500E6A5BE /* HyahhooTracker */;
+			target = 0D1AD1B716BFEBB500E6A5BE /* hyahhootracker */;
 			targetProxy = 0D1AD1F216BFEBB600E6A5BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -367,7 +395,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -383,7 +411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
+				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -398,7 +426,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Developer: 淳史 岩佐 (PDDBL4NG79)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -407,7 +435,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
+				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "526819E3-DD9C-4094-82D4-A43BA8A2A7DD";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -416,12 +444,13 @@
 		0D1AD20016BFEBB600E6A5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos6.1]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HyahhooTracker/HyahhooTracker-Prefix.pch";
 				INFOPLIST_FILE = "HyahhooTracker/HyahhooTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos6.1]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,13 +458,11 @@
 		0D1AD20116BFEBB600E6A5BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HyahhooTracker/HyahhooTracker-Prefix.pch";
 				INFOPLIST_FILE = "HyahhooTracker/HyahhooTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -486,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D1AD1FF16BFEBB600E6A5BE /* Build configuration list for PBXNativeTarget "HyahhooTracker" */ = {
+		0D1AD1FF16BFEBB600E6A5BE /* Build configuration list for PBXNativeTarget "hyahhootracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D1AD20016BFEBB600E6A5BE /* Debug */,

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0D1AD1B716BFEBB500E6A5BE"
-               BuildableName = "HyahhooTracker.app"
-               BlueprintName = "HyahhooTracker"
+               BuildableName = "hyahhootracker.app"
+               BlueprintName = "hyahhootracker"
                ReferencedContainer = "container:HyahhooTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0D1AD1B716BFEBB500E6A5BE"
-            BuildableName = "HyahhooTracker.app"
-            BlueprintName = "HyahhooTracker"
+            BuildableName = "hyahhootracker.app"
+            BlueprintName = "hyahhootracker"
             ReferencedContainer = "container:HyahhooTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0D1AD1B716BFEBB500E6A5BE"
-            BuildableName = "HyahhooTracker.app"
-            BlueprintName = "HyahhooTracker"
+            BuildableName = "hyahhootracker.app"
+            BlueprintName = "hyahhootracker"
             ReferencedContainer = "container:HyahhooTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0D1AD1B716BFEBB500E6A5BE"
-            BuildableName = "HyahhooTracker.app"
-            BlueprintName = "HyahhooTracker"
+            BuildableName = "hyahhootracker.app"
+            BlueprintName = "hyahhootracker"
             ReferencedContainer = "container:HyahhooTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

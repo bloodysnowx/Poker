@@ -11,6 +11,7 @@
 #import "BSFirstViewController.h"
 
 #import "BSSecondViewController.h"
+#import "BSMainViewController.h"
 
 @implementation AppDelegate
 
@@ -18,11 +19,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[BSFirstViewController alloc] initWithNibName:@"BSFirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[BSSecondViewController alloc] initWithNibName:@"BSSecondViewController" bundle:nil];
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
-    self.window.rootViewController = self.tabBarController;
+    // UIViewController *viewController1 = [[BSFirstViewController alloc] initWithNibName:@"BSFirstViewController" bundle:nil];
+    // UIViewController *viewController2 = [[BSSecondViewController alloc] initWithNibName:@"BSSecondViewController" bundle:nil];
+    // self.tabBarController = [[UITabBarController alloc] init];
+    // self.tabBarController.viewControllers = @[viewController1, viewController2];
+    // self.window.rootViewController = self.tabBarController;
+    UIViewController* main = [[BSMainViewController alloc] initWithNibName:@"BSMainViewController" bundle:nil];
+    self.window.rootViewController = main;
     [self.window makeKeyAndVisible];
     return YES;
 }
