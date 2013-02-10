@@ -75,7 +75,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"Num Name  Action     VP PF 3B AF";
+    return @"Num Name    Action       VPPF 3BAF  Num Name    Action       CBCBF AF";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
