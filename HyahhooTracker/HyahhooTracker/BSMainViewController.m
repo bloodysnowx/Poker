@@ -8,8 +8,12 @@
 
 #import "BSMainViewController.h"
 #import "BSMainTableCell.h"
+#import "BSPlayerData.h"
 
 @interface BSMainViewController ()
+{
+    NSArray* playerDatas;
+}
 
 @end
 
@@ -26,9 +30,14 @@
 
 - (void)viewDidLoad
 {
+    // BSPlayerData* playerData = [NSEntityDescription insertNewObjectForEntityForName:@"BSPlayerData" inManagedObjectContext:self.managedObjectContext];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     // [self.tableView registerNib:[UINib nibWithNibName: bundle:nil] forCellReuseIdentifier:[BSMainTableCell reuseIdentifier]];
+    self.scrollView.contentSize = self.tableView.frame.size;
+    NSLog(@"width = %f, height = %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
+    NSFetchRequest* request = [[NSFetchRequest alloc] initWithEntityName:@"BSPlayerData"];
+    playerDatas = [self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +51,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40.0F;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,5 +114,15 @@
 }
 
 #pragma mark UITableViewDelegate
+
+-(IBAction) moveToFlop
+{
+    [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
+}
+
+-(IBAction) moveToPreF
+{
+    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
 
 @end

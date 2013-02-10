@@ -34,6 +34,10 @@
 		0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */; };
 		0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */; };
 		0DEB7AB616C6885B00E2AA8A /* BSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */; };
+		0DEB7AB816C7FBBC00E2AA8A /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AB716C7FBBB00E2AA8A /* readme.txt */; };
+		0DEB7ABB16C803C000E2AA8A /* PlayerData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AB916C803C000E2AA8A /* PlayerData.xcdatamodeld */; };
+		0DEB7B1016C805FC00E2AA8A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEB7B0F16C805FC00E2AA8A /* CoreData.framework */; };
+		0DEB7B1716C80C3E00E2AA8A /* BSPlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7B1616C80C3E00E2AA8A /* BSPlayerData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,11 @@
 		0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainTableCell.m; sourceTree = "<group>"; };
 		0DEB7AB416C6885B00E2AA8A /* BSSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSegmentedControl.h; sourceTree = "<group>"; };
 		0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSegmentedControl.m; sourceTree = "<group>"; };
+		0DEB7AB716C7FBBB00E2AA8A /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		0DEB7ABA16C803C000E2AA8A /* PlayerData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerData.xcdatamodel; sourceTree = "<group>"; };
+		0DEB7B0F16C805FC00E2AA8A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0DEB7B1516C80C3E00E2AA8A /* BSPlayerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlayerData.h; sourceTree = "<group>"; };
+		0DEB7B1616C80C3E00E2AA8A /* BSPlayerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlayerData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEB7B1016C805FC00E2AA8A /* CoreData.framework in Frameworks */,
 				0D1AD1BD16BFEBB600E6A5BE /* UIKit.framework in Frameworks */,
 				0D1AD1BF16BFEBB600E6A5BE /* Foundation.framework in Frameworks */,
 				0D1AD1C116BFEBB600E6A5BE /* CoreGraphics.framework in Frameworks */,
@@ -132,6 +142,7 @@
 		0D1AD1BB16BFEBB600E6A5BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0DEB7B0F16C805FC00E2AA8A /* CoreData.framework */,
 				0D1AD1BC16BFEBB600E6A5BE /* UIKit.framework */,
 				0D1AD1BE16BFEBB600E6A5BE /* Foundation.framework */,
 				0D1AD1C016BFEBB600E6A5BE /* CoreGraphics.framework */,
@@ -143,6 +154,7 @@
 		0D1AD1C216BFEBB600E6A5BE /* HyahhooTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0DEB7B1116C806F800E2AA8A /* CoreData */,
 				0DD7675B16C2A705009E8B99 /* ViewController */,
 				0D1AD1CB16BFEBB600E6A5BE /* AppDelegate.h */,
 				0D1AD1CC16BFEBB600E6A5BE /* AppDelegate.m */,
@@ -157,6 +169,7 @@
 				0D1AD1E216BFEBB600E6A5BE /* BSFirstViewController.xib */,
 				0D1AD1E516BFEBB600E6A5BE /* BSSecondViewController.xib */,
 				0D1AD1C316BFEBB600E6A5BE /* Supporting Files */,
+				0DEB7AB716C7FBBB00E2AA8A /* readme.txt */,
 			);
 			path = HyahhooTracker;
 			sourceTree = "<group>";
@@ -207,6 +220,16 @@
 				0DEB7AB516C6885B00E2AA8A /* BSSegmentedControl.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		0DEB7B1116C806F800E2AA8A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0DEB7AB916C803C000E2AA8A /* PlayerData.xcdatamodeld */,
+				0DEB7B1516C80C3E00E2AA8A /* BSPlayerData.h */,
+				0DEB7B1616C80C3E00E2AA8A /* BSPlayerData.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +316,7 @@
 				0D1AD1E716BFEBB600E6A5BE /* BSSecondViewController.xib in Resources */,
 				0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */,
 				0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */,
+				0DEB7AB816C7FBBC00E2AA8A /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +358,8 @@
 				0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */,
 				0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */,
 				0DEB7AB616C6885B00E2AA8A /* BSSegmentedControl.m in Sources */,
+				0DEB7ABB16C803C000E2AA8A /* PlayerData.xcdatamodeld in Sources */,
+				0DEB7B1716C80C3E00E2AA8A /* BSPlayerData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +564,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0DEB7AB916C803C000E2AA8A /* PlayerData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0DEB7ABA16C803C000E2AA8A /* PlayerData.xcdatamodel */,
+			);
+			currentVersion = 0DEB7ABA16C803C000E2AA8A /* PlayerData.xcdatamodel */;
+			name = PlayerData.xcdatamodeld;
+			path = ../PlayerData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0D1AD1AF16BFEBB500E6A5BE /* Project object */;
 }

@@ -38,7 +38,8 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 +(BSMainTableCell*)create
 {
     NSArray* ary = [[NSBundle mainBundle] loadNibNamed:@"BSMainTableCell" owner:nil options:nil];
-    return ary[0];
+    BSMainTableCell* cell = ary[0];
+    return cell;
 }
 
 +(NSString*)reuseIdentifier {

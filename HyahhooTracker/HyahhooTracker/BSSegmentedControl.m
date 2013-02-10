@@ -10,7 +10,7 @@
 
 @interface BSSegmentedControl()
 {
-    NSInteger old_selected_index;
+    // NSInteger old_selected_index;
 }
 @end
 
@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        old_selected_index = -1;
+        // old_selected_index = -1;
     }
     return self;
 }
@@ -38,13 +38,14 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];
-    if(old_selected_index == self.selectedSegmentIndex)
-    {
-        self.selectedSegmentIndex = -1;
-        [self sendActionsForControlEvents:UIControlEventTouchUpInside];
-    }
+    // if(old_selected_index == self.selectedSegmentIndex)
+    // {
+    // self.selectedSegmentIndex = -1;
+    // NSLog(@"value reseted");
+    // [self sendActionsForControlEvents:UIControlEventTouchUpInside];
+    // }
     
-    old_selected_index = self.selectedSegmentIndex;
+    // old_selected_index = self.selectedSegmentIndex;
 }
 
 @end
