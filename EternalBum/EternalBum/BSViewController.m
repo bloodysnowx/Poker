@@ -9,7 +9,7 @@
 #import "BSViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+#import "BSAssetLoader.h"
 
 @interface BSViewController ()
 {
@@ -19,10 +19,7 @@
     UIImage* downImage;
 }
 @property (nonatomic, assign)CGSize visibleArea;
-
-@property (nonatomic, retain) ALAssetsLibrary* assetsLibrary;
-@property (nonatomic, retain) NSMutableArray* groups;
-@property (nonatomic, retain) ALAssetsGroup* cameraRoll;
+@property (nonatomic, retain)BSAssetLoader * loader;
 @property (nonatomic, retain) NSMutableArray* photos;
 @property (nonatomic, assign) int currentNum;
 @property (nonatomic, retain) NSTimer *timer;
@@ -39,7 +36,6 @@ static const int Y_MARGIN = 60;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.assetsLibrary = [[ALAssetsLibrary alloc] init];
     [self setUpGesture];
     filterCoeff = 1.2;
     isFiltered = YES;
@@ -55,7 +51,7 @@ static const int Y_MARGIN = 60;
     {
         NSLog(@"shaked");
         [self.timer invalidate];
-        self.currentNum = arc4random() % [self.cameraRoll numberOfAssets];
+        self.currentNum = arc4random() % [self.photos count];
         [self startSlideShow];
     }
 }
@@ -111,41 +107,11 @@ static const int Y_MARGIN = 60;
     [self startSlideShow];
 }
 
-- (void)getCameraRollGroups
+- (void)loadComplete:(NSMutableArray*)photos
 {
-    NSThread* current = [NSThread currentThread];
-    self.groups = [[NSMutableArray alloc] init];
-    ALAssetsLibraryGroupsEnumerationResultsBlock listCameraRollBlock = ^(ALAssetsGroup * group, BOOL * stop) {
-		if(group) {
-			[self.groups addObject:group];
-		} else {
-			self.cameraRoll = self.groups[0];
-			[self performSelector:@selector(getCameraRollPhotos) onThread:current withObject:nil waitUntilDone:YES];
-		}
-	};
-    
-	[self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:listCameraRollBlock failureBlock:nil];
-}
-
-- (void)getCameraRollPhotos
-{
-    NSThread* curent = [NSThread currentThread];
-    self.photos = [NSMutableArray arrayWithCapacity:[self.cameraRoll numberOfAssets]];
-    
-    ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock = ^(ALAsset * result, NSUInteger index, BOOL * stop) {
-		if(result) {
-            [self.photos addObject:result];
-        }
-        else {
-            self.currentNum = arc4random() % [self.cameraRoll numberOfAssets];
-            [self performSelector:@selector(startSlideShow) onThread:curent withObject:nil waitUntilDone:NO];
-		}
-	};
-    
-	ALAssetsFilter* onlyPhotosFilter = [ALAssetsFilter allPhotos];
-	[self.cameraRoll setAssetsFilter:onlyPhotosFilter];
-    [self.cameraRoll enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:assetsEnumerationBlock];
-	// [self.cameraRoll enumerateAssetsUsingBlock:assetsEnumerationBlock];
+    self.photos = photos;
+    self.currentNum = arc4random() % [self.photos count];
+    [self performSelectorOnMainThread:@selector(startSlideShow) withObject:nil waitUntilDone:NO];
 }
 
 - (void)startSlideShow
@@ -398,7 +364,8 @@ static const int Y_MARGIN = 60;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self getCameraRollGroups];
+    self.loader = [BSAssetLoader new];
+    [self.loader getCameraRolls:self selector:@selector(loadComplete:)];
     [self calcVisibleArea];
     NSLog(@"visible area = %f, %f", self.visibleArea.width, self.visibleArea.height);
     [self startMove];

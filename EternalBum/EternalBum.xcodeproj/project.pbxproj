@@ -26,6 +26,7 @@
 		0D1466CF16C8A9AF00162487 /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0D1466CE16C8A9AF00162487 /* image.jpeg */; };
 		0D1466D216C8AFA200162487 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D116C8AFA200162487 /* QuartzCore.framework */; };
 		0D1466D516C8B18200162487 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D416C8B18200162487 /* AssetsLibrary.framework */; };
+		0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		0D1466CE16C8A9AF00162487 /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
 		0D1466D116C8AFA200162487 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0D1466D416C8B18200162487 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0DA6B7CC16C8FEAE0006C390 /* BSAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAssetLoader.h; sourceTree = "<group>"; };
+		0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAssetLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				0D1466A216C8A90F00162487 /* BSAppDelegate.h */,
 				0D1466A316C8A90F00162487 /* BSAppDelegate.m */,
 				0D14669A16C8A90F00162487 /* Supporting Files */,
+				0DA6B7CC16C8FEAE0006C390 /* BSAssetLoader.h */,
+				0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */,
 			);
 			path = EternalBum;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				0D1466A016C8A90F00162487 /* main.m in Sources */,
 				0D1466A416C8A90F00162487 /* BSAppDelegate.m in Sources */,
 				0D1466B016C8A91000162487 /* BSViewController.m in Sources */,
+				0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +491,7 @@
 				0D1466CA16C8A91000162487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D1466CB16C8A91000162487 /* Build configuration list for PBXNativeTarget "EternalBumTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				0D1466CD16C8A91000162487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
