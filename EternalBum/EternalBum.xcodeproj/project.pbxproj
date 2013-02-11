@@ -25,6 +25,7 @@
 		0D1466C516C8A91000162487 /* EternalBumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1466C416C8A91000162487 /* EternalBumTests.m */; };
 		0D1466CF16C8A9AF00162487 /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0D1466CE16C8A9AF00162487 /* image.jpeg */; };
 		0D1466D216C8AFA200162487 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D116C8AFA200162487 /* QuartzCore.framework */; };
+		0D1466D516C8B18200162487 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D416C8B18200162487 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		0D1466C416C8A91000162487 /* EternalBumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EternalBumTests.m; sourceTree = "<group>"; };
 		0D1466CE16C8A9AF00162487 /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
 		0D1466D116C8AFA200162487 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0D1466D416C8B18200162487 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1466D516C8B18200162487 /* AssetsLibrary.framework in Frameworks */,
 				0D1466D216C8AFA200162487 /* QuartzCore.framework in Frameworks */,
 				0D14669416C8A90F00162487 /* UIKit.framework in Frameworks */,
 				0D14669616C8A90F00162487 /* Foundation.framework in Frameworks */,
@@ -92,6 +95,7 @@
 		0D14668716C8A90F00162487 = {
 			isa = PBXGroup;
 			children = (
+				0D1466D416C8B18200162487 /* AssetsLibrary.framework */,
 				0D14669916C8A90F00162487 /* EternalBum */,
 				0D1466BD16C8A91000162487 /* EternalBumTests */,
 				0D14669216C8A90F00162487 /* Frameworks */,
@@ -123,12 +127,10 @@
 		0D14669916C8A90F00162487 /* EternalBum */ = {
 			isa = PBXGroup;
 			children = (
+				0D1466D316C8B10F00162487 /* ViewController */,
 				0D1466D016C8A9B500162487 /* Resources */,
 				0D1466A216C8A90F00162487 /* BSAppDelegate.h */,
 				0D1466A316C8A90F00162487 /* BSAppDelegate.m */,
-				0D1466AB16C8A91000162487 /* MainStoryboard.storyboard */,
-				0D1466AE16C8A91000162487 /* BSViewController.h */,
-				0D1466AF16C8A91000162487 /* BSViewController.m */,
 				0D14669A16C8A90F00162487 /* Supporting Files */,
 			);
 			path = EternalBum;
@@ -173,6 +175,16 @@
 				0D1466CE16C8A9AF00162487 /* image.jpeg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		0D1466D316C8B10F00162487 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D1466AB16C8A91000162487 /* MainStoryboard.storyboard */,
+				0D1466AE16C8A91000162487 /* BSViewController.h */,
+				0D1466AF16C8A91000162487 /* BSViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

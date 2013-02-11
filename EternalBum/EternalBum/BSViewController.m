@@ -9,10 +9,18 @@
 #import "BSViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface BSViewController ()
 
 @property (nonatomic, assign)CGSize visibleArea;
+
+@property (nonatomic, retain) ALAssetsLibrary* assetsLibrary;
+@property (nonatomic, retain) NSMutableArray* groups;
+@property (nonatomic, retain) ALAssetsGroup* cameraRoll;
+@property (nonatomic, retain) NSMutableArray* photos;
+@property (nonatomic, assign) int currentNum;
+@property (nonatomic, retain) NSTimer *timer;
 
 @end
 
@@ -24,6 +32,80 @@ static const int ANIMATION_DURATION = 15;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.assetsLibrary = [[ALAssetsLibrary alloc] init];
+
+}
+
+- (void)getCameraRollGroups
+{
+    NSThread* current = [NSThread currentThread];
+    self.groups = [[NSMutableArray alloc] init];
+    ALAssetsLibraryGroupsEnumerationResultsBlock listCameraRollBlock = ^(ALAssetsGroup * group, BOOL * stop) {
+		if(group) {
+			[self.groups addObject:group];
+		} else {
+			self.cameraRoll = self.groups[0];
+			[self performSelector:@selector(getCameraRollPhotos) onThread:current withObject:nil waitUntilDone:YES];
+		}
+	};
+    
+	[self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:listCameraRollBlock failureBlock:nil];
+}
+
+- (void)getCameraRollPhotos
+{
+    NSThread* curent = [NSThread currentThread];
+    self.photos = [NSMutableArray arrayWithCapacity:[self.cameraRoll numberOfAssets]];
+    
+    ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock = ^(ALAsset * result, NSUInteger index, BOOL * stop) {
+		if(result) {
+            [self.photos addObject:result];
+        }
+        else {
+            [self performSelector:@selector(startSlideShow) onThread:curent withObject:nil waitUntilDone:NO];
+		}
+	};
+    
+	ALAssetsFilter* onlyPhotosFilter = [ALAssetsFilter allPhotos];
+	[self.cameraRoll setAssetsFilter:onlyPhotosFilter];
+	[self.cameraRoll enumerateAssetsUsingBlock:assetsEnumerationBlock];
+}
+
+- (void)startSlideShow
+{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(slideChangeWithAnime) userInfo:nil repeats:YES];
+    [self.timer fire];
+}
+
+- (void)slideChangeWithAnime
+{
+    [UIView animateWithDuration:0.5 animations:^void{
+        self.pictureView.alpha = 0.2;
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.5 animations:^void{
+            [self relocatePictureView];
+            self.pictureView.alpha = 1.0;
+        } completion:^(BOOL finished){
+            
+        }];
+    }];
+}
+
+- (void)relocatePictureView
+{
+    self.pictureView.transform = CGAffineTransformMakeRotation(0.0);
+    int x = arc4random() % 80;
+    int y = arc4random() % 120;
+    int width = self.backView.frame.size.width - x - arc4random() % 80;
+    int height = self.backView.frame.size.height - y - arc4random() % 120;
+    self.pictureView.frame = CGRectMake(x, y, width, height);
+    ALAsset* asset = self.photos[self.currentNum++ % [self.photos count]];
+    ALAssetRepresentation* representation = [asset defaultRepresentation];
+    self.pictureView.image = [UIImage imageWithCGImage:[representation fullScreenImage]];
+    // self.pictureView.layer.anchorPoint = CGPointMake(0, 0);
+    int deg = (arc4random() % 60 - 30 + 360) % 360;
+    NSLog(@"x =  %d, y = %d, width = %d, height = %d, deg = %d", x, y, width, height, deg);
+    self.pictureView.transform = CGAffineTransformMakeRotation(M_PI * deg / 180.0f);
 }
 
 - (void)calcVisibleArea
@@ -81,6 +163,7 @@ static const int ANIMATION_DURATION = 15;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self getCameraRollGroups];
     [self calcVisibleArea];
     NSLog(@"visible area = %f, %f", self.visibleArea.width, self.visibleArea.height);
     [self startMove];

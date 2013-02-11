@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,23 +12,16 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="image.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-5o-1E0" userLabel="BackView"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8T-Qt-vsq" userLabel="PictureView">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="HlU-BT-IXQ"/>
-                                    <constraint firstAttribute="width" constant="240" id="MId-Af-AeU"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="image.jpeg" id="PkG-5o-1E0" userLabel="BackView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureView">
+                                <rect key="frame" x="40" y="210" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="PkG-5o-1E0" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="1km-fR-643"/>
-                            <constraint firstItem="PkG-5o-1E0" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="R5e-Ai-h5q"/>
-                            <constraint firstItem="b8T-Qt-vsq" firstAttribute="centerY" secondItem="PkG-5o-1E0" secondAttribute="centerY" type="default" id="WUJ-vZ-mKe"/>
-                            <constraint firstItem="b8T-Qt-vsq" firstAttribute="centerX" secondItem="PkG-5o-1E0" secondAttribute="centerX" type="default" id="dEf-aK-Mj6"/>
-                            <constraint firstItem="PkG-5o-1E0" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="weN-ia-VWx"/>
-                            <constraint firstItem="PkG-5o-1E0" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="yXq-JG-v3O"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backView" destination="PkG-5o-1E0" id="fde-2h-ZRT"/>
@@ -49,9 +42,6 @@
                 <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="pictureView" candidateClass="UIImageView"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
