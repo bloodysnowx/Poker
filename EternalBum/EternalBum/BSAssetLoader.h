@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+@protocol BSAssetLoaderDelegate<NSObject>
+
+- (void)loadComplete:(NSMutableArray*)photos;
+
+@end
+
 @interface BSAssetLoader : NSObject
 
 @property (nonatomic, retain) ALAssetsLibrary* assetsLibrary;
@@ -16,5 +22,5 @@
 @property (nonatomic, retain) ALAssetsGroup* cameraRoll;
 @property (nonatomic, retain) NSMutableArray* photos;
 
-- (void)getCameraRolls:(id)target selector:(SEL)aSelector;
+- (void)getCameraRolls:(id<BSAssetLoaderDelegate>)target selector:(SEL)aSelector;
 @end

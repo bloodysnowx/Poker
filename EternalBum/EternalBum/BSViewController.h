@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSAssetLoader.h"
 
-@interface BSViewController : UIViewController<UIAccelerometerDelegate>
+@interface BSViewController : UIViewController<UIAccelerometerDelegate, BSAssetLoaderDelegate>
 
 @property (nonatomic, retain) IBOutlet UIImageView* backView;
 @property (nonatomic, retain) IBOutlet UIImageView* pictureUpView;

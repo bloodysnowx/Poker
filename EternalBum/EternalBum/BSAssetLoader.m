@@ -16,7 +16,7 @@
 
 @implementation BSAssetLoader
 
-- (void)getCameraRolls:(id)target selector:(SEL)aSelector
+- (void)getCameraRolls:(id<BSAssetLoaderDelegate>)target selector:(SEL)aSelector;
 {
     self.assetsLibrary = [ALAssetsLibrary new];
     self.target = target;
