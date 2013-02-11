@@ -27,6 +27,8 @@
 @implementation BSViewController
 
 static const int ANIMATION_DURATION = 15;
+static const int X_MARGIN = 40;
+static const int Y_MARGIN = 60;
 
 - (void)viewDidLoad
 {
@@ -60,7 +62,7 @@ static const int ANIMATION_DURATION = 15;
 - (void)next
 {
     [self.timer invalidate];
-    self.currentNum -= 2;
+    self.currentNum -= 4;
     if(self.currentNum < 0) self.currentNum += [self.photos count];
     [self startSlideShow];
 }
@@ -110,32 +112,41 @@ static const int ANIMATION_DURATION = 15;
 - (void)slideChangeWithAnime
 {
     [UIView animateWithDuration:0.5 animations:^void{
-        self.pictureView.alpha = 0.2;
+        self.pictureUpView.alpha = 0.2;
+        self.pictureDownView.alpha = 0.3;
     } completion:^(BOOL finished){
         [UIView animateWithDuration:0.5 animations:^void{
             [self relocatePictureView];
-            self.pictureView.alpha = 1.0;
+            self.pictureUpView.alpha = 1.0;
+            self.pictureDownView.alpha = 1.0;
         } completion:^(BOOL finished){
             
         }];
     }];
 }
 
-- (void)relocatePictureView
+- (void)relocatePictureView:(UIImageView*)view HeightOffset:(CGFloat)offset
 {
-    self.pictureView.transform = CGAffineTransformMakeRotation(0.0);
-    int x = arc4random() % 80;
-    int y = arc4random() % 120;
-    int width = self.backView.frame.size.width - x - arc4random() % 80;
-    int height = self.backView.frame.size.height - y - arc4random() % 120;
-    self.pictureView.frame = CGRectMake(x, y, width, height);
+    view.transform = CGAffineTransformMakeRotation(0.0);
+    int x = arc4random() % X_MARGIN;
+    int y = arc4random() % Y_MARGIN;
+    int width = self.backView.frame.size.width - x - arc4random() % X_MARGIN;
+    int height = self.backView.frame.size.height - y - arc4random() % Y_MARGIN;
+    y += offset;
+    view.frame = CGRectMake(x, y, width, height);
     ALAsset* asset = self.photos[self.currentNum++ % [self.photos count]];
     ALAssetRepresentation* representation = [asset defaultRepresentation];
-    self.pictureView.image = [UIImage imageWithCGImage:[representation fullScreenImage]];
+    view.image = [UIImage imageWithCGImage:[representation fullScreenImage]];
     // self.pictureView.layer.anchorPoint = CGPointMake(0, 0);
     int deg = (arc4random() % 60 - 30 + 360) % 360;
     NSLog(@"x =  %d, y = %d, width = %d, height = %d, deg = %d", x, y, width, height, deg);
-    self.pictureView.transform = CGAffineTransformMakeRotation(M_PI * deg / 180.0f);
+    view.transform = CGAffineTransformMakeRotation(M_PI * deg / 180.0f);
+}
+
+- (void)relocatePictureView
+{
+    [self relocatePictureView:self.pictureUpView HeightOffset:-self.backView.frame.size.height/4];
+    [self relocatePictureView:self.pictureDownView HeightOffset:self.backView.frame.size.height/4];
 }
 
 - (void)calcVisibleArea

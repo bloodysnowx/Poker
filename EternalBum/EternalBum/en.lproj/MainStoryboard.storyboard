@@ -16,8 +16,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureUpView">
                                 <rect key="frame" x="40" y="210" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="NLo-0Q-XhI" userLabel="PictureDownView">
+                                <rect key="frame" x="40" y="355" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -25,7 +29,8 @@
                     </view>
                     <connections>
                         <outlet property="backView" destination="PkG-5o-1E0" id="fde-2h-ZRT"/>
-                        <outlet property="pictureView" destination="b8T-Qt-vsq" id="brM-nF-hj9"/>
+                        <outlet property="pictureDownView" destination="NLo-0Q-XhI" id="9KL-Vm-G2y"/>
+                        <outlet property="pictureUpView" destination="b8T-Qt-vsq" id="tmS-CO-cL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -40,7 +45,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BSViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="pictureView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="pictureDownView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="pictureUpView" candidateClass="UIImageView"/>
             </relationships>
         </class>
     </classes>

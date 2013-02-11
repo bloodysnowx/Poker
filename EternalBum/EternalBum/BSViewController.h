@@ -11,6 +11,7 @@
 @interface BSViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIImageView* backView;
-@property (nonatomic, retain) IBOutlet UIImageView* pictureView;
+@property (nonatomic, retain) IBOutlet UIImageView* pictureUpView;
+@property (nonatomic, retain) IBOutlet UIImageView* pictureDownView;
 
 @end
