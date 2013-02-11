@@ -16,11 +16,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureUpView">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureUpView">
                                 <rect key="frame" x="40" y="210" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="NLo-0Q-XhI" userLabel="PictureDownView">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="NLo-0Q-XhI" userLabel="PictureDownView">
                                 <rect key="frame" x="40" y="355" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
