@@ -27,6 +27,7 @@
 		0D1466D216C8AFA200162487 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D116C8AFA200162487 /* QuartzCore.framework */; };
 		0D1466D516C8B18200162487 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D416C8B18200162487 /* AssetsLibrary.framework */; };
 		0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */; };
+		0DA6B7D116C904350006C390 /* BSPhotoMasker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7D016C904350006C390 /* BSPhotoMasker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		0D1466D416C8B18200162487 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0DA6B7CC16C8FEAE0006C390 /* BSAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAssetLoader.h; sourceTree = "<group>"; };
 		0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAssetLoader.m; sourceTree = "<group>"; };
+		0DA6B7CF16C904350006C390 /* BSPhotoMasker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoMasker.h; sourceTree = "<group>"; };
+		0DA6B7D016C904350006C390 /* BSPhotoMasker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoMasker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				0D14669A16C8A90F00162487 /* Supporting Files */,
 				0DA6B7CC16C8FEAE0006C390 /* BSAssetLoader.h */,
 				0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */,
+				0DA6B7CF16C904350006C390 /* BSPhotoMasker.h */,
+				0DA6B7D016C904350006C390 /* BSPhotoMasker.m */,
 			);
 			path = EternalBum;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				0D1466A416C8A90F00162487 /* BSAppDelegate.m in Sources */,
 				0D1466B016C8A91000162487 /* BSViewController.m in Sources */,
 				0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */,
+				0DA6B7D116C904350006C390 /* BSPhotoMasker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
