@@ -43,6 +43,21 @@ static const int Y_MARGIN = 60;
     [self setUpGesture];
     filterCoeff = 1.2;
     isFiltered = YES;
+    UIAccelerometer *accel = [UIAccelerometer sharedAccelerometer];
+    accel.delegate = self;
+    accel.updateInterval = 6.0f/60.0f;
+}
+
+- (void)accelerometer:(UIAccelerometer *)acel
+        didAccelerate:(UIAcceleration *)acceleration {
+    
+    if(acceleration.x * acceleration.x + acceleration.y * acceleration.y + acceleration.z * acceleration.z > 2.0)
+    {
+        NSLog(@"shaked");
+        [self.timer invalidate];
+        self.currentNum = arc4random() % [self.cameraRoll numberOfAssets];
+        [self startSlideShow];
+    }
 }
 
 - (void)addGestureWithTarget:(id)target action:(SEL)selector direction:(UISwipeGestureRecognizerDirection)direction {
@@ -122,6 +137,7 @@ static const int Y_MARGIN = 60;
             [self.photos addObject:result];
         }
         else {
+            self.currentNum = arc4random() % [self.cameraRoll numberOfAssets];
             [self performSelector:@selector(startSlideShow) onThread:curent withObject:nil waitUntilDone:NO];
 		}
 	};
@@ -141,8 +157,12 @@ static const int Y_MARGIN = 60;
 - (void)slideChangeWithAnime
 {
     [UIView animateWithDuration:0.5 animations:^void{
+        self.pictureUpView.transform = CGAffineTransformMakeRotation(0.0);
         self.pictureUpView.alpha = 0.2;
+        self.pictureUpView.frame = CGRectMake(150, self.backView.frame.size.height / 4, 20, 20);
+        self.pictureDownView.transform = CGAffineTransformMakeRotation(0.0);
         self.pictureDownView.alpha = 0.3;
+        self.pictureDownView.frame = CGRectMake(150, self.backView.frame.size.height * 3 / 4, 20, 20);
     } completion:^(BOOL finished){
         [UIView animateWithDuration:0.5 animations:^void{
             [self relocatePictureView];

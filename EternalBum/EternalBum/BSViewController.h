@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSViewController : UIViewController
+@interface BSViewController : UIViewController<UIAccelerometerDelegate>
 
 @property (nonatomic, retain) IBOutlet UIImageView* backView;
 @property (nonatomic, retain) IBOutlet UIImageView* pictureUpView;
