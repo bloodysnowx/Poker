@@ -14,7 +14,6 @@
 
 @interface BSViewController ()
 {
-    BOOL isFiltered;
     double filterCoeff;
     UIImage* upImage;
     UIImage* downImage;
@@ -38,7 +37,6 @@ static const int Y_MARGIN = 60;
 	// Do any additional setup after loading the view, typically from a nib.
     [self setUpGesture];
     filterCoeff = 1.2;
-    isFiltered = YES;
     UIAccelerometer *accel = [UIAccelerometer sharedAccelerometer];
     accel.delegate = self;
     accel.updateInterval = 6.0f/60.0f;
@@ -77,10 +75,11 @@ static const int Y_MARGIN = 60;
 
 - (void)up
 {
-    filterCoeff += 0.1;
-    if(filterCoeff > 2.0)
-        isFiltered = NO;
-    else [self resetPictures];
+    if(filterCoeff < 3.0)
+    {
+        filterCoeff += 0.1;
+        [self resetPictures];
+    }
 }
 
 - (void)down
@@ -88,7 +87,6 @@ static const int Y_MARGIN = 60;
     if(filterCoeff > 0.8)
     {
         filterCoeff -= 0.1;
-        isFiltered = filterCoeff < 2.0;
         [self resetPictures];
     }
 }
@@ -170,9 +168,7 @@ static const int Y_MARGIN = 60;
 
 - (void)setPicture:(UIImageView*)view Image:(UIImage*)origin
 {
-    UIImage* image = origin;
-    if(isFiltered) image = [BSPhotoMasker maskImage:origin AlphaCoeff:filterCoeff];
-    view.image = image;
+    view.image = [BSPhotoMasker maskImage:origin AlphaCoeff:filterCoeff];
 }
 
 - (void)relocatePictureView
