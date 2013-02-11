@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="image.jpeg" id="PkG-5o-1E0" userLabel="BackView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="image.jpeg" id="PkG-5o-1E0" userLabel="BackView" customClass="BSMovingImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -41,10 +41,13 @@
         <image name="image.jpeg" width="300" height="267"/>
     </resources>
     <classes>
+        <class className="BSMovingImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BSMovingImageView.h"/>
+        </class>
         <class className="BSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BSViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="backView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="backView" candidateClass="BSMovingImageView"/>
                 <relationship kind="outlet" name="pictureDownView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="pictureUpView" candidateClass="UIImageView"/>
             </relationships>

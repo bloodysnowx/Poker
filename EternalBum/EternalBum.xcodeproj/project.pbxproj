@@ -28,6 +28,7 @@
 		0D1466D516C8B18200162487 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1466D416C8B18200162487 /* AssetsLibrary.framework */; };
 		0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */; };
 		0DA6B7D116C904350006C390 /* BSPhotoMasker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7D016C904350006C390 /* BSPhotoMasker.m */; };
+		0DA6B7D416C906B30006C390 /* BSMovingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B7D316C906B30006C390 /* BSMovingImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAssetLoader.m; sourceTree = "<group>"; };
 		0DA6B7CF16C904350006C390 /* BSPhotoMasker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoMasker.h; sourceTree = "<group>"; };
 		0DA6B7D016C904350006C390 /* BSPhotoMasker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoMasker.m; sourceTree = "<group>"; };
+		0DA6B7D216C906B30006C390 /* BSMovingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMovingImageView.h; sourceTree = "<group>"; };
+		0DA6B7D316C906B30006C390 /* BSMovingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMovingImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				0D1466AB16C8A91000162487 /* MainStoryboard.storyboard */,
 				0D1466AE16C8A91000162487 /* BSViewController.h */,
 				0D1466AF16C8A91000162487 /* BSViewController.m */,
+				0DA6B7D216C906B30006C390 /* BSMovingImageView.h */,
+				0DA6B7D316C906B30006C390 /* BSMovingImageView.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				0D1466B016C8A91000162487 /* BSViewController.m in Sources */,
 				0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */,
 				0DA6B7D116C904350006C390 /* BSPhotoMasker.m in Sources */,
+				0DA6B7D416C906B30006C390 /* BSMovingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
