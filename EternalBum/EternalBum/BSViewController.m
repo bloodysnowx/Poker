@@ -35,7 +35,7 @@ static const int Y_MARGIN = 60;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self setUpGesture];
+    // [self setUpGesture];
     filterCoeff = 1.2;
     UIAccelerometer *accel = [UIAccelerometer sharedAccelerometer];
     accel.delegate = self;
@@ -54,26 +54,7 @@ static const int Y_MARGIN = 60;
     }
 }
 
-- (void)addGestureWithTarget:(id)target action:(SEL)selector direction:(UISwipeGestureRecognizerDirection)direction {
-	UISwipeGestureRecognizer* swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:target action:selector];
-	swipeLeftGesture.direction = direction;
-	// Viewへ関連付け
-	[self.view addGestureRecognizer:swipeLeftGesture];
-}
-
-- (void) setUpGesture
-{
-    // 右へ : 未来
-	[self addGestureWithTarget:self action:@selector(next) direction:UISwipeGestureRecognizerDirectionRight];
-	// 左へ : 過去
-	[self addGestureWithTarget:self action:@selector(prev) direction:UISwipeGestureRecognizerDirectionLeft];
-    // Up
-    [self addGestureWithTarget:self action:@selector(up) direction:UISwipeGestureRecognizerDirectionUp];
-    // Down
-    [self addGestureWithTarget:self action:@selector(down) direction:UISwipeGestureRecognizerDirectionDown];
-}
-
-- (void)up
+- (IBAction)up:(id)sender
 {
     if(filterCoeff < 3.0)
     {
@@ -82,7 +63,7 @@ static const int Y_MARGIN = 60;
     }
 }
 
-- (void)down
+- (IBAction)down:(id)sender
 {
     if(filterCoeff > 0.8)
     {
@@ -91,13 +72,13 @@ static const int Y_MARGIN = 60;
     }
 }
 
-- (void)prev
+- (IBAction)prev:(id)sender
 {
     [self.timer invalidate];
     [self startSlideShow];
 }
 
-- (void)next
+- (IBAction)next:(id)sender
 {
     [self.timer invalidate];
     self.currentNum -= 4;

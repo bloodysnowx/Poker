@@ -15,6 +15,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="image.jpeg" id="PkG-5o-1E0" userLabel="BackView" customClass="BSMovingImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" id="b8T-Qt-vsq" userLabel="PictureUpView">
                                 <rect key="frame" x="40" y="210" width="240" height="128"/>
@@ -26,6 +27,13 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ns0-GD-FED" appends="YES" id="6j1-YF-VDl"/>
+                            <outletCollection property="gestureRecognizers" destination="EAO-3s-e35" appends="YES" id="O1y-Yk-5pY"/>
+                            <outletCollection property="gestureRecognizers" destination="W5Q-2Z-lkt" appends="YES" id="s4V-6Y-lzF"/>
+                            <outletCollection property="gestureRecognizers" destination="5eM-x3-p54" appends="YES" id="zaS-j5-KJG"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="backView" destination="PkG-5o-1E0" id="fde-2h-ZRT"/>
@@ -34,6 +42,30 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ns0-GD-FED">
+                    <connections>
+                        <action selector="prev:" destination="2" id="Jv2-00-yyd"/>
+                        <outlet property="delegate" destination="2" id="Eeu-gY-KBd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="EAO-3s-e35">
+                    <connections>
+                        <action selector="next:" destination="2" id="Qwk-tO-fE2"/>
+                        <outlet property="delegate" destination="2" id="bdW-zt-oL6"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="W5Q-2Z-lkt">
+                    <connections>
+                        <action selector="up:" destination="2" id="hVs-ra-IQd"/>
+                        <outlet property="delegate" destination="2" id="FM9-fP-BOt"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="5eM-x3-p54">
+                    <connections>
+                        <action selector="down:" destination="2" id="KRK-GA-8Dd"/>
+                        <outlet property="delegate" destination="2" id="WHu-jY-Hsi"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>
@@ -47,6 +79,10 @@
         <class className="BSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BSViewController.h"/>
             <relationships>
+                <relationship kind="action" name="down:"/>
+                <relationship kind="action" name="next:"/>
+                <relationship kind="action" name="prev:"/>
+                <relationship kind="action" name="up:"/>
                 <relationship kind="outlet" name="backView" candidateClass="BSMovingImageView"/>
                 <relationship kind="outlet" name="pictureDownView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="pictureUpView" candidateClass="UIImageView"/>
