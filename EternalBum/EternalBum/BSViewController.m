@@ -33,7 +33,36 @@ static const int ANIMATION_DURATION = 15;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [self setUpGesture];
+}
 
+- (void)addGestureWithTarget:(id)target action:(SEL)selector direction:(UISwipeGestureRecognizerDirection)direction {
+	UISwipeGestureRecognizer* swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:target action:selector];
+	swipeLeftGesture.direction = direction;
+	// Viewへ関連付け
+	[self.view addGestureRecognizer:swipeLeftGesture];
+}
+
+- (void) setUpGesture
+{
+    // 右へ : 未来
+	[self addGestureWithTarget:self action:@selector(prev) direction:UISwipeGestureRecognizerDirectionRight];
+	// 左へ : 過去
+	[self addGestureWithTarget:self action:@selector(next) direction:UISwipeGestureRecognizerDirectionLeft];
+}
+
+- (void)prev
+{
+    [self.timer invalidate];
+    [self startSlideShow];
+}
+
+- (void)next
+{
+    [self.timer invalidate];
+    self.currentNum -= 2;
+    if(self.currentNum < 0) self.currentNum += [self.photos count];
+    [self startSlideShow];
 }
 
 - (void)getCameraRollGroups
@@ -68,7 +97,8 @@ static const int ANIMATION_DURATION = 15;
     
 	ALAssetsFilter* onlyPhotosFilter = [ALAssetsFilter allPhotos];
 	[self.cameraRoll setAssetsFilter:onlyPhotosFilter];
-	[self.cameraRoll enumerateAssetsUsingBlock:assetsEnumerationBlock];
+    [self.cameraRoll enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:assetsEnumerationBlock];
+	// [self.cameraRoll enumerateAssetsUsingBlock:assetsEnumerationBlock];
 }
 
 - (void)startSlideShow
