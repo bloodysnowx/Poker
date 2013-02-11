@@ -11,16 +11,19 @@
 
 @protocol BSAssetLoaderDelegate<NSObject>
 
-- (void)loadComplete:(NSMutableArray*)photos;
+- (void)loadBackImagesComplete:(NSMutableArray*)photos;
+- (void)loadCameraRollComplete:(NSMutableArray*)photos;
 
 @end
 
 @interface BSAssetLoader : NSObject
 
 @property (nonatomic, retain) ALAssetsLibrary* assetsLibrary;
-@property (nonatomic, retain) NSMutableArray* groups;
 @property (nonatomic, retain) ALAssetsGroup* cameraRoll;
+@property (nonatomic, retain) ALAssetsGroup* backsFolder;
 @property (nonatomic, retain) NSMutableArray* photos;
+@property (nonatomic, retain) NSMutableArray* backImages;
 
 - (void)getCameraRolls:(id<BSAssetLoaderDelegate>)target selector:(SEL)aSelector;
+- (void)getBacks:(id<BSAssetLoaderDelegate>)target selector:(SEL)aSelector;
 @end

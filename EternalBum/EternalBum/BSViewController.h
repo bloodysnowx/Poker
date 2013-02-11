@@ -19,5 +19,7 @@
 - (IBAction)down:(id)sender;
 - (IBAction)prev:(id)sender;
 - (IBAction)next:(id)sender;
+- (IBAction)doublePrev:(id)sender;
+- (IBAction)doubleNext:(id)sender;
 
 @end

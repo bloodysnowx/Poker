@@ -21,36 +21,49 @@
     self.assetsLibrary = [ALAssetsLibrary new];
     self.target = target;
     self.selector = aSelector;
-    NSThread* current = [NSThread currentThread];
-    self.groups = [[NSMutableArray alloc] init];
     ALAssetsLibraryGroupsEnumerationResultsBlock listCameraRollBlock = ^(ALAssetsGroup * group, BOOL * stop) {
-		if(group) {
-			[self.groups addObject:group];
-		} else {
-			self.cameraRoll = self.groups[0];
-			[self performSelector:@selector(getCameraRollPhotos) onThread:current withObject:nil waitUntilDone:YES];
-		}
+		if(group)
+            self.cameraRoll = group;
+		else
+        {
+            self.photos = [NSMutableArray arrayWithCapacity:[self.cameraRoll numberOfAssets]];
+            [self performSelector:@selector(getGroupPhotos:Array:) withObject:self.cameraRoll withObject:self.photos];
+        }
 	};
     
 	[self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:listCameraRollBlock failureBlock:nil];
 }
 
-- (void)getCameraRollPhotos
+- (void)getGroupPhotos:(ALAssetsGroup*)group Array:(NSMutableArray*)array
 {
-    NSThread* curent = [NSThread currentThread];
-    self.photos = [NSMutableArray arrayWithCapacity:[self.cameraRoll numberOfAssets]];
-    
     ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock = ^(ALAsset * result, NSUInteger index, BOOL * stop) {
-		if(result) {
-            [self.photos addObject:result];
-        }
-        else {
-            [self.target performSelector:self.selector onThread:curent withObject:self.photos waitUntilDone:NO];
-		}
+		if(result)
+            [array addObject:result];
+        else
+            [self.target performSelectorOnMainThread:self.selector withObject:self.photos waitUntilDone:NO];
 	};
     
 	ALAssetsFilter* onlyPhotosFilter = [ALAssetsFilter allPhotos];
-	[self.cameraRoll setAssetsFilter:onlyPhotosFilter];
-    [self.cameraRoll enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:assetsEnumerationBlock];
+	[group setAssetsFilter:onlyPhotosFilter];
+    [group enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:assetsEnumerationBlock];
 }
+
+- (void)getBacks:(id<BSAssetLoaderDelegate>)target selector:(SEL)aSelector
+{
+    self.target = target;
+    self.selector = aSelector;
+    ALAssetsLibraryGroupsEnumerationResultsBlock listAlbumBlock = ^(ALAssetsGroup * group, BOOL * stop) {
+		if(group) {
+            if([[group valueForProperty:ALAssetsGroupPropertyName] isEqualToString:@"backs"])
+                self.backsFolder = group;
+		} else
+        {
+            self.backImages = [[NSMutableArray alloc] initWithCapacity:[self.backsFolder numberOfAssets]];
+			[self performSelector:@selector(getGroupPhotos:Array:) withObject:self.backsFolder withObject:self.backImages];
+        }
+	};
+    
+	[self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:listAlbumBlock failureBlock:nil];
+}
+
 @end
