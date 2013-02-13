@@ -23,9 +23,9 @@
 		0DA6B83416CA98000006C390 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6B80F16CA97FC0006C390 /* Foundation.framework */; };
 		0DA6B83C16CA98000006C390 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B83A16CA98000006C390 /* InfoPlist.strings */; };
 		0DA6B83F16CA98010006C390 /* MasterOfMeetingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6B83E16CA98010006C390 /* MasterOfMeetingTests.m */; };
-		0DA6B84A16CA991C0006C390 /* 01_OP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84916CA991C0006C390 /* 01_OP.mp3 */; };
+		0DA6B84A16CA991C0006C390 /* 010_OP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84916CA991C0006C390 /* 010_OP.mp3 */; };
 		0DA6B84C16CA997A0006C390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6B84B16CA997A0006C390 /* AVFoundation.framework */; };
-		0DA6B84E16CAA1FE0006C390 /* 20_ED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84D16CAA1FE0006C390 /* 20_ED.mp3 */; };
+		0DA6B84E16CAA1FE0006C390 /* 200_ED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */; };
 		0DECE92F16CB26DE00A8185E /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0DECE92E16CB26DE00A8185E /* readme.txt */; };
 /* End PBXBuildFile section */
 
@@ -61,9 +61,9 @@
 		0DA6B83B16CA98000006C390 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DA6B83D16CA98000006C390 /* MasterOfMeetingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterOfMeetingTests.h; sourceTree = "<group>"; };
 		0DA6B83E16CA98010006C390 /* MasterOfMeetingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterOfMeetingTests.m; sourceTree = "<group>"; };
-		0DA6B84916CA991C0006C390 /* 01_OP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01_OP.mp3; sourceTree = "<group>"; };
+		0DA6B84916CA991C0006C390 /* 010_OP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 010_OP.mp3; sourceTree = "<group>"; };
 		0DA6B84B16CA997A0006C390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0DA6B84D16CAA1FE0006C390 /* 20_ED.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20_ED.mp3; sourceTree = "<group>"; };
+		0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 200_ED.mp3; sourceTree = "<group>"; };
 		0DECE92D16CB26C600A8185E /* MasterOfMeeting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MasterOfMeeting-Prefix.pch"; sourceTree = "<group>"; };
 		0DECE92E16CB26DE00A8185E /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = MasterOfMeeting/readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,8 +175,8 @@
 		0DA6B84816CA990C0006C390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0DA6B84916CA991C0006C390 /* 01_OP.mp3 */,
-				0DA6B84D16CAA1FE0006C390 /* 20_ED.mp3 */,
+				0DA6B84916CA991C0006C390 /* 010_OP.mp3 */,
+				0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -258,8 +258,8 @@
 				0DA6B82216CA97FE0006C390 /* Default@2x.png in Resources */,
 				0DA6B82416CA97FE0006C390 /* Default-568h@2x.png in Resources */,
 				0DA6B82716CA97FE0006C390 /* MainStoryboard.storyboard in Resources */,
-				0DA6B84A16CA991C0006C390 /* 01_OP.mp3 in Resources */,
-				0DA6B84E16CAA1FE0006C390 /* 20_ED.mp3 in Resources */,
+				0DA6B84A16CA991C0006C390 /* 010_OP.mp3 in Resources */,
+				0DA6B84E16CAA1FE0006C390 /* 200_ED.mp3 in Resources */,
 				0DECE92F16CB26DE00A8185E /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
