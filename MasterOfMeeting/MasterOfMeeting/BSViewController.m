@@ -43,7 +43,8 @@ static const int ENDING_TIME = 30;
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    
+    [self play:fileURLs[++nowCount] WillDelegate:NO];
+    [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
 
 - (NSURL*)getURLfromBundleChar:(const char* const)path
@@ -62,12 +63,16 @@ static const int ENDING_TIME = 30;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    nowCount = 0;
+    nowCount = -1;
 	// Do any additional setup after loading the view, typically from a nib.
-    NSArray* filePaths = [[NSArray alloc] initWithObjects:@"010_OP", @"020_ED", nil];
+    NSArray* filePaths = [[NSArray alloc] initWithObjects:@"010_OP", @"020_SUGIMORI", @"040_ERROR_MAIL",
+                          @"050_TOPIX", @"060_SLF", @"070_GRAVURE", @"080_MEISAI", @"090_KYARY", @"100_NYUKAI",
+                          @"110_BIKKURI", @"120_MARIO", @"130_UX", @"140_IKUSEI", @"150_SUZUKI", @"160_NEXT",
+                          @"200_ED", nil];
     fileURLs = [[NSMutableArray alloc] initWithCapacity:[filePaths count]];
     for(NSString* path in filePaths)
         [fileURLs addObject:[self getURLfromBundle:path]];
+    [self audioPlayerDidFinishPlaying:nil successfully:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,9 +81,19 @@ static const int ENDING_TIME = 30;
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)buttonPushed:(id)sender
+-(IBAction)noButtonPushed:(id)sender
 {
-    [self play:fileURLs[nowCount++] WillDelegate:NO];
+    [self playChar:NOTHING_MP3 WillDelegate:YES];
+}
+
+-(IBAction)seyaButtonPushed:(id)sender
+{
+    [self playChar:SEYASEYA_MP3 WillDelegate:YES];
+}
+
+-(IBAction)repeatButtonPushed:(id)sender
+{
+    [self play:fileURLs[nowCount] WillDelegate:NO];
     [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
 
