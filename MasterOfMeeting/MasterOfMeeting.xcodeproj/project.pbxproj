@@ -26,6 +26,7 @@
 		0DA6B84A16CA991C0006C390 /* 01_OP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84916CA991C0006C390 /* 01_OP.mp3 */; };
 		0DA6B84C16CA997A0006C390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6B84B16CA997A0006C390 /* AVFoundation.framework */; };
 		0DA6B84E16CAA1FE0006C390 /* 20_ED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84D16CAA1FE0006C390 /* 20_ED.mp3 */; };
+		0DECE92F16CB26DE00A8185E /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0DECE92E16CB26DE00A8185E /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		0DA6B81516CA97FC0006C390 /* MasterOfMeeting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MasterOfMeeting-Info.plist"; sourceTree = "<group>"; };
 		0DA6B81716CA97FC0006C390 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0DA6B81916CA97FC0006C390 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0DA6B81B16CA97FD0006C390 /* MasterOfMeeting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MasterOfMeeting-Prefix.pch"; sourceTree = "<group>"; };
 		0DA6B81C16CA97FD0006C390 /* BSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAppDelegate.h; sourceTree = "<group>"; };
 		0DA6B81D16CA97FD0006C390 /* BSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
 		0DA6B81F16CA97FE0006C390 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		0DA6B84916CA991C0006C390 /* 01_OP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01_OP.mp3; sourceTree = "<group>"; };
 		0DA6B84B16CA997A0006C390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0DA6B84D16CAA1FE0006C390 /* 20_ED.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20_ED.mp3; sourceTree = "<group>"; };
+		0DECE92D16CB26C600A8185E /* MasterOfMeeting-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MasterOfMeeting-Prefix.pch"; sourceTree = "<group>"; };
+		0DECE92E16CB26DE00A8185E /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = MasterOfMeeting/readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		0DA6B80116CA97FB0006C390 = {
 			isa = PBXGroup;
 			children = (
+				0DECE92E16CB26DE00A8185E /* readme.txt */,
 				0DA6B81316CA97FC0006C390 /* MasterOfMeeting */,
 				0DA6B83716CA98000006C390 /* MasterOfMeetingTests */,
 				0DA6B80C16CA97FC0006C390 /* Frameworks */,
@@ -139,10 +142,10 @@
 		0DA6B81416CA97FC0006C390 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0DECE92D16CB26C600A8185E /* MasterOfMeeting-Prefix.pch */,
 				0DA6B81516CA97FC0006C390 /* MasterOfMeeting-Info.plist */,
 				0DA6B81616CA97FC0006C390 /* InfoPlist.strings */,
 				0DA6B81916CA97FC0006C390 /* main.m */,
-				0DA6B81B16CA97FD0006C390 /* MasterOfMeeting-Prefix.pch */,
 				0DA6B81F16CA97FE0006C390 /* Default.png */,
 				0DA6B82116CA97FE0006C390 /* Default@2x.png */,
 				0DA6B82316CA97FE0006C390 /* Default-568h@2x.png */,
@@ -257,6 +260,7 @@
 				0DA6B82716CA97FE0006C390 /* MainStoryboard.storyboard in Resources */,
 				0DA6B84A16CA991C0006C390 /* 01_OP.mp3 in Resources */,
 				0DA6B84E16CAA1FE0006C390 /* 20_ED.mp3 in Resources */,
+				0DECE92F16CB26DE00A8185E /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +478,7 @@
 				0DA6B84416CA98010006C390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA6B84516CA98010006C390 /* Build configuration list for PBXNativeTarget "MasterOfMeetingTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +487,7 @@
 				0DA6B84716CA98010006C390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
