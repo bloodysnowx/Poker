@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BSViewController : UIViewController
+@interface BSViewController : UIViewController<AVAudioPlayerDelegate>
 
 -(IBAction)buttonPushed:(id)sender;
 

@@ -7,7 +7,6 @@
 //
 
 #import "BSViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface BSViewController ()
 {
@@ -22,6 +21,8 @@
 
 static const char* const TIME_WARNING_MP3 = "20_ED";
 static const char* const TIME_ENDED_MP3 = "20_ED";
+static const int WARNING_TIME = 30;
+static const int ENDING_TIME = 30;
 
 - (void)playChar:(const char* const)path
 {
@@ -35,6 +36,11 @@ static const char* const TIME_ENDED_MP3 = "20_ED";
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
     [player prepareToPlay];
     [player play];
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    
 }
 
 - (NSURL*)getURLfromBundleChar:(const char* const)path
@@ -70,13 +76,13 @@ static const char* const TIME_ENDED_MP3 = "20_ED";
 -(IBAction)buttonPushed:(id)sender
 {
     [self play:fileURLs[nowCount++]];
-    [self performSelector:@selector(timeWarning) withObject:nil afterDelay:30];
+    [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
 
 -(void)timeWarning
 {
     [self playChar:TIME_WARNING_MP3];
-    [self performSelector:@selector(timeEnded) withObject:nil afterDelay:30];
+    [self performSelector:@selector(timeEnded) withObject:nil afterDelay:ENDING_TIME];
 }
 
 -(void)timeEnded
