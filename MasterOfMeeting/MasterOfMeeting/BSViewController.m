@@ -12,30 +12,76 @@
 @interface BSViewController ()
 {
     AVAudioPlayer* player;
+    NSMutableArray* fileURLs;
+    int nowCount;
 }
 
 @end
 
 @implementation BSViewController
 
+static const char* const TIME_WARNING_MP3 = "20_ED";
+static const char* const TIME_ENDED_MP3 = "20_ED";
+
+- (void)playChar:(const char* const)path
+{
+    NSURL* fileURL = [self getURLfromBundleChar:path];
+    [self play:fileURL];
+}
+
+- (void)play:(NSURL*)fileURL
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    [player prepareToPlay];
+    [player play];
+}
+
+- (NSURL*)getURLfromBundleChar:(const char* const)path
+{
+    NSString* str = [NSString stringWithCString:path encoding:NSASCIIStringEncoding];
+    return [self getURLfromBundle:str];
+}
+
+- (NSURL*)getURLfromBundle:(NSString*)path
+{
+    NSBundle* mainBundle = [NSBundle mainBundle];
+    NSString* filePath = [mainBundle pathForResource:path ofType:@"mp3"];
+    return [NSURL fileURLWithPath:filePath];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    nowCount = 0;
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    NSBundle* mainBundle = [NSBundle mainBundle];
-    NSString* filePath = [mainBundle pathForResource:@"01_OP" ofType:@"mp3"];
-    NSURL* fileUrl = [NSURL fileURLWithPath:filePath];
-    player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:nil];
-    [player prepareToPlay];
-    [player play];
+    NSArray* filePaths = [[NSArray alloc] initWithObjects:@"01_OP", @"20_ED", nil];
+    fileURLs = [[NSMutableArray alloc] initWithCapacity:[filePaths count]];
+    for(NSString* path in filePaths)
+        [fileURLs addObject:[self getURLfromBundle:path]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)buttonPushed:(id)sender
+{
+    [self play:fileURLs[nowCount++]];
+    [self performSelector:@selector(timeWarning) withObject:nil afterDelay:30];
+}
+
+-(void)timeWarning
+{
+    [self playChar:TIME_WARNING_MP3];
+    [self performSelector:@selector(timeEnded) withObject:nil afterDelay:30];
+}
+
+-(void)timeEnded
+{
+    [self playChar:TIME_ENDED_MP3];
 }
 
 @end

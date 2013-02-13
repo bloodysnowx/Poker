@@ -10,4 +10,6 @@
 
 @interface BSViewController : UIViewController
 
+-(IBAction)buttonPushed:(id)sender;
+
 @end
