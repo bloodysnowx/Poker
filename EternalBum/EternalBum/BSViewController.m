@@ -48,6 +48,13 @@ static const int Y_MARGIN = 60;
     images = [[NSMutableArray alloc] initWithCapacity:22];
     for(int i = 1; i < 23; ++i)
         [images addObject:[NSString stringWithFormat:@"image%02d.JPG", i]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive)
+                                                 name:@"applicationDidBecomeActive" object:nil];
+}
+
+- (void)applicationDidBecomeActive {
+    [self.backView startMove];
 }
 
 - (void)accelerometer:(UIAccelerometer *)acel
