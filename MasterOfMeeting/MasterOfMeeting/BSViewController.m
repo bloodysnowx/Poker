@@ -43,6 +43,7 @@ static const int ENDING_TIME = 30;
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
+    [NSThread sleepForTimeInterval:1];
     [self play:fileURLs[++nowCount] WillDelegate:NO];
     [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
@@ -72,7 +73,7 @@ static const int ENDING_TIME = 30;
     fileURLs = [[NSMutableArray alloc] initWithCapacity:[filePaths count]];
     for(NSString* path in filePaths)
         [fileURLs addObject:[self getURLfromBundle:path]];
-    [self audioPlayerDidFinishPlaying:nil successfully:YES];
+    [self play:fileURLs[++nowCount] WillDelegate:YES];
 }
 
 - (void)didReceiveMemoryWarning
