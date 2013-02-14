@@ -439,27 +439,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">PFLabel</string>
-						<reference key="source" ref="836434226"/>
-						<reference key="destination" ref="494890052"/>
-					</object>
-					<int key="connectionID">104</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">NameLabel</string>
 						<reference key="source" ref="836434226"/>
 						<reference key="destination" ref="43019799"/>
 					</object>
 					<int key="connectionID">105</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">AFLabel</string>
-						<reference key="source" ref="836434226"/>
-						<reference key="destination" ref="644967816"/>
-					</object>
-					<int key="connectionID">106</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -502,40 +486,44 @@
 					<int key="connectionID">124</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">pushedActionControl:</string>
-						<reference key="source" ref="14259160"/>
-						<reference key="destination" ref="836434226"/>
-						<int key="IBEventType">13</int>
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">PFAFLabel</string>
+						<reference key="source" ref="836434226"/>
+						<reference key="destination" ref="644967816"/>
 					</object>
-					<int key="connectionID">110</int>
+					<int key="connectionID">125</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">pushedActionControl:</string>
-						<reference key="source" ref="14259160"/>
-						<reference key="destination" ref="836434226"/>
-						<int key="IBEventType">1</int>
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">PFRLabel</string>
+						<reference key="source" ref="836434226"/>
+						<reference key="destination" ref="494890052"/>
 					</object>
-					<int key="connectionID">111</int>
+					<int key="connectionID">126</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">pushedActionControl:</string>
-						<reference key="source" ref="992454669"/>
-						<reference key="destination" ref="836434226"/>
-						<int key="IBEventType">13</int>
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">CBFLabel</string>
+						<reference key="source" ref="836434226"/>
+						<reference key="destination" ref="997934620"/>
 					</object>
-					<int key="connectionID">117</int>
+					<int key="connectionID">127</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">pushedActionControl:</string>
-						<reference key="source" ref="992454669"/>
-						<reference key="destination" ref="836434226"/>
-						<int key="IBEventType">1</int>
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">CBLabel</string>
+						<reference key="source" ref="836434226"/>
+						<reference key="destination" ref="21086896"/>
 					</object>
-					<int key="connectionID">118</int>
+					<int key="connectionID">128</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">FlopAFLabel</string>
+						<reference key="source" ref="836434226"/>
+						<reference key="destination" ref="158507768"/>
+					</object>
+					<int key="connectionID">129</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -678,7 +666,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">124</int>
+			<int key="maxID">129</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -697,10 +685,13 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="AFLabel">UILabel</string>
+						<string key="CBFLabel">UILabel</string>
+						<string key="CBLabel">UILabel</string>
+						<string key="FlopAFLabel">UILabel</string>
 						<string key="NameLabel">UILabel</string>
 						<string key="NameLabel2">UILabel</string>
-						<string key="PFLabel">UILabel</string>
+						<string key="PFAFLabel">UILabel</string>
+						<string key="PFRLabel">UILabel</string>
 						<string key="ReraiseLabel">UILabel</string>
 						<string key="SeatLabel">UILabel</string>
 						<string key="SeatLabel2">UILabel</string>
@@ -709,8 +700,16 @@
 						<string key="actionControl2">UISegmentedControl</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="AFLabel">
-							<string key="name">AFLabel</string>
+						<object class="IBToOneOutletInfo" key="CBFLabel">
+							<string key="name">CBFLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="CBLabel">
+							<string key="name">CBLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="FlopAFLabel">
+							<string key="name">FlopAFLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="NameLabel">
@@ -721,8 +720,12 @@
 							<string key="name">NameLabel2</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="PFLabel">
-							<string key="name">PFLabel</string>
+						<object class="IBToOneOutletInfo" key="PFAFLabel">
+							<string key="name">PFAFLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="PFRLabel">
+							<string key="name">PFRLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="ReraiseLabel">

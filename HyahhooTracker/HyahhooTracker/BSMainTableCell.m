@@ -17,7 +17,6 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
     }
     return self;
 }
@@ -27,12 +26,6 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    // [self.SeatLabel = ]
 }
 
 +(BSMainTableCell*)create
@@ -46,11 +39,6 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     return CELL_IDENTIFIER;
 }
 
--(IBAction) pushedActionControl:(UISegmentedControl*)sender
-{
-    NSLog(@"value changed");
-}
-
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];
@@ -60,5 +48,10 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 -(void)setSeatNum:(NSInteger)num
 {
     self.SeatLabel.text = self.SeatLabel2.text = [NSString stringWithFormat:@"%02d", num];
+}
+
+-(void)setName:(NSString*)name
+{
+    self.NameLabel.text = self.NameLabel2.text = name;
 }
 @end

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BSMainTableCell : UITableViewCell
+{
+
+}
 
 @property (nonatomic, retain) IBOutlet UILabel* SeatLabel;
 @property (nonatomic, retain) IBOutlet UILabel* SeatLabel2;
@@ -16,15 +19,17 @@
 @property (nonatomic, retain) IBOutlet UILabel* NameLabel2;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl2;
-@property (nonatomic, retain) IBOutlet UILabel* PFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* PFRLabel;
 @property (nonatomic, retain) IBOutlet UILabel* VPLabel;
 @property (nonatomic, retain) IBOutlet UILabel* ReraiseLabel;
-@property (nonatomic, retain) IBOutlet UILabel* AFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* PFAFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* CBLabel;
+@property (nonatomic, retain) IBOutlet UILabel* CBFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* FlopAFLabel;
 
-// @property (nonatomic, retain) IBOutlet
 +(BSMainTableCell*)create;
 +(NSString*)reuseIdentifier;
--(IBAction) pushedActionControl:(UISegmentedControl*)sender;
 -(void)setSeatNum:(NSInteger)num;
+-(void)setName:(NSString*)name;
 
 @end
