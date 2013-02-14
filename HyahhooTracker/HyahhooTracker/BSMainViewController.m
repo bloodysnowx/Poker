@@ -65,17 +65,13 @@
         cell = [BSMainTableCell create];
     }
     // BSMainTableCell* cell = [self.tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
+    [cell setSeatNum:indexPath.row + 1];
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"Num Name    Action       VPPF 3BAF  Num Name    Action       CBCBF AF";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
@@ -114,6 +110,13 @@
 }
 
 #pragma mark UITableViewDelegate
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSArray* ary = [[NSBundle mainBundle] loadNibNamed:@"BSMainTableHeader" owner:nil options:nil];
+    UIView* view = ary[0];
+    return view;
+}
 
 -(IBAction) moveToFlop
 {

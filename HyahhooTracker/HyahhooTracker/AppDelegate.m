@@ -7,10 +7,6 @@
 //
 
 #import "AppDelegate.h"
-
-#import "BSFirstViewController.h"
-
-#import "BSSecondViewController.h"
 #import "BSMainViewController.h"
 #import "BSPlayerData.h"
 
@@ -23,12 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    // UIViewController *viewController1 = [[BSFirstViewController alloc] initWithNibName:@"BSFirstViewController" bundle:nil];
-    // UIViewController *viewController2 = [[BSSecondViewController alloc] initWithNibName:@"BSSecondViewController" bundle:nil];
-    // self.tabBarController = [[UITabBarController alloc] init];
-    // self.tabBarController.viewControllers = @[viewController1, viewController2];
-    // self.window.rootViewController = self.tabBarController;
     BSMainViewController* main = [[BSMainViewController alloc] initWithNibName:@"BSMainViewController" bundle:nil];
     main.managedObjectContext = self.managedObjectContext;
     self.window.rootViewController = main;

@@ -56,4 +56,9 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [super touchesEnded:touches withEvent:event];
     // [self sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
+
+-(void)setSeatNum:(NSInteger)num
+{
+    self.SeatLabel.text = self.SeatLabel2.text = [NSString stringWithFormat:@"%02d", num];
+}
 @end

@@ -11,8 +11,11 @@
 @interface BSMainTableCell : UITableViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel* SeatLabel;
+@property (nonatomic, retain) IBOutlet UILabel* SeatLabel2;
 @property (nonatomic, retain) IBOutlet UILabel* NameLabel;
+@property (nonatomic, retain) IBOutlet UILabel* NameLabel2;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
+@property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl2;
 @property (nonatomic, retain) IBOutlet UILabel* PFLabel;
 @property (nonatomic, retain) IBOutlet UILabel* VPLabel;
 @property (nonatomic, retain) IBOutlet UILabel* ReraiseLabel;
@@ -22,4 +25,6 @@
 +(BSMainTableCell*)create;
 +(NSString*)reuseIdentifier;
 -(IBAction) pushedActionControl:(UISegmentedControl*)sender;
+-(void)setSeatNum:(NSInteger)num;
+
 @end
