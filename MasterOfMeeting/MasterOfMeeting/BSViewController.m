@@ -43,7 +43,8 @@ static const int ENDING_TIME = 30;
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    [self play:fileURLs[++nowCount] WillDelegate:NO];
+    ++nowCount;
+    [self play:fileURLs[nowCount] WillDelegate:nowCount == 14];
     [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
 
