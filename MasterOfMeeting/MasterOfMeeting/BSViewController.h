@@ -10,8 +10,7 @@
 
 @interface BSViewController : UIViewController<AVAudioPlayerDelegate>
 
--(IBAction)noButtonPushed:(id)sender;
--(IBAction)seyaButtonPushed:(id)sender;
+-(IBAction)sayButtonPushed:(id)sender;
 -(IBAction)repeatButtonPushed:(id)sender;
 
 @end

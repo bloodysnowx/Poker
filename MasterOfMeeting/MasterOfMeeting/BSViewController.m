@@ -21,8 +21,7 @@
 
 static const char* const TIME_WARNING_MP3 = "800_WARNING";
 static const char* const TIME_ENDED_MP3 = "810_ENDING";
-static const char* const NOTHING_MP3 = "600_NOTHING";
-static const char* const SEYASEYA_MP3 = "610_SEYASEYA";
+static const char* const BUTTON_MP3S[] = { "600_NOTHING", "610_SEYASEYA", "620_SHIBIRERU", "630_NAIYO" };
 static const int WARNING_TIME = 30;
 static const int ENDING_TIME = 30;
 
@@ -43,13 +42,9 @@ static const int ENDING_TIME = 30;
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-<<<<<<< HEAD
     [NSThread sleepForTimeInterval:1];
-    [self play:fileURLs[++nowCount] WillDelegate:NO];
-=======
     ++nowCount;
     [self play:fileURLs[nowCount] WillDelegate:nowCount == 14];
->>>>>>> a025478718baefa51ed80431615cc559677f4d68
     [self performSelector:@selector(timeWarning) withObject:nil afterDelay:WARNING_TIME];
 }
 
@@ -87,14 +82,9 @@ static const int ENDING_TIME = 30;
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)noButtonPushed:(id)sender
+-(IBAction)sayButtonPushed:(id)sender
 {
-    [self playChar:NOTHING_MP3 WillDelegate:YES];
-}
-
--(IBAction)seyaButtonPushed:(id)sender
-{
-    [self playChar:SEYASEYA_MP3 WillDelegate:YES];
+    [self playChar:BUTTON_MP3S[((UIButton*)sender).tag] WillDelegate:YES];
 }
 
 -(IBAction)repeatButtonPushed:(id)sender

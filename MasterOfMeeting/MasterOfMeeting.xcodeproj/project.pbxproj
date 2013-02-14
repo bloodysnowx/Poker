@@ -26,6 +26,10 @@
 		0DA6B84A16CA991C0006C390 /* 010_OP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84916CA991C0006C390 /* 010_OP.mp3 */; };
 		0DA6B84C16CA997A0006C390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA6B84B16CA997A0006C390 /* AVFoundation.framework */; };
 		0DA6B84E16CAA1FE0006C390 /* 200_ED.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */; };
+		0DA6B85116CCEFA50006C390 /* 620_SHIBIRERU.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B84F16CCEFA50006C390 /* 620_SHIBIRERU.mp3 */; };
+		0DA6B85216CCEFA50006C390 /* 630_NAIYO.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85016CCEFA50006C390 /* 630_NAIYO.mp3 */; };
+		0DA6B85616CD1B0F0006C390 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85516CD1B0F0006C390 /* icon_57.png */; };
+		0DA6B85816CD1B130006C390 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85716CD1B130006C390 /* icon_114.png */; };
 		0DCE77C216CBABAF00285E56 /* 800_WARNING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE77C016CBABAF00285E56 /* 800_WARNING.mp3 */; };
 		0DCE77C316CBABAF00285E56 /* 810_ENDING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE77C116CBABAF00285E56 /* 810_ENDING.mp3 */; };
 		0DCE77C616CBAD5400285E56 /* 600_NOTHING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE77C416CBAD5400285E56 /* 600_NOTHING.mp3 */; };
@@ -82,6 +86,10 @@
 		0DA6B84916CA991C0006C390 /* 010_OP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 010_OP.mp3; sourceTree = "<group>"; };
 		0DA6B84B16CA997A0006C390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 200_ED.mp3; sourceTree = "<group>"; };
+		0DA6B84F16CCEFA50006C390 /* 620_SHIBIRERU.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 620_SHIBIRERU.mp3; sourceTree = "<group>"; };
+		0DA6B85016CCEFA50006C390 /* 630_NAIYO.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 630_NAIYO.mp3; sourceTree = "<group>"; };
+		0DA6B85516CD1B0F0006C390 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		0DA6B85716CD1B130006C390 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		0DCE77C016CBABAF00285E56 /* 800_WARNING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 800_WARNING.mp3; sourceTree = "<group>"; };
 		0DCE77C116CBABAF00285E56 /* 810_ENDING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 810_ENDING.mp3; sourceTree = "<group>"; };
 		0DCE77C416CBAD5400285E56 /* 600_NOTHING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 600_NOTHING.mp3; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 		0DA6B80116CA97FB0006C390 = {
 			isa = PBXGroup;
 			children = (
+				0DA6B85716CD1B130006C390 /* icon_114.png */,
+				0DA6B85516CD1B0F0006C390 /* icon_57.png */,
 				0DECE92E16CB26DE00A8185E /* readme.txt */,
 				0DA6B81316CA97FC0006C390 /* MasterOfMeeting */,
 				0DA6B83716CA98000006C390 /* MasterOfMeetingTests */,
@@ -229,6 +239,8 @@
 				0DA6B84D16CAA1FE0006C390 /* 200_ED.mp3 */,
 				0DCE77C416CBAD5400285E56 /* 600_NOTHING.mp3 */,
 				0DCE77C516CBAD5400285E56 /* 610_SEYASEYA.mp3 */,
+				0DA6B84F16CCEFA50006C390 /* 620_SHIBIRERU.mp3 */,
+				0DA6B85016CCEFA50006C390 /* 630_NAIYO.mp3 */,
 				0DCE77C016CBABAF00285E56 /* 800_WARNING.mp3 */,
 				0DCE77C116CBABAF00285E56 /* 810_ENDING.mp3 */,
 			);
@@ -333,6 +345,10 @@
 				0DCE77DE16CBB7F600285E56 /* 100_NYUKAI.mp3 in Resources */,
 				0DCE77DF16CBB7F600285E56 /* 110_BIKKURI.mp3 in Resources */,
 				0DCE77E116CBB80F00285E56 /* 160_NEXT.mp3 in Resources */,
+				0DA6B85116CCEFA50006C390 /* 620_SHIBIRERU.mp3 in Resources */,
+				0DA6B85216CCEFA50006C390 /* 630_NAIYO.mp3 in Resources */,
+				0DA6B85616CD1B0F0006C390 /* icon_57.png in Resources */,
+				0DA6B85816CD1B130006C390 /* icon_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
