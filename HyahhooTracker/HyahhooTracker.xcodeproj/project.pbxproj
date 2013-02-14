@@ -16,10 +16,6 @@
 		0D1AD1CF16BFEBB600E6A5BE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1CE16BFEBB600E6A5BE /* Default.png */; };
 		0D1AD1D116BFEBB600E6A5BE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1D016BFEBB600E6A5BE /* Default@2x.png */; };
 		0D1AD1D316BFEBB600E6A5BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1D216BFEBB600E6A5BE /* Default-568h@2x.png */; };
-		0D1AD1D816BFEBB600E6A5BE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1D716BFEBB600E6A5BE /* first.png */; };
-		0D1AD1DA16BFEBB600E6A5BE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1D916BFEBB600E6A5BE /* first@2x.png */; };
-		0D1AD1DF16BFEBB600E6A5BE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1DE16BFEBB600E6A5BE /* second.png */; };
-		0D1AD1E116BFEBB600E6A5BE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1E016BFEBB600E6A5BE /* second@2x.png */; };
 		0D1AD1EF16BFEBB600E6A5BE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1AD1EE16BFEBB600E6A5BE /* SenTestingKit.framework */; };
 		0D1AD1F016BFEBB600E6A5BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1AD1BC16BFEBB600E6A5BE /* UIKit.framework */; };
 		0D1AD1F116BFEBB600E6A5BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1AD1BE16BFEBB600E6A5BE /* Foundation.framework */; };
@@ -60,10 +56,6 @@
 		0D1AD1CE16BFEBB600E6A5BE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0D1AD1D016BFEBB600E6A5BE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0D1AD1D216BFEBB600E6A5BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0D1AD1D716BFEBB600E6A5BE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		0D1AD1D916BFEBB600E6A5BE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		0D1AD1DE16BFEBB600E6A5BE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		0D1AD1E016BFEBB600E6A5BE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		0D1AD1ED16BFEBB600E6A5BE /* HyahhooTrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyahhooTrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1AD1EE16BFEBB600E6A5BE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0D1AD1F616BFEBB600E6A5BE /* HyahhooTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HyahhooTrackerTests-Info.plist"; sourceTree = "<group>"; };
@@ -147,10 +139,6 @@
 				0DD7675B16C2A705009E8B99 /* ViewController */,
 				0D1AD1CB16BFEBB600E6A5BE /* AppDelegate.h */,
 				0D1AD1CC16BFEBB600E6A5BE /* AppDelegate.m */,
-				0D1AD1D716BFEBB600E6A5BE /* first.png */,
-				0D1AD1D916BFEBB600E6A5BE /* first@2x.png */,
-				0D1AD1DE16BFEBB600E6A5BE /* second.png */,
-				0D1AD1E016BFEBB600E6A5BE /* second@2x.png */,
 				0D1AD1C316BFEBB600E6A5BE /* Supporting Files */,
 				0DEB7AB716C7FBBB00E2AA8A /* readme.txt */,
 			);
@@ -290,10 +278,6 @@
 				0D1AD1CF16BFEBB600E6A5BE /* Default.png in Resources */,
 				0D1AD1D116BFEBB600E6A5BE /* Default@2x.png in Resources */,
 				0D1AD1D316BFEBB600E6A5BE /* Default-568h@2x.png in Resources */,
-				0D1AD1D816BFEBB600E6A5BE /* first.png in Resources */,
-				0D1AD1DA16BFEBB600E6A5BE /* first@2x.png in Resources */,
-				0D1AD1DF16BFEBB600E6A5BE /* second.png in Resources */,
-				0D1AD1E116BFEBB600E6A5BE /* second@2x.png in Resources */,
 				0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */,
 				0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */,
 				0DEB7AB816C7FBBC00E2AA8A /* readme.txt in Resources */,
