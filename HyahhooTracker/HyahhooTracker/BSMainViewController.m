@@ -24,6 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.isPreFlop = YES;
     }
     return self;
 }
@@ -35,7 +36,7 @@
     // Do any additional setup after loading the view from its nib.
     // [self.tableView registerNib:[UINib nibWithNibName: bundle:nil] forCellReuseIdentifier:[BSMainTableCell reuseIdentifier]];
     self.scrollView.contentSize = self.tableView.frame.size;
-    NSLog(@"width = %f, height = %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
+    self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.tableView.frame.size.height);
     NSFetchRequest* request = [[NSFetchRequest alloc] initWithEntityName:@"BSPlayerData"];
     playerDatas = [self.managedObjectContext executeFetchRequest:request error:nil];
 }
@@ -81,12 +82,12 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return NO;
+    return YES;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return NO;
+    return YES;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
@@ -106,7 +107,6 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    
 }
 
 #pragma mark UITableViewDelegate
@@ -118,14 +118,37 @@
     return view;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellAccessoryNone;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
+
+#pragma mark ViewEvent
+   
 -(IBAction) moveToFlop
 {
+    self.isPreFlop = NO;
+    [self.tableView setEditing:NO];
+    self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 640, self.tableView.frame.size.height);
     [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
 }
 
 -(IBAction) moveToPreF
 {
+    self.isPreFlop = YES;
+    [self.tableView setEditing:NO];
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
+-(IBAction) toggleEdit
+{
+    if(self.isPreFlop) self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.tableView.frame.size.height);
+    [self.tableView setEditing:!self.tableView.isEditing];
 }
 
 @end

@@ -17,7 +17,10 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (nonatomic, assign) BOOL isPreFlop;
+
 -(IBAction) moveToFlop;
 -(IBAction) moveToPreF;
+-(IBAction) toggleEdit;
 
 @end
