@@ -47,6 +47,9 @@
 		0DA6B7FE16C9326A0006C390 /* image20.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B7E816C9326A0006C390 /* image20.JPG */; };
 		0DA6B7FF16C9326A0006C390 /* image21.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B7E916C9326A0006C390 /* image21.JPG */; };
 		0DA6B80016C9326A0006C390 /* image22.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B7EA16C9326A0006C390 /* image22.JPG */; };
+		0DCE77E416CCBBE800285E56 /* BSPhotoRelocateLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE77E316CCBBE800285E56 /* BSPhotoRelocateLogic.m */; };
+		0DCE77E816CCBE4800285E56 /* BSPhotoRelocateLogicPortraitState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE77E716CCBE4800285E56 /* BSPhotoRelocateLogicPortraitState.m */; };
+		0DCE77EB16CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE77EA16CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.m */; };
 		0DECE93916CB4BD400A8185E /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DECE93816CB4BD400A8185E /* icon114.png */; };
 		0DECE93B16CB4C1000A8185E /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DECE93A16CB4C1000A8185E /* icon57.png */; };
 		0DECE93D16CB4D9500A8185E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DECE93C16CB4D9500A8185E /* Default-568h@2x.png */; };
@@ -114,6 +117,13 @@
 		0DA6B7E816C9326A0006C390 /* image20.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image20.JPG; sourceTree = "<group>"; };
 		0DA6B7E916C9326A0006C390 /* image21.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image21.JPG; sourceTree = "<group>"; };
 		0DA6B7EA16C9326A0006C390 /* image22.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image22.JPG; sourceTree = "<group>"; };
+		0DCE77E216CCBBE800285E56 /* BSPhotoRelocateLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoRelocateLogic.h; sourceTree = "<group>"; };
+		0DCE77E316CCBBE800285E56 /* BSPhotoRelocateLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoRelocateLogic.m; sourceTree = "<group>"; };
+		0DCE77E516CCBE0F00285E56 /* BSPhotoRelocateLogicState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoRelocateLogicState.h; sourceTree = "<group>"; };
+		0DCE77E616CCBE4700285E56 /* BSPhotoRelocateLogicPortraitState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoRelocateLogicPortraitState.h; sourceTree = "<group>"; };
+		0DCE77E716CCBE4800285E56 /* BSPhotoRelocateLogicPortraitState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoRelocateLogicPortraitState.m; sourceTree = "<group>"; };
+		0DCE77E916CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPhotoRelocateLogicLandscapeState.h; sourceTree = "<group>"; };
+		0DCE77EA16CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPhotoRelocateLogicLandscapeState.m; sourceTree = "<group>"; };
 		0DECE93816CB4BD400A8185E /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114.png; path = ../icon114.png; sourceTree = "<group>"; };
 		0DECE93A16CB4C1000A8185E /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../icon57.png; sourceTree = "<group>"; };
 		0DECE93C16CB4D9500A8185E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -191,6 +201,13 @@
 				0DA6B7CD16C8FEAE0006C390 /* BSAssetLoader.m */,
 				0DA6B7CF16C904350006C390 /* BSPhotoMasker.h */,
 				0DA6B7D016C904350006C390 /* BSPhotoMasker.m */,
+				0DCE77E216CCBBE800285E56 /* BSPhotoRelocateLogic.h */,
+				0DCE77E316CCBBE800285E56 /* BSPhotoRelocateLogic.m */,
+				0DCE77E516CCBE0F00285E56 /* BSPhotoRelocateLogicState.h */,
+				0DCE77E616CCBE4700285E56 /* BSPhotoRelocateLogicPortraitState.h */,
+				0DCE77E716CCBE4800285E56 /* BSPhotoRelocateLogicPortraitState.m */,
+				0DCE77E916CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.h */,
+				0DCE77EA16CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.m */,
 			);
 			path = EternalBum;
 			sourceTree = "<group>";
@@ -412,6 +429,9 @@
 				0DA6B7CE16C8FEAE0006C390 /* BSAssetLoader.m in Sources */,
 				0DA6B7D116C904350006C390 /* BSPhotoMasker.m in Sources */,
 				0DA6B7D416C906B30006C390 /* BSMovingImageView.m in Sources */,
+				0DCE77E416CCBBE800285E56 /* BSPhotoRelocateLogic.m in Sources */,
+				0DCE77E816CCBE4800285E56 /* BSPhotoRelocateLogicPortraitState.m in Sources */,
+				0DCE77EB16CCBE7700285E56 /* BSPhotoRelocateLogicLandscapeState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

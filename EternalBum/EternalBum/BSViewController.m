@@ -48,6 +48,13 @@ static const int Y_MARGIN = 60;
     images = [[NSMutableArray alloc] initWithCapacity:22];
     for(int i = 1; i < 23; ++i)
         [images addObject:[NSString stringWithFormat:@"image%02d.JPG", i]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive)
+                                                 name:@"applicationDidBecomeActive" object:nil];
+}
+
+- (void)applicationDidBecomeActive {
+    [self.backView startMove];
 }
 
 - (void)accelerometer:(UIAccelerometer *)acel
@@ -119,10 +126,10 @@ static const int Y_MARGIN = 60;
     [UIView animateWithDuration:0.5 animations:^void{
         self.pictureUpView.transform = CGAffineTransformMakeRotation(0.0);
         self.pictureUpView.alpha = 0.2;
-        self.pictureUpView.frame = CGRectMake(150, self.backView.frame.size.height / 4, 20, 20);
+        self.pictureUpView.frame = CGRectMake(self.backView.frame.size.width * 3 / 4, self.backView.frame.size.height / 4, 20, 20);
         self.pictureDownView.transform = CGAffineTransformMakeRotation(0.0);
         self.pictureDownView.alpha = 0.3;
-        self.pictureDownView.frame = CGRectMake(150, self.backView.frame.size.height * 3 / 4, 20, 20);
+        self.pictureDownView.frame = CGRectMake(self.backView.frame.size.width * 1 / 4, self.backView.frame.size.height * 3 / 4, 20, 20);
     } completion:^(BOOL finished){
         [UIView animateWithDuration:0.5 animations:^void{
             [self relocatePictureView];
