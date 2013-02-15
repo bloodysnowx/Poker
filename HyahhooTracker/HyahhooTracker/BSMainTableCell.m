@@ -70,6 +70,8 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 -(IBAction)touchSeat:(id)sender
 {
     self.isEnabled = !self.isEnabled;
+    if(self.isEnabled == YES && [self.NameButton.titleLabel.text length] == 0)
+        [self touchName:sender];
 }
 
 -(IBAction)touchName:(id)sender
