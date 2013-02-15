@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BSMainTableCell.h"
 
-@interface BSMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
+@interface BSMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, BSMainTableCellDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView* tableView;
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;

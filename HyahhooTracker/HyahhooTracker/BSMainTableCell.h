@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSMainTableCell;
+
+@protocol BSMainTableCellDelegate <UIActionSheetDelegate>
+
+-(void)touchName:(BSMainTableCell*)sender;
+
+@end
+
 @interface BSMainTableCell : UITableViewCell
 {
 
@@ -15,8 +23,8 @@
 
 @property (nonatomic, retain) IBOutlet UIButton* SeatButton;
 @property (nonatomic, retain) IBOutlet UIButton* SeatButton2;
-@property (nonatomic, retain) IBOutlet UILabel* NameLabel;
-@property (nonatomic, retain) IBOutlet UILabel* NameLabel2;
+@property (nonatomic, retain) IBOutlet UIButton* NameButton;
+@property (nonatomic, retain) IBOutlet UIButton* NameButton2;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl2;
 @property (nonatomic, retain) IBOutlet UILabel* PFRLabel;
@@ -29,8 +37,10 @@
 @property (nonatomic, retain) IBOutlet UIView* HideView;
 
 -(IBAction)touchSeat:(id)sender;
+-(IBAction)touchName:(id)sender;
 
 @property (nonatomic, assign) BOOL isEnabled;
+@property (nonatomic, assign) id<BSMainTableCellDelegate> delegate;
 
 +(BSMainTableCell*)create;
 +(NSString*)reuseIdentifier;

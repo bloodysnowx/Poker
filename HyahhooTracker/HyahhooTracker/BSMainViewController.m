@@ -9,6 +9,7 @@
 #import "BSMainViewController.h"
 #import "BSMainTableCell.h"
 #import "BSPlayerData.h"
+#import "BSPlayerSelectViewController.h"
 
 @interface BSMainViewController ()
 {
@@ -67,6 +68,7 @@
     }
     // BSMainTableCell* cell = [self.tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     [cell setSeatNum:indexPath.row + 1];
+    cell.delegate = self;
     return cell;
 }
 
@@ -151,4 +153,12 @@
     [self.tableView setEditing:!self.tableView.isEditing];
 }
 
+#pragma mark BSMainTableCellDelegat
+
+-(void)touchName:(BSMainTableCell *)sender
+{
+    BSPlayerSelectViewController* viewController = [[BSPlayerSelectViewController alloc] initWithNibName:@"BSPlayerSelectViewController" bundle:nil];
+    [self presentModalViewController:viewController animated:YES];
+
+}
 @end

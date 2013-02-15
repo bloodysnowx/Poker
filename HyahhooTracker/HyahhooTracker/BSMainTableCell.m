@@ -33,6 +33,8 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     NSArray* ary = [[NSBundle mainBundle] loadNibNamed:@"BSMainTableCell" owner:nil options:nil];
     BSMainTableCell* cell = ary[0];
     cell.isEnabled = NO;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [cell setName:@""];
     return cell;
 }
 
@@ -54,16 +56,24 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 
 -(void)setSeatNum:(NSInteger)num
 {
-    self.SeatButton.titleLabel.text = self.SeatButton2.titleLabel.text = [NSString stringWithFormat:@"%02d", num];
+    NSString* title = [NSString stringWithFormat:@"%02d", num];
+    [self.SeatButton setTitle:title forState:UIControlStateNormal];
+    [self.SeatButton2 setTitle:title forState:UIControlStateNormal];
 }
 
 -(void)setName:(NSString*)name
 {
-    self.NameLabel.text = self.NameLabel2.text = name;
+    [self.NameButton setTitle:name forState:UIControlStateNormal];
+    [self.NameButton2 setTitle:name forState:UIControlStateNormal];
 }
 
 -(IBAction)touchSeat:(id)sender
 {
     self.isEnabled = !self.isEnabled;
+}
+
+-(IBAction)touchName:(id)sender
+{
+    [self.delegate touchName:self];
 }
 @end

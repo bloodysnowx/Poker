@@ -24,6 +24,8 @@
 		0D4355CD16CDB68100F091C7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CC16CDB68100F091C7 /* Icon.png */; };
 		0D4355CF16CDB68600F091C7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CE16CDB68600F091C7 /* Icon@2x.png */; };
 		0DA6B85416CD12900006C390 /* BSMainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */; };
+		0DB5B1C516CE7C5C00A80E3B /* BSPlayerSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5B1C316CE7C5C00A80E3B /* BSPlayerSelectViewController.m */; };
+		0DB5B1C616CE7C5C00A80E3B /* BSPlayerSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB5B1C416CE7C5C00A80E3B /* BSPlayerSelectViewController.xib */; };
 		0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7675D16C2A730009E8B99 /* BSMainViewController.m */; };
 		0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */; };
 		0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */; };
@@ -67,6 +69,9 @@
 		0D4355CC16CDB68100F091C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0D4355CE16CDB68600F091C7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableHeader.xib; sourceTree = "<group>"; };
+		0DB5B1C216CE7C5C00A80E3B /* BSPlayerSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlayerSelectViewController.h; sourceTree = "<group>"; };
+		0DB5B1C316CE7C5C00A80E3B /* BSPlayerSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlayerSelectViewController.m; sourceTree = "<group>"; };
+		0DB5B1C416CE7C5C00A80E3B /* BSPlayerSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPlayerSelectViewController.xib; sourceTree = "<group>"; };
 		0DD7675C16C2A730009E8B99 /* BSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainViewController.h; sourceTree = "<group>"; };
 		0DD7675D16C2A730009E8B99 /* BSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainViewController.m; sourceTree = "<group>"; };
 		0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +207,9 @@
 				0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */,
 				0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */,
 				0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */,
+				0DB5B1C216CE7C5C00A80E3B /* BSPlayerSelectViewController.h */,
+				0DB5B1C316CE7C5C00A80E3B /* BSPlayerSelectViewController.m */,
+				0DB5B1C416CE7C5C00A80E3B /* BSPlayerSelectViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 				0DA6B85416CD12900006C390 /* BSMainTableHeader.xib in Resources */,
 				0D4355CD16CDB68100F091C7 /* Icon.png in Resources */,
 				0D4355CF16CDB68600F091C7 /* Icon@2x.png in Resources */,
+				0DB5B1C616CE7C5C00A80E3B /* BSPlayerSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +347,7 @@
 				0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */,
 				0DEB7ABB16C803C000E2AA8A /* PlayerData.xcdatamodeld in Sources */,
 				0DEB7B1716C80C3E00E2AA8A /* BSPlayerData.m in Sources */,
+				0DB5B1C516CE7C5C00A80E3B /* BSPlayerSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
