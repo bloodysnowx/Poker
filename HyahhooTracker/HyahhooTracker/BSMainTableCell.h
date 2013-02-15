@@ -13,8 +13,8 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UILabel* SeatLabel;
-@property (nonatomic, retain) IBOutlet UILabel* SeatLabel2;
+@property (nonatomic, retain) IBOutlet UIButton* SeatButton;
+@property (nonatomic, retain) IBOutlet UIButton* SeatButton2;
 @property (nonatomic, retain) IBOutlet UILabel* NameLabel;
 @property (nonatomic, retain) IBOutlet UILabel* NameLabel2;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
@@ -26,10 +26,16 @@
 @property (nonatomic, retain) IBOutlet UILabel* CBLabel;
 @property (nonatomic, retain) IBOutlet UILabel* CBFLabel;
 @property (nonatomic, retain) IBOutlet UILabel* FlopAFLabel;
+@property (nonatomic, retain) IBOutlet UIView* HideView;
+
+-(IBAction)touchSeat:(id)sender;
+
+@property (nonatomic, assign) BOOL isEnabled;
 
 +(BSMainTableCell*)create;
 +(NSString*)reuseIdentifier;
 -(void)setSeatNum:(NSInteger)num;
 -(void)setName:(NSString*)name;
+
 
 @end

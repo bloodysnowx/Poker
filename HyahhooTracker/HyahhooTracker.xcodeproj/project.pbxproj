@@ -64,8 +64,8 @@
 		0D1AD1F816BFEBB600E6A5BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0D1AD1FA16BFEBB600E6A5BE /* HyahhooTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyahhooTrackerTests.h; sourceTree = "<group>"; };
 		0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HyahhooTrackerTests.m; sourceTree = "<group>"; };
-		0D4355CC16CDB68100F091C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0D4355CE16CDB68600F091C7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0D4355CC16CDB68100F091C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		0D4355CE16CDB68600F091C7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableHeader.xib; sourceTree = "<group>"; };
 		0DD7675C16C2A730009E8B99 /* BSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainViewController.h; sourceTree = "<group>"; };
 		0DD7675D16C2A730009E8B99 /* BSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainViewController.m; sourceTree = "<group>"; };
@@ -108,8 +108,6 @@
 		0D1AD1AD16BFEBB500E6A5BE = {
 			isa = PBXGroup;
 			children = (
-				0D4355CE16CDB68600F091C7 /* Icon@2x.png */,
-				0D4355CC16CDB68100F091C7 /* Icon.png */,
 				0D1AD1C216BFEBB600E6A5BE /* HyahhooTracker */,
 				0D1AD1F416BFEBB600E6A5BE /* HyahhooTrackerTests */,
 				0D1AD1BB16BFEBB600E6A5BE /* Frameworks */,
@@ -141,6 +139,7 @@
 		0D1AD1C216BFEBB600E6A5BE /* HyahhooTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0D4355D016CDB6D900F091C7 /* Resources */,
 				0DEB7B1116C806F800E2AA8A /* CoreData */,
 				0DD7675B16C2A705009E8B99 /* ViewController */,
 				0D1AD1CB16BFEBB600E6A5BE /* AppDelegate.h */,
@@ -182,6 +181,15 @@
 				0D1AD1F716BFEBB600E6A5BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0D4355D016CDB6D900F091C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D4355CC16CDB68100F091C7 /* Icon.png */,
+				0D4355CE16CDB68600F091C7 /* Icon@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		0DD7675B16C2A705009E8B99 /* ViewController */ = {

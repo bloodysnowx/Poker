@@ -32,7 +32,14 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 {
     NSArray* ary = [[NSBundle mainBundle] loadNibNamed:@"BSMainTableCell" owner:nil options:nil];
     BSMainTableCell* cell = ary[0];
+    cell.isEnabled = NO;
     return cell;
+}
+
+-(void)setIsEnabled:(BOOL)isEnabled
+{
+    _isEnabled = isEnabled;
+    self.HideView.alpha = isEnabled ? 0 : 0.5;
 }
 
 +(NSString*)reuseIdentifier {
@@ -47,11 +54,16 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 
 -(void)setSeatNum:(NSInteger)num
 {
-    self.SeatLabel.text = self.SeatLabel2.text = [NSString stringWithFormat:@"%02d", num];
+    self.SeatButton.titleLabel.text = self.SeatButton2.titleLabel.text = [NSString stringWithFormat:@"%02d", num];
 }
 
 -(void)setName:(NSString*)name
 {
     self.NameLabel.text = self.NameLabel2.text = name;
+}
+
+-(IBAction)touchSeat:(id)sender
+{
+    self.isEnabled = !self.isEnabled;
 }
 @end
