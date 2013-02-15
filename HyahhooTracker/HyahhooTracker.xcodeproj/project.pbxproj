@@ -21,6 +21,8 @@
 		0D1AD1F116BFEBB600E6A5BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1AD1BE16BFEBB600E6A5BE /* Foundation.framework */; };
 		0D1AD1F916BFEBB600E6A5BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D1AD1F716BFEBB600E6A5BE /* InfoPlist.strings */; };
 		0D1AD1FC16BFEBB600E6A5BE /* HyahhooTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */; };
+		0D4355CD16CDB68100F091C7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CC16CDB68100F091C7 /* Icon.png */; };
+		0D4355CF16CDB68600F091C7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CE16CDB68600F091C7 /* Icon@2x.png */; };
 		0DA6B85416CD12900006C390 /* BSMainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */; };
 		0DD7675F16C2A730009E8B99 /* BSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD7675D16C2A730009E8B99 /* BSMainViewController.m */; };
 		0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */; };
@@ -62,6 +64,8 @@
 		0D1AD1F816BFEBB600E6A5BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0D1AD1FA16BFEBB600E6A5BE /* HyahhooTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HyahhooTrackerTests.h; sourceTree = "<group>"; };
 		0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HyahhooTrackerTests.m; sourceTree = "<group>"; };
+		0D4355CC16CDB68100F091C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0D4355CE16CDB68600F091C7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableHeader.xib; sourceTree = "<group>"; };
 		0DD7675C16C2A730009E8B99 /* BSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainViewController.h; sourceTree = "<group>"; };
 		0DD7675D16C2A730009E8B99 /* BSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainViewController.m; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		0D1AD1AD16BFEBB500E6A5BE = {
 			isa = PBXGroup;
 			children = (
+				0D4355CE16CDB68600F091C7 /* Icon@2x.png */,
+				0D4355CC16CDB68100F091C7 /* Icon.png */,
 				0D1AD1C216BFEBB600E6A5BE /* HyahhooTracker */,
 				0D1AD1F416BFEBB600E6A5BE /* HyahhooTrackerTests */,
 				0D1AD1BB16BFEBB600E6A5BE /* Frameworks */,
@@ -282,6 +288,8 @@
 				0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */,
 				0DEB7AB816C7FBBC00E2AA8A /* readme.txt in Resources */,
 				0DA6B85416CD12900006C390 /* BSMainTableHeader.xib in Resources */,
+				0D4355CD16CDB68100F091C7 /* Icon.png in Resources */,
+				0D4355CF16CDB68600F091C7 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
