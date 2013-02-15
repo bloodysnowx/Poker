@@ -23,6 +23,17 @@
     return self;
 }
 
+- (id)initWithNibName:(NSString*)nibNameOrNil sender:(BSMainTableCell*)sender delegate:(id<BSPlayerSelectViewControllerDelegate>)delegate
+{
+    self = [self initWithNibName:nibNameOrNil bundle:nil];
+    if(self)
+    {
+        self.delegate = delegate;
+        self.sender = sender;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,7 +48,7 @@
 
 -(IBAction)addNewPlayer:(id)sender
 {
-    [self.delegate addNewPlayer:self.textField.text];
+    [self.delegate addNewPlayer:self.textField.text sender:self.sender];
 }
 -(IBAction)cancel:(id)sender
 {
@@ -46,6 +57,13 @@
 -(IBAction)loadPlayer:(id)sender
 {
     [self.delegate loadPlayer:nil];
+}
+
+#pragma mark UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

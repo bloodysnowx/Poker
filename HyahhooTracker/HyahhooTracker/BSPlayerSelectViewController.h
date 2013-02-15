@@ -7,19 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSMainTableCell.h"
 
 @protocol BSPlayerSelectViewControllerDelegate <NSObject>
 
--(void)addNewPlayer:(NSString*)name;
+-(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell*)sender;
 -(void)cancel;
 -(void)loadPlayer:(NSString*)name;
 
 @end
 
-@interface BSPlayerSelectViewController : UIViewController
+@interface BSPlayerSelectViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, assign) id<BSPlayerSelectViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField* textField;
+@property (nonatomic, assign) BSMainTableCell* sender;
+
+- (id)initWithNibName:(NSString*)nibNameOrNil sender:(BSMainTableCell*)sender delegate:(id<BSPlayerSelectViewControllerDelegate>)delegate;
 
 -(IBAction)addNewPlayer:(id)sender;
 -(IBAction)cancel:(id)sender;

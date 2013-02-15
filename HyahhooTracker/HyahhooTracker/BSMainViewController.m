@@ -156,17 +156,16 @@
 
 -(void)touchName:(BSMainTableCell *)sender
 {
-    BSPlayerSelectViewController* viewController = [[BSPlayerSelectViewController alloc] initWithNibName:@"BSPlayerSelectViewController" bundle:nil];
-    viewController.delegate = self;
+    BSPlayerSelectViewController* viewController = [[BSPlayerSelectViewController alloc] initWithNibName:@"BSPlayerSelectViewController" sender:sender delegate:self];
     [self presentModalViewController:viewController animated:YES];
-
 }
 
 #pragma mark BSPlayerSelectViewControllerDelegate
 
--(void)addNewPlayer:(NSString*)name
+-(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
-    
+    [sender setName:name];
+    [self dismissModalViewControllerAnimated:YES];
 }
 -(void)cancel
 {
