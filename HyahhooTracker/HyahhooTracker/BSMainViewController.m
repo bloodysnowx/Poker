@@ -9,7 +9,6 @@
 #import "BSMainViewController.h"
 #import "BSMainTableCell.h"
 #import "BSPlayerData.h"
-#import "BSPlayerSelectViewController.h"
 
 @interface BSMainViewController ()
 {
@@ -158,7 +157,24 @@
 -(void)touchName:(BSMainTableCell *)sender
 {
     BSPlayerSelectViewController* viewController = [[BSPlayerSelectViewController alloc] initWithNibName:@"BSPlayerSelectViewController" bundle:nil];
+    viewController.delegate = self;
     [self presentModalViewController:viewController animated:YES];
 
 }
+
+#pragma mark BSPlayerSelectViewControllerDelegate
+
+-(void)addNewPlayer:(NSString*)name
+{
+    
+}
+-(void)cancel
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+-(void)loadPlayer:(NSString*)name
+{
+    
+}
+
 @end

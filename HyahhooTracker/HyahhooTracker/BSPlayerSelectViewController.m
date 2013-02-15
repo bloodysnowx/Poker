@@ -35,4 +35,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)addNewPlayer:(id)sender
+{
+    [self.delegate addNewPlayer:self.textField.text];
+}
+-(IBAction)cancel:(id)sender
+{
+    [self.delegate cancel];
+}
+-(IBAction)loadPlayer:(id)sender
+{
+    [self.delegate loadPlayer:nil];
+}
+
 @end

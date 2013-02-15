@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BSPlayerSelectViewControllerDelegate <NSObject>
+
+-(void)addNewPlayer:(NSString*)name;
+-(void)cancel;
+-(void)loadPlayer:(NSString*)name;
+
+@end
+
 @interface BSPlayerSelectViewController : UIViewController
+
+@property (nonatomic, assign) id<BSPlayerSelectViewControllerDelegate> delegate;
+@property (nonatomic, retain) IBOutlet UITextField* textField;
+
+-(IBAction)addNewPlayer:(id)sender;
+-(IBAction)cancel:(id)sender;
+-(IBAction)loadPlayer:(id)sender;
 
 @end
