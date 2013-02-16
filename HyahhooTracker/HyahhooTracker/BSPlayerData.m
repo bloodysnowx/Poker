@@ -22,5 +22,6 @@
 @dynamic flopFoldtoCB;
 @dynamic flopCalltoCB;
 @dynamic flopRaisetoCB;
+@dynamic memo;
 
 @end

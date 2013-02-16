@@ -23,5 +23,6 @@
 @property (nonatomic, retain) NSNumber * flopFoldtoCB;
 @property (nonatomic, retain) NSNumber * flopCalltoCB;
 @property (nonatomic, retain) NSNumber * flopRaisetoCB;
+@property (nonatomic, retain) NSString * memo;
 
 @end
