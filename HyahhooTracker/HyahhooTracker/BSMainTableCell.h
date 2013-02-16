@@ -30,9 +30,9 @@
 @property (nonatomic, retain) IBOutlet UIButton* NameButton;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl;
 @property (nonatomic, retain) IBOutlet UISegmentedControl* actionControl2;
-@property (nonatomic, retain) IBOutlet UILabel* PFRLabel;
-@property (nonatomic, retain) IBOutlet UILabel* VPLabel;
-@property (nonatomic, retain) IBOutlet UILabel* ReraiseLabel;
+@property (nonatomic, retain) IBOutlet UIButton* PFRButton;
+@property (nonatomic, retain) IBOutlet UIButton* VPButton;
+@property (nonatomic, retain) IBOutlet UIButton* ReraiseButton;
 @property (nonatomic, retain) IBOutlet UILabel* PFAFLabel;
 @property (nonatomic, retain) IBOutlet UILabel* HandLabel;
 @property (nonatomic, retain) IBOutlet UILabel* CBLabel;
@@ -44,7 +44,9 @@
 
 -(IBAction)touchSeat:(id)sender;
 -(IBAction)touchName:(id)sender;
--(IBAction)delete;
+-(IBAction)showDeleteAlert;
+-(IBAction)memo;
+-(IBAction)showHandRange:(id)sender;
 
 @property (nonatomic, assign) BOOL isEnabled;
 @property (nonatomic, assign) id<BSMainTableCellDelegate> delegate;

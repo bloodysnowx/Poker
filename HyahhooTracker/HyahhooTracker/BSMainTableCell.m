@@ -70,9 +70,9 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 -(void)reset
 {
     [self.NameButton setTitle:@"" forState:UIControlStateNormal];
-    self.PFRLabel.text = @"";
-    self.VPLabel.text = @"";
-    self.ReraiseLabel.text = @"";
+    [self.PFRButton setTitle:@"" forState:UIControlStateNormal];
+    [self.VPButton setTitle:@"" forState:UIControlStateNormal];
+    [self.ReraiseButton setTitle:@"" forState:UIControlStateNormal];
     self.HandLabel.text = @"";
 }
 
@@ -80,13 +80,13 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 {
     [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
     if([self.data.handCount integerValue] == 0) return;
-    self.PFRLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
-    self.VPLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]];
-    self.ReraiseLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
+    [self.PFRButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
+    [self.VPButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
+    [self.ReraiseButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
     self.HandLabel.text = [NSString stringWithFormat:@"%03d", [self.data.handCount integerValue]];
 }
 
--(IBAction)delete
+-(IBAction)showDeleteAlert
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"確認" message:@"削除してもよろしいですか？" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
     [alert show];
