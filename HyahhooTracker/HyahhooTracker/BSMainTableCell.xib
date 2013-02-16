@@ -83,7 +83,7 @@
 								<string key="NSFrame">{{325, 9}, {20, 21}}</string>
 								<reference key="NSSuperview" ref="25264323"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="1003547395"/>
+								<reference key="NSNextKeyView" ref="992454669"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -108,26 +108,6 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<string key="IBUINormalTitle">Name</string>
-								<reference key="IBUIHighlightedTitleColor" ref="1026076352"/>
-								<reference key="IBUINormalTitleColor" ref="378636418"/>
-								<reference key="IBUINormalTitleShadowColor" ref="764876147"/>
-								<reference key="IBUIFontDescription" ref="46831411"/>
-								<reference key="IBUIFont" ref="799698475"/>
-							</object>
-							<object class="IBUIButton" id="1003547395">
-								<reference key="NSNextResponder" ref="25264323"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{345, 9}, {70, 21}}</string>
-								<reference key="NSSuperview" ref="25264323"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="992454669"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<int key="IBUIContentHorizontalAlignment">0</int>
-								<int key="IBUIContentVerticalAlignment">0</int>
-								<string key="IBUINormalTitle">Name</string>
 								<reference key="IBUIHighlightedTitleColor" ref="1026076352"/>
 								<reference key="IBUINormalTitleColor" ref="378636418"/>
 								<reference key="IBUINormalTitleShadowColor" ref="764876147"/>
@@ -280,7 +260,7 @@
 							<object class="IBUISegmentedControl" id="992454669">
 								<reference key="NSNextResponder" ref="25264323"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{415, 5}, {125, 30}}</string>
+								<string key="NSFrame">{{345, 5}, {155, 30}}</string>
 								<reference key="NSSuperview" ref="25264323"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="21086896"/>
@@ -288,15 +268,17 @@
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBSegmentControlStyle">2</int>
-								<int key="IBNumberOfSegments">4</int>
-								<int key="IBSelectedSegmentIndex">3</int>
+								<int key="IBNumberOfSegments">5</int>
+								<int key="IBSelectedSegmentIndex">4</int>
 								<array key="IBSegmentTitles">
 									<string>CB</string>
 									<string>NCB</string>
 									<string>CBC</string>
 									<string>CBF</string>
+									<string>none</string>
 								</array>
 								<array class="NSMutableArray" key="IBSegmentWidths">
+									<real value="0.0"/>
 									<real value="0.0"/>
 									<real value="0.0"/>
 									<real value="0.0"/>
@@ -307,14 +289,17 @@
 									<boolean value="YES"/>
 									<boolean value="YES"/>
 									<boolean value="YES"/>
+									<boolean value="YES"/>
 								</array>
 								<array class="NSMutableArray" key="IBSegmentContentOffsets">
 									<string>{0, 0}</string>
 									<string>{0, 0}</string>
 									<string>{0, 0}</string>
 									<string>{0, 0}</string>
+									<string>{0, 0}</string>
 								</array>
 								<array class="NSMutableArray" key="IBSegmentImages">
+									<reference ref="4"/>
 									<reference ref="4"/>
 									<reference ref="4"/>
 									<reference ref="4"/>
@@ -540,14 +525,6 @@
 					<int key="connectionID">147</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">NameButton2</string>
-						<reference key="source" ref="836434226"/>
-						<reference key="destination" ref="1003547395"/>
-					</object>
-					<int key="connectionID">148</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">touchSeat:</string>
 						<reference key="source" ref="205371184"/>
@@ -573,15 +550,6 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">149</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">touchName:</string>
-						<reference key="source" ref="1003547395"/>
-						<reference key="destination" ref="836434226"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">150</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -619,7 +587,6 @@
 							<reference ref="205371184"/>
 							<reference ref="795306112"/>
 							<reference ref="53554550"/>
-							<reference ref="1003547395"/>
 							<reference ref="634299967"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -693,11 +660,7 @@
 						<int key="objectID">138</int>
 						<reference key="object" ref="53554550"/>
 						<reference key="parent" ref="836434226"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">140</int>
-						<reference key="object" ref="1003547395"/>
-						<reference key="parent" ref="836434226"/>
+						<string key="objectName">Name Button</string>
 					</object>
 				</array>
 			</object>
@@ -718,8 +681,6 @@
 				<real value="0.0" key="133.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="138.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="0.0" key="138.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
-				<string key="140.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="0.0" key="140.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="27.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<integer value="3" key="27.IUISegmentedControlInspectorSelectedSegmentMetadataKey"/>
 				<string key="3.CustomClassName">BSMainTableCell</string>
@@ -760,7 +721,6 @@
 						<string key="FlopAFLabel">UILabel</string>
 						<string key="HideView">UIView</string>
 						<string key="NameButton">UIButton</string>
-						<string key="NameButton2">UIButton</string>
 						<string key="PFAFLabel">UILabel</string>
 						<string key="PFRLabel">UILabel</string>
 						<string key="ReraiseLabel">UILabel</string>
@@ -789,10 +749,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="NameButton">
 							<string key="name">NameButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="NameButton2">
-							<string key="name">NameButton2</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="PFAFLabel">
@@ -837,35 +793,40 @@
 					<string key="className">BSMainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="moveToFlop">id</string>
-						<string key="moveToPreF">id</string>
+						<string key="moveToFlop:">id</string>
+						<string key="moveToPreF:">id</string>
 						<string key="toggleEdit">id</string>
-						<string key="touchName:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="moveToFlop">
-							<string key="name">moveToFlop</string>
+						<object class="IBActionInfo" key="moveToFlop:">
+							<string key="name">moveToFlop:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="moveToPreF">
-							<string key="name">moveToPreF</string>
+						<object class="IBActionInfo" key="moveToPreF:">
+							<string key="name">moveToPreF:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="toggleEdit">
 							<string key="name">toggleEdit</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="touchName:">
-							<string key="name">touchName:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="FlopButton">UIButton</string>
+						<string key="PFButton">UIButton</string>
 						<string key="cell">BSMainTableCell</string>
 						<string key="scrollView">UIScrollView</string>
 						<string key="tableView">UITableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="FlopButton">
+							<string key="name">FlopButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="PFButton">
+							<string key="name">PFButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="cell">
 							<string key="name">cell</string>
 							<string key="candidateClassName">BSMainTableCell</string>

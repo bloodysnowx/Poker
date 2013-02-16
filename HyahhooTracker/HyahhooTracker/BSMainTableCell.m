@@ -34,7 +34,6 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     BSMainTableCell* cell = ary[0];
     cell.isEnabled = NO;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell setName:@""];
     return cell;
 }
 
@@ -48,23 +47,11 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     return CELL_IDENTIFIER;
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [super touchesEnded:touches withEvent:event];
-    // [self sendActionsForControlEvents:UIControlEventTouchUpInside];
-}
-
 -(void)setSeatNum:(NSInteger)num
 {
     NSString* title = [NSString stringWithFormat:@"%02d", num];
     [self.SeatButton setTitle:title forState:UIControlStateNormal];
     [self.SeatButton2 setTitle:title forState:UIControlStateNormal];
-}
-
--(void)setName:(NSString*)name
-{
-    [self.NameButton setTitle:name forState:UIControlStateNormal];
-    [self.NameButton2 setTitle:name forState:UIControlStateNormal];
 }
 
 -(IBAction)touchSeat:(id)sender
@@ -77,5 +64,14 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 -(IBAction)touchName:(id)sender
 {
     [self.delegate touchName:self];
+}
+
+-(void)reloadData
+{
+    [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
+    if([self.data.handCount integerValue] == 0) return;
+    self.PFRLabel.text = [NSString stringWithFormat:@"%03d", ([self.data.pfRaiseCount integerValue] + [self.data.pfReRaiseCount integerValue]) * 100 / [self.data.handCount integerValue]];
+    self.VPLabel.text = [NSString stringWithFormat:@"%03d", ([self.data.pfRaiseCount integerValue] + [self.data.pfCallCount integerValue] + [self.data.pfReRaiseCount integerValue]) * 100 / [self.data.handCount integerValue]];
+    self.ReraiseLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
 }
 @end
