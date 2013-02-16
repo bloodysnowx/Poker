@@ -12,8 +12,8 @@
 @protocol BSPlayerSelectViewControllerDelegate <NSObject>
 
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell*)sender;
--(void)cancel;
--(void)loadPlayer:(NSString*)name;
+-(void)cancel:(BSMainTableCell *)sender;
+-(void)loadPlayer:(NSString*)name sender:(BSMainTableCell *)sender;
 
 @end
 

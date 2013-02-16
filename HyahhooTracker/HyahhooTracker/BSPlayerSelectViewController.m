@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.textField setText:self.sender.NameButton.titleLabel.text];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,15 +49,16 @@
 
 -(IBAction)addNewPlayer:(id)sender
 {
+    if([self.textField.text length] < 1) return;
     [self.delegate addNewPlayer:self.textField.text sender:self.sender];
 }
 -(IBAction)cancel:(id)sender
 {
-    [self.delegate cancel];
+    [self.delegate cancel:self.sender];
 }
 -(IBAction)loadPlayer:(id)sender
 {
-    [self.delegate loadPlayer:nil];
+    [self.delegate loadPlayer:nil sender:self.sender];
 }
 
 #pragma mark UITextFieldDelegate
