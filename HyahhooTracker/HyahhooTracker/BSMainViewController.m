@@ -245,6 +245,13 @@ static const int SEAT_NUM = 10;
     [self presentModalViewController:viewController animated:YES];
 }
 
+-(void)deleteData:(BSMainTableCell*)sender
+{
+    [playerNames removeObject:sender.data.name];
+    [self.managedObjectContext deleteObject:sender.data];
+    sender.data = nil;
+}
+
 #pragma mark BSPlayerSelectViewControllerDelegate
 
 -(void)exitPlayerSelectView:(BSMainTableCell *)sender;

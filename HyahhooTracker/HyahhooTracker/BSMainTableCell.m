@@ -66,6 +66,15 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [self.delegate touchName:self];
 }
 
+-(void)reset
+{
+    [self.NameButton setTitle:@"" forState:UIControlStateNormal];
+    self.PFRLabel.text = @"";
+    self.VPLabel.text = @"";
+    self.ReraiseLabel.text = @"";
+    self.HandLabel.text = @"";
+}
+
 -(void)reloadData
 {
     [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
@@ -74,5 +83,29 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     self.VPLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]];
     self.ReraiseLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
     self.HandLabel.text = [NSString stringWithFormat:@"%03d", [self.data.handCount integerValue]];
+}
+
+-(IBAction)delete
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"確認" message:@"削除してもよろしいですか？" delegate:self cancelButtonTitle:@"いいえ" otherButtonTitles:@"はい", nil];
+    [alert show];
+}
+
+-(IBAction)memo
+{
+    
+}
+
+-(void)deleteData
+{
+    [self.delegate deleteData:self];
+    [self reset];
+}
+
+#pragma mark UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1) [self deleteData];
 }
 @end

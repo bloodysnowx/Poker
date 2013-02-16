@@ -11,15 +11,16 @@
 
 @class BSMainTableCell;
 
-@protocol BSMainTableCellDelegate <UIActionSheetDelegate>
+@protocol BSMainTableCellDelegate <UIActionSheetDelegate, UIAlertViewDelegate>
 
 -(void)touchName:(BSMainTableCell*)sender;
+-(void)deleteData:(BSMainTableCell*)sender;
 
 @end
 
 @interface BSMainTableCell : UITableViewCell
 {
-
+    
 }
 
 @property (nonatomic, retain) IBOutlet UIButton* SeatButton;
@@ -41,6 +42,7 @@
 
 -(IBAction)touchSeat:(id)sender;
 -(IBAction)touchName:(id)sender;
+-(IBAction)delete;
 
 @property (nonatomic, assign) BOOL isEnabled;
 @property (nonatomic, assign) id<BSMainTableCellDelegate> delegate;
