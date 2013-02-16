@@ -16,7 +16,7 @@ static const int SEAT_NUM = 10;
 
 @interface BSMainViewController ()
 {
-    NSArray* playerDatas;
+    NSMutableArray* playerNames;
     NSFetchRequest *fetchRequest;
 }
 
@@ -40,7 +40,10 @@ static const int SEAT_NUM = 10;
     self.scrollView.contentSize = self.tableView.frame.size;
     self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.tableView.frame.size.height);
     fetchRequest = [self createRequest];
-    // playerDatas = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSArray* playerDatas = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    playerNames = [[NSMutableArray alloc] initWithCapacity:[playerDatas count]];
+    for(BSPlayerData* data in playerDatas)
+        [playerNames addObject:data.name];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -250,23 +253,41 @@ static const int SEAT_NUM = 10;
     if([sender.NameButton.titleLabel.text length] < 1) [sender setIsEnabled:NO];
 }
 
+-(BOOL)isLoaded:(NSString*)name
+{
+    for(int i = 0; i < SEAT_NUM; ++i)
+    {
+        NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+        BSMainTableCell* cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:index];
+        if([name isEqualToString:cell.NameButton.titleLabel.text]) return YES;
+    }
+    return NO;
+}
+
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
+    if([self isLoaded:name]) return;
     sender.data = [self selectByName:name];
     if(sender.data == nil) {
         sender.data = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME inManagedObjectContext:self.managedObjectContext];
         sender.data.name = name;
+        [playerNames addObject:name];
     }
     [sender reloadData];
     [self exitPlayerSelectView:sender];
 }
+
 -(void)cancel:(BSMainTableCell *)sender
 {
     [self exitPlayerSelectView:sender];
 }
+
 -(void)loadPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
-    
+    if([self isLoaded:name]) return;
+    sender.data = [self selectByName:name];
+    [sender reloadData];
+    [self exitPlayerSelectView:sender];
 }
 
 #pragma mark core data

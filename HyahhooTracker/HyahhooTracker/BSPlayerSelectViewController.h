@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BSMainTableCell.h"
 
-@protocol BSPlayerSelectViewControllerDelegate <NSObject>
+@protocol BSPlayerSelectViewControllerDelegate <UIPickerViewDelegate, UIPickerViewDataSource>
 
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell*)sender;
 -(void)cancel:(BSMainTableCell *)sender;
