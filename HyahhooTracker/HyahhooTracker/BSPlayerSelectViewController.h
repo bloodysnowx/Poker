@@ -13,7 +13,7 @@
 
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell*)sender;
 -(void)cancel:(BSMainTableCell *)sender;
--(void)loadPlayer:(NSString*)name sender:(BSMainTableCell *)sender;
+-(void)loadPlayer:(NSInteger)number sender:(BSMainTableCell *)sender;
 
 @end
 
@@ -22,6 +22,7 @@
 @property (nonatomic, assign) id<BSPlayerSelectViewControllerDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITextField* textField;
 @property (nonatomic, assign) BSMainTableCell* sender;
+@property (nonatomic, retain) IBOutlet UIPickerView* playerNamePicker;
 
 - (id)initWithNibName:(NSString*)nibNameOrNil sender:(BSMainTableCell*)sender delegate:(id<BSPlayerSelectViewControllerDelegate>)delegate;
 

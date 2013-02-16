@@ -39,6 +39,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.textField setText:self.sender.NameButton.titleLabel.text];
+    self.playerNamePicker.delegate = self.delegate;
+    self.playerNamePicker.dataSource = self.delegate;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +60,7 @@
 }
 -(IBAction)loadPlayer:(id)sender
 {
-    [self.delegate loadPlayer:nil sender:self.sender];
+    [self.delegate loadPlayer:[self.playerNamePicker selectedRowInComponent:0] sender:self.sender];
 }
 
 #pragma mark UITextFieldDelegate

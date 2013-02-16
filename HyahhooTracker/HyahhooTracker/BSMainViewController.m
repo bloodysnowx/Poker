@@ -282,8 +282,9 @@ static const int SEAT_NUM = 10;
     [self exitPlayerSelectView:sender];
 }
 
--(void)loadPlayer:(NSString*)name sender:(BSMainTableCell *)sender
+-(void)loadPlayer:(NSInteger)number sender:(BSMainTableCell *)sender
 {
+    NSString* name = playerNames[number];
     if([self isLoaded:name]) return;
     sender.data = [self selectByName:name];
     [sender reloadData];
@@ -310,6 +311,22 @@ static const int SEAT_NUM = 10;
     if ([moArray count] == 0) return nil;
     BSPlayerData* playerData = moArray[0];
     return playerData;
+}
+
+#pragma mark UIPickerViewDelegate
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView
+{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [playerNames count];
+}
+
+-(NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return playerNames[row];
 }
 
 #undef ENTITY_NAME
