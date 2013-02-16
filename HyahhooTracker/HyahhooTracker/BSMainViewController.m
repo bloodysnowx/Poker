@@ -10,9 +10,14 @@
 #import "BSMainTableCell.h"
 #import "BSPlayerData.h"
 
+static const int SEAT_NUM = 10;
+#define ENTITY_NAME @"BSPlayerData"
+#define ENTITY_PKEY @"name"
+
 @interface BSMainViewController ()
 {
     NSArray* playerDatas;
+    NSFetchRequest *fetchRequest;
 }
 
 @end
@@ -31,14 +36,11 @@
 
 - (void)viewDidLoad
 {
-    // BSPlayerData* playerData = [NSEntityDescription insertNewObjectForEntityForName:@"BSPlayerData" inManagedObjectContext:self.managedObjectContext];
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    // [self.tableView registerNib:[UINib nibWithNibName: bundle:nil] forCellReuseIdentifier:[BSMainTableCell reuseIdentifier]];
     self.scrollView.contentSize = self.tableView.frame.size;
     self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.tableView.frame.size.height);
-    NSFetchRequest* request = [[NSFetchRequest alloc] initWithEntityName:@"BSPlayerData"];
-    playerDatas = [self.managedObjectContext executeFetchRequest:request error:nil];
+    fetchRequest = [self createRequest];
+    // playerDatas = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -62,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return SEAT_NUM;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,24 +121,24 @@
 
 - (void)resetSeatNums
 {
-    for(int i = 0; i < 10; ++i)
+    for(int i = 0; i < SEAT_NUM; ++i)
     {
         NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
-        BSMainTableCell* cell = [self.tableView cellForRowAtIndexPath:index];
+        BSMainTableCell* cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:index];
         [cell setSeatNum:i + 1];
     }
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    BSMainTableCell* cell = [self.tableView cellForRowAtIndexPath:sourceIndexPath];
+    BSMainTableCell* cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:sourceIndexPath];
     [cell setSeatNum:destinationIndexPath.row + 1];
     if(sourceIndexPath.row < destinationIndexPath.row)
     {
         for(int i = sourceIndexPath.row + 1; i <= destinationIndexPath.row; ++i)
         {
             NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
-            cell = [self.tableView cellForRowAtIndexPath:index];
+            cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:index];
             [cell setSeatNum:i];
         }
     }
@@ -145,7 +147,7 @@
         for(int i = destinationIndexPath.row; i < sourceIndexPath.row; ++i)
         {
             NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
-            cell = [self.tableView cellForRowAtIndexPath:index];
+            cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:index];
             [cell setSeatNum:i + 2];
         }
     }
@@ -207,6 +209,31 @@
     [self.tableView setEditing:!self.tableView.isEditing];
 }
 
+-(IBAction) nextHand
+{
+    for(int i = 0; i < SEAT_NUM; ++i)
+    {
+        NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+        BSMainTableCell* cell = (BSMainTableCell*)[self.tableView cellForRowAtIndexPath:index];
+        if(cell.isEnabled)
+        {
+            switch (cell.actionControl.selectedSegmentIndex) {
+                case 0:
+                    cell.data.pfReRaiseCount = [NSNumber numberWithInteger:[cell.data.pfReRaiseCount integerValue] + 1];
+                case 1:
+                    cell.data.pfRaiseCount = [NSNumber numberWithInteger:[cell.data.pfRaiseCount integerValue] + 1];
+                case 2:
+                    cell.data.pfCallCount = [NSNumber numberWithInteger:[cell.data.pfCallCount integerValue] + 1];
+                default:
+                    cell.data.handCount = [NSNumber numberWithInteger:[cell.data.handCount integerValue] + 1];
+                    break;
+            }
+            cell.actionControl.selectedSegmentIndex = 3;
+            [cell reloadData];
+        }
+    }
+}
+
 #pragma mark BSMainTableCellDelegat
 
 -(void)touchName:(BSMainTableCell *)sender
@@ -225,8 +252,11 @@
 
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
-    sender.data = [NSEntityDescription insertNewObjectForEntityForName:@"BSPlayerData" inManagedObjectContext:self.managedObjectContext];
-    sender.data.name = name;
+    sender.data = [self selectByName:name];
+    if(sender.data == nil) {
+        sender.data = [NSEntityDescription insertNewObjectForEntityForName:ENTITY_NAME inManagedObjectContext:self.managedObjectContext];
+        sender.data.name = name;
+    }
     [sender reloadData];
     [self exitPlayerSelectView:sender];
 }
@@ -238,5 +268,29 @@
 {
     
 }
+
+#pragma mark core data
+
+-(NSFetchRequest*)createRequest
+{
+    NSFetchRequest* request = [[NSFetchRequest alloc] initWithEntityName:ENTITY_NAME];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:ENTITY_PKEY ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    return request;
+}
+
+-(BSPlayerData*)selectByName:(NSString*)name
+{
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name = %@", name];
+    [fetchRequest setPredicate:pred];
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    if (![fetchedResultsController performFetch:nil]) return nil;
+    NSArray *moArray = [fetchedResultsController fetchedObjects];
+    if ([moArray count] == 0) return nil;
+    BSPlayerData* playerData = moArray[0];
+    return playerData;
+}
+
+#undef ENTITY_NAME
 
 @end

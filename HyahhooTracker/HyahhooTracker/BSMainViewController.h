@@ -25,5 +25,6 @@
 -(IBAction) moveToFlop:(id)sender;
 -(IBAction) moveToPreF:(id)sender;
 -(IBAction) toggleEdit;
+-(IBAction) nextHand;
 
 @end

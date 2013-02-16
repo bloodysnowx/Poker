@@ -281,6 +281,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">nextHand</string>
+						<reference key="source" ref="783492800"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">95</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">moveToPreF:</string>
 						<reference key="source" ref="822633939"/>
 						<reference key="destination" ref="372490531"/>
@@ -382,7 +391,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">93</int>
+			<int key="maxID">95</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -409,7 +418,6 @@
 						<string key="FlopAFLabel">UILabel</string>
 						<string key="HideView">UIView</string>
 						<string key="NameButton">UIButton</string>
-						<string key="NameButton2">UIButton</string>
 						<string key="PFAFLabel">UILabel</string>
 						<string key="PFRLabel">UILabel</string>
 						<string key="ReraiseLabel">UILabel</string>
@@ -438,10 +446,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="NameButton">
 							<string key="name">NameButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="NameButton2">
-							<string key="name">NameButton2</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="PFAFLabel">
@@ -488,6 +492,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="moveToFlop:">id</string>
 						<string key="moveToPreF:">id</string>
+						<string key="nextHand">id</string>
 						<string key="toggleEdit">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -497,6 +502,10 @@
 						</object>
 						<object class="IBActionInfo" key="moveToPreF:">
 							<string key="name">moveToPreF:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="nextHand">
+							<string key="name">nextHand</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="toggleEdit">
