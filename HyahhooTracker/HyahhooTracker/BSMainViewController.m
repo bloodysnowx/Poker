@@ -252,6 +252,12 @@ static const int SEAT_NUM = 10;
     sender.data = nil;
 }
 
+-(void)memo:(BSMainTableCell*)sender
+{
+    BSPlayerStatsViewController* viewController = [[BSPlayerStatsViewController alloc] initWithNibName:@"BSPlayerStatsViewController" sender:sender delegate:self];
+    [self presentModalViewController:viewController animated:YES];
+}
+
 #pragma mark BSPlayerSelectViewControllerDelegate
 
 -(void)exitPlayerSelectView:(BSMainTableCell *)sender;
@@ -334,6 +340,24 @@ static const int SEAT_NUM = 10;
 -(NSString*)pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return playerNames[row];
+}
+
+#pragma mark BSPlayerStatsViewControllerDelegate
+
+-(void)exitPlayerStatsView:(BSMainTableCell *)sender;
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void)replaceMemo:(NSString*)memo sender:(BSMainTableCell*)sender
+{
+    sender.data.memo = memo;
+    [self exitPlayerStatsView:sender];
+}
+
+-(void)cancelMemo:(BSMainTableCell *)sender
+{
+    [self exitPlayerStatsView:sender];
 }
 
 #undef ENTITY_NAME

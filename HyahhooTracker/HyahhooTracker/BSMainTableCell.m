@@ -8,6 +8,7 @@
 
 #import "BSMainTableCell.h"
 
+
 @implementation BSMainTableCell
 
 static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
@@ -93,7 +94,7 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 
 -(IBAction)memo
 {
-    
+    [self.delegate memo:self];
 }
 
 -(void)deleteData

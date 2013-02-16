@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BSPlayerData.h"
+#import "BSPlayerStatsViewController.h"
 
 @class BSMainTableCell;
 
@@ -15,6 +16,7 @@
 
 -(void)touchName:(BSMainTableCell*)sender;
 -(void)deleteData:(BSMainTableCell*)sender;
+-(void)memo:(BSMainTableCell*)sender;
 
 @end
 

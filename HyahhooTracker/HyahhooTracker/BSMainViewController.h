@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BSMainTableCell.h"
 #import "BSPlayerSelectViewController.h"
+#import "BSPlayerStatsViewController.h"
 
-@interface BSMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, BSMainTableCellDelegate, BSPlayerSelectViewControllerDelegate>
+@interface BSMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, BSMainTableCellDelegate, BSPlayerSelectViewControllerDelegate, BSPlayerStatsViewControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView* tableView;
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
