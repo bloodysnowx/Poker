@@ -41,6 +41,17 @@
     playerDatas = [self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // [self resetSeatNums];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -66,8 +77,8 @@
         cell = [BSMainTableCell create];
     }
     // BSMainTableCell* cell = [self.tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
-    [cell setSeatNum:indexPath.row + 1];
     cell.delegate = self;
+    [cell setSeatNum:indexPath.row + 1];
     return cell;
 }
 
@@ -106,8 +117,38 @@
     
 }
 
+- (void)resetSeatNums
+{
+    for(int i = 0; i < 10; ++i)
+    {
+        NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+        BSMainTableCell* cell = [self.tableView cellForRowAtIndexPath:index];
+        [cell setSeatNum:i + 1];
+    }
+}
+
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
+    BSMainTableCell* cell = [self.tableView cellForRowAtIndexPath:sourceIndexPath];
+    [cell setSeatNum:destinationIndexPath.row + 1];
+    if(sourceIndexPath.row < destinationIndexPath.row)
+    {
+        for(int i = sourceIndexPath.row + 1; i <= destinationIndexPath.row; ++i)
+        {
+            NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+            cell = [self.tableView cellForRowAtIndexPath:index];
+            [cell setSeatNum:i];
+        }
+    }
+    else if(sourceIndexPath.row > destinationIndexPath.row)
+    {
+        for(int i = destinationIndexPath.row; i < sourceIndexPath.row; ++i)
+        {
+            NSIndexPath* index = [NSIndexPath indexPathForItem:i inSection:0];
+            cell = [self.tableView cellForRowAtIndexPath:index];
+            [cell setSeatNum:i + 2];
+        }
+    }
 }
 
 #pragma mark UITableViewDelegate
@@ -130,8 +171,22 @@
 }
 
 #pragma mark ViewEvent
-   
--(IBAction) moveToFlop
+
+-(void)highlightButton
+{
+    self.PFButton.highlighted = self.isPreFlop;
+    self.FlopButton.highlighted = !self.isPreFlop;
+    self.PFButton.enabled = !self.isPreFlop;
+    self.FlopButton.enabled = self.isPreFlop;
+}
+
+-(void)setIsPreFlop:(BOOL)isPreFlop
+{
+    [self performSelector:@selector(highlightButton) withObject:nil afterDelay:0.0];
+    _isPreFlop = isPreFlop;
+}
+
+-(IBAction) moveToFlop:(id)sender
 {
     self.isPreFlop = NO;
     [self.tableView setEditing:NO];
@@ -139,7 +194,7 @@
     [self.scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
 }
 
--(IBAction) moveToPreF
+-(IBAction) moveToPreF:(id)sender
 {
     self.isPreFlop = YES;
     [self.tableView setEditing:NO];
@@ -162,16 +217,24 @@
 
 #pragma mark BSPlayerSelectViewControllerDelegate
 
+-(void)exitPlayerSelectView:(BSMainTableCell *)sender;
+{
+    [self dismissModalViewControllerAnimated:YES];
+    if([sender.NameButton.titleLabel.text length] < 1) [sender setIsEnabled:NO];
+}
+
 -(void)addNewPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
-    [sender setName:name];
-    [self dismissModalViewControllerAnimated:YES];
+    sender.data = [NSEntityDescription insertNewObjectForEntityForName:@"BSPlayerData" inManagedObjectContext:self.managedObjectContext];
+    sender.data.name = name;
+    [sender reloadData];
+    [self exitPlayerSelectView:sender];
 }
--(void)cancel
+-(void)cancel:(BSMainTableCell *)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self exitPlayerSelectView:sender];
 }
--(void)loadPlayer:(NSString*)name
+-(void)loadPlayer:(NSString*)name sender:(BSMainTableCell *)sender
 {
     
 }

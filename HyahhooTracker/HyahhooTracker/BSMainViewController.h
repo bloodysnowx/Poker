@@ -17,11 +17,13 @@
 @property (nonatomic, retain) IBOutlet BSMainTableCell* cell;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) IBOutlet UIButton* PFButton;
+@property (nonatomic, retain) IBOutlet UIButton* FlopButton;
 
 @property (nonatomic, assign) BOOL isPreFlop;
 
--(IBAction) moveToFlop;
--(IBAction) moveToPreF;
+-(IBAction) moveToFlop:(id)sender;
+-(IBAction) moveToPreF:(id)sender;
 -(IBAction) toggleEdit;
 
 @end

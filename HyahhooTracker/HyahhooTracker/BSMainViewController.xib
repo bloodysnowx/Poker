@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">11G63</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1138.51</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">2083</string>
@@ -240,6 +240,22 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">FlopButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="412476510"/>
+					</object>
+					<int key="connectionID">89</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">PFButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="822633939"/>
+					</object>
+					<int key="connectionID">90</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
 						<reference key="source" ref="210809392"/>
 						<reference key="destination" ref="372490531"/>
@@ -256,21 +272,21 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">moveToFlop</string>
+						<string key="label">moveToFlop:</string>
 						<reference key="source" ref="412476510"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">85</int>
+					<int key="connectionID">93</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">moveToPreF</string>
+						<string key="label">moveToPreF:</string>
 						<reference key="source" ref="822633939"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">86</int>
+					<int key="connectionID">91</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -366,35 +382,39 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">88</int>
+			<int key="maxID">93</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">BSMainTableCell</string>
 					<string key="superclassName">UITableViewCell</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">pushedActionControl:</string>
-						<string key="NS.object.0">UISegmentedControl</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">pushedActionControl:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">pushedActionControl:</string>
-							<string key="candidateClassName">UISegmentedControl</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="touchName:">id</string>
+						<string key="touchSeat:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="touchName:">
+							<string key="name">touchName:</string>
+							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="touchSeat:">
+							<string key="name">touchSeat:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="CBFLabel">UILabel</string>
 						<string key="CBLabel">UILabel</string>
 						<string key="FlopAFLabel">UILabel</string>
-						<string key="NameLabel">UILabel</string>
-						<string key="NameLabel2">UILabel</string>
+						<string key="HideView">UIView</string>
+						<string key="NameButton">UIButton</string>
+						<string key="NameButton2">UIButton</string>
 						<string key="PFAFLabel">UILabel</string>
 						<string key="PFRLabel">UILabel</string>
 						<string key="ReraiseLabel">UILabel</string>
-						<string key="SeatLabel">UILabel</string>
-						<string key="SeatLabel2">UILabel</string>
+						<string key="SeatButton">UIButton</string>
+						<string key="SeatButton2">UIButton</string>
 						<string key="VPLabel">UILabel</string>
 						<string key="actionControl">UISegmentedControl</string>
 						<string key="actionControl2">UISegmentedControl</string>
@@ -412,13 +432,17 @@
 							<string key="name">FlopAFLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="NameLabel">
-							<string key="name">NameLabel</string>
-							<string key="candidateClassName">UILabel</string>
+						<object class="IBToOneOutletInfo" key="HideView">
+							<string key="name">HideView</string>
+							<string key="candidateClassName">UIView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="NameLabel2">
-							<string key="name">NameLabel2</string>
-							<string key="candidateClassName">UILabel</string>
+						<object class="IBToOneOutletInfo" key="NameButton">
+							<string key="name">NameButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="NameButton2">
+							<string key="name">NameButton2</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="PFAFLabel">
 							<string key="name">PFAFLabel</string>
@@ -432,13 +456,13 @@
 							<string key="name">ReraiseLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="SeatLabel">
-							<string key="name">SeatLabel</string>
-							<string key="candidateClassName">UILabel</string>
+						<object class="IBToOneOutletInfo" key="SeatButton">
+							<string key="name">SeatButton</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="SeatLabel2">
-							<string key="name">SeatLabel2</string>
-							<string key="candidateClassName">UILabel</string>
+						<object class="IBToOneOutletInfo" key="SeatButton2">
+							<string key="name">SeatButton2</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="VPLabel">
 							<string key="name">VPLabel</string>
@@ -462,17 +486,17 @@
 					<string key="className">BSMainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="moveToFlop">id</string>
-						<string key="moveToPreF">id</string>
+						<string key="moveToFlop:">id</string>
+						<string key="moveToPreF:">id</string>
 						<string key="toggleEdit">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="moveToFlop">
-							<string key="name">moveToFlop</string>
+						<object class="IBActionInfo" key="moveToFlop:">
+							<string key="name">moveToFlop:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="moveToPreF">
-							<string key="name">moveToPreF</string>
+						<object class="IBActionInfo" key="moveToPreF:">
+							<string key="name">moveToPreF:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="toggleEdit">
@@ -481,11 +505,21 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="FlopButton">UIButton</string>
+						<string key="PFButton">UIButton</string>
 						<string key="cell">BSMainTableCell</string>
 						<string key="scrollView">UIScrollView</string>
 						<string key="tableView">UITableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="FlopButton">
+							<string key="name">FlopButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="PFButton">
+							<string key="name">PFButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="cell">
 							<string key="name">cell</string>
 							<string key="candidateClassName">BSMainTableCell</string>
