@@ -70,8 +70,9 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 {
     [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
     if([self.data.handCount integerValue] == 0) return;
-    self.PFRLabel.text = [NSString stringWithFormat:@"%03d", ([self.data.pfRaiseCount integerValue] + [self.data.pfReRaiseCount integerValue]) * 100 / [self.data.handCount integerValue]];
-    self.VPLabel.text = [NSString stringWithFormat:@"%03d", ([self.data.pfRaiseCount integerValue] + [self.data.pfCallCount integerValue] + [self.data.pfReRaiseCount integerValue]) * 100 / [self.data.handCount integerValue]];
+    self.PFRLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
+    self.VPLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]];
     self.ReraiseLabel.text = [NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]];
+    self.HandLabel.text = [NSString stringWithFormat:@"%03d", [self.data.handCount integerValue]];
 }
 @end

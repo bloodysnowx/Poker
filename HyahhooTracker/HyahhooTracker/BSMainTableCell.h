@@ -31,6 +31,7 @@
 @property (nonatomic, retain) IBOutlet UILabel* VPLabel;
 @property (nonatomic, retain) IBOutlet UILabel* ReraiseLabel;
 @property (nonatomic, retain) IBOutlet UILabel* PFAFLabel;
+@property (nonatomic, retain) IBOutlet UILabel* HandLabel;
 @property (nonatomic, retain) IBOutlet UILabel* CBLabel;
 @property (nonatomic, retain) IBOutlet UILabel* CBFLabel;
 @property (nonatomic, retain) IBOutlet UILabel* FlopAFLabel;
