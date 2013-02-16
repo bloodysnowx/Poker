@@ -46,7 +46,8 @@
 -(IBAction)touchName:(id)sender;
 -(IBAction)showDeleteAlert;
 -(IBAction)memo;
--(IBAction)showHandRange:(id)sender;
+-(IBAction)showHandRange:(UIButton*)sender;
+-(void)reset;
 
 @property (nonatomic, assign) BOOL isEnabled;
 @property (nonatomic, assign) id<BSMainTableCellDelegate> delegate;

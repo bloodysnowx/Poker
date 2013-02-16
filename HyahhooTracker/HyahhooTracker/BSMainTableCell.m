@@ -79,7 +79,11 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 -(void)reloadData
 {
     [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
-    if([self.data.handCount integerValue] == 0) return;
+    if([self.data.handCount integerValue] == 0)
+    {
+        [self reset];
+        return;
+    }
     [self.PFRButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
     [self.VPButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
     [self.ReraiseButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
@@ -101,6 +105,12 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
 {
     [self.delegate deleteData:self];
     [self reset];
+}
+
+-(IBAction)showHandRange:(UIButton*)sender
+{
+    int percent = [sender.titleLabel.text intValue];
+    NSLog(@"%d", percent);
 }
 
 #pragma mark UIAlertViewDelegate
