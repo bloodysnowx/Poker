@@ -47,5 +47,24 @@
     }
     return result;
 }
+-(int)getCB
+{
+    int result = 0;
+    if([self.flopCBChance intValue] > 0)
+        result = [self.flopCBCount intValue] * 100 / [self.flopCBChance intValue];
+    return result;
+}
+-(int)getFoldToCB
+{
+    int result = 0;
+    int count = ([self.flopFoldtoCB intValue] + [self.flopCalltoCB intValue]);
+    if(count > 0)
+        result = [self.flopFoldtoCB intValue] * 100 / count;
+    return result;
+}
+-(float)getFlopAF
+{
+    return 0.0;
+}
 
 @end

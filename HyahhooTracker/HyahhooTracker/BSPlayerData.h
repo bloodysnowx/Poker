@@ -29,6 +29,8 @@
 -(int)getPFR;
 -(int)getPF3B;
 -(float)getPFAF;
-
+-(int)getCB;
+-(int)getFoldToCB;
+-(float)getFlopAF;
 
 @end
