@@ -75,6 +75,9 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [self.ReraiseButton setTitle:@"" forState:UIControlStateNormal];
     [self.PFAFLabel setText:@""];
     self.HandLabel.text = @"";
+    [self.CBLabel setText:@""];
+    [self.CBFLabel setText:@""];
+    [self.FlopAFLabel setText:@""];
 }
 
 -(void)reloadData
@@ -91,6 +94,9 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [self.ReraiseButton setTitle:[NSString stringWithFormat:@"%03d", [self.data getPF3B]] forState:UIControlStateNormal];
     [self.PFAFLabel setText:[NSString stringWithFormat:@"%2.1f", [self.data getPFAF]]];
     self.HandLabel.text = [NSString stringWithFormat:@"%03d", [self.data.handCount integerValue]];
+    [self.CBLabel setText:[NSString stringWithFormat:@"%03d", [self.data getCB]]];
+    [self.CBFLabel setText:[NSString stringWithFormat:@"%03d", [self.data getFoldToCB]]];
+    [self.FlopAFLabel setText:@""];
 }
 
 -(IBAction)showDeleteAlert

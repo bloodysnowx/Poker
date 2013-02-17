@@ -235,7 +235,7 @@ static const int SEAT_NUM = 10;
             cell.actionControl.selectedSegmentIndex = 3;
             switch (cell.actionControl2.selectedSegmentIndex) {
                 case 0:
-                    cell.data.flopCBCount = [cell.data.handCount increment];
+                    cell.data.flopCBCount = [cell.data.flopCBCount increment];
                 case 1:
                     cell.data.flopCBChance = [cell.data.flopCBChance increment];
                     break;

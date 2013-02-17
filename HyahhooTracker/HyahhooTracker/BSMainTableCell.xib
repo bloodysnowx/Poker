@@ -352,36 +352,8 @@
 								<reference key="IBUIHighlightedColor" ref="1026076352"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUITextAlignment">1</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="440721977">
-									<int key="type">1</int>
-									<double key="pointSize">17</double>
-								</object>
-								<object class="NSFont" key="IBUIFont" id="99551510">
-									<string key="NSName">Helvetica</string>
-									<double key="NSSize">17</double>
-									<int key="NSfFlags">16</int>
-								</object>
-								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-							</object>
-							<object class="IBUILabel" id="158507768">
-								<reference key="NSNextResponder" ref="25264323"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{615, 9}, {28, 21}}</string>
-								<reference key="NSSuperview" ref="25264323"/>
-								<reference key="NSWindow"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIOpaque">NO</bool>
-								<bool key="IBUIClipsSubviews">YES</bool>
-								<int key="IBUIContentMode">7</int>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">AF</string>
-								<reference key="IBUITextColor" ref="904628862"/>
-								<reference key="IBUIHighlightedColor" ref="1026076352"/>
-								<int key="IBUIBaselineAdjustment">0</int>
-								<int key="IBUITextAlignment">1</int>
-								<reference key="IBUIFontDescription" ref="440721977"/>
-								<reference key="IBUIFont" ref="99551510"/>
+								<reference key="IBUIFontDescription" ref="501945239"/>
+								<reference key="IBUIFont" ref="539924483"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUILabel" id="997934620">
@@ -402,8 +374,29 @@
 								<reference key="IBUIHighlightedColor" ref="1026076352"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUITextAlignment">1</int>
-								<reference key="IBUIFontDescription" ref="440721977"/>
-								<reference key="IBUIFont" ref="99551510"/>
+								<reference key="IBUIFontDescription" ref="501945239"/>
+								<reference key="IBUIFont" ref="539924483"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+							</object>
+							<object class="IBUILabel" id="158507768">
+								<reference key="NSNextResponder" ref="25264323"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{615, 9}, {28, 21}}</string>
+								<reference key="NSSuperview" ref="25264323"/>
+								<reference key="NSWindow"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<string key="IBUIText">AF</string>
+								<reference key="IBUITextColor" ref="904628862"/>
+								<reference key="IBUIHighlightedColor" ref="1026076352"/>
+								<int key="IBUIBaselineAdjustment">0</int>
+								<int key="IBUITextAlignment">1</int>
+								<reference key="IBUIFontDescription" ref="501945239"/>
+								<reference key="IBUIFont" ref="539924483"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUIView" id="634299967">
@@ -706,7 +699,6 @@
 							<reference ref="992454669"/>
 							<reference ref="21086896"/>
 							<reference ref="158507768"/>
-							<reference ref="997934620"/>
 							<reference ref="205371184"/>
 							<reference ref="795306112"/>
 							<reference ref="53554550"/>
@@ -714,6 +706,7 @@
 							<reference ref="146644937"/>
 							<reference ref="18165156"/>
 							<reference ref="502429221"/>
+							<reference ref="997934620"/>
 							<reference ref="560697866"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -848,7 +841,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="memo">id</string>
 						<string key="showDeleteAlert">id</string>
-						<string key="showHandRange:">id</string>
+						<string key="showHandRange:">UIButton</string>
 						<string key="touchName:">id</string>
 						<string key="touchSeat:">id</string>
 					</dictionary>
@@ -863,7 +856,7 @@
 						</object>
 						<object class="IBActionInfo" key="showHandRange:">
 							<string key="name">showHandRange:</string>
-							<string key="candidateClassName">id</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBActionInfo" key="touchName:">
 							<string key="name">touchName:</string>
