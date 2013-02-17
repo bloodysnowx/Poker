@@ -25,4 +25,10 @@
 @property (nonatomic, retain) NSNumber * flopRaisetoCB;
 @property (nonatomic, retain) NSString * memo;
 
+-(int)getVPIP;
+-(int)getPFR;
+-(int)getPF3B;
+-(float)getPFAF;
+
+
 @end

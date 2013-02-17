@@ -73,6 +73,7 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
     [self.PFRButton setTitle:@"" forState:UIControlStateNormal];
     [self.VPButton setTitle:@"" forState:UIControlStateNormal];
     [self.ReraiseButton setTitle:@"" forState:UIControlStateNormal];
+    [self.PFAFLabel setText:@""];
     self.HandLabel.text = @"";
 }
 
@@ -85,9 +86,10 @@ static NSString * const CELL_IDENTIFIER = @"BSMainTableCell";
         return;
     }
     [self.NameButton setTitle:self.data.name forState:UIControlStateNormal];
-    [self.PFRButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
-    [self.VPButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfCallCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
-    [self.ReraiseButton setTitle:[NSString stringWithFormat:@"%03d", [self.data.pfReRaiseCount integerValue] * 100 / [self.data.handCount integerValue]] forState:UIControlStateNormal];
+    [self.PFRButton setTitle:[NSString stringWithFormat:@"%03d", [self.data getPFR]] forState:UIControlStateNormal];
+    [self.VPButton setTitle:[NSString stringWithFormat:@"%03d", [self.data getPFR]] forState:UIControlStateNormal];
+    [self.ReraiseButton setTitle:[NSString stringWithFormat:@"%03d", [self.data getPF3B]] forState:UIControlStateNormal];
+    [self.PFAFLabel setText:[NSString stringWithFormat:@"%2.1f", [self.data getPFAF]]];
     self.HandLabel.text = [NSString stringWithFormat:@"%03d", [self.data.handCount integerValue]];
 }
 

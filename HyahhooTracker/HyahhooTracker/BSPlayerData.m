@@ -24,4 +24,28 @@
 @dynamic flopRaisetoCB;
 @dynamic memo;
 
+-(int)getVPIP
+{
+    return [self.pfCallCount integerValue] * 100 / [self.handCount integerValue];
+}
+
+-(int)getPFR
+{
+    return [self.pfRaiseCount integerValue] * 100 / [self.handCount integerValue];
+}
+-(int)getPF3B
+{
+    return [self.pfReRaiseCount integerValue] * 100 / [self.handCount integerValue];
+}
+-(float)getPFAF
+{
+    float result = 9.9;
+    int callCount = [self.pfCallCount intValue] - [self.pfRaiseCount intValue];
+    if(callCount > 0)
+    {
+        result = MIN(result, [self.pfRaiseCount floatValue] / (float)callCount);
+    }
+    return result;
+}
+
 @end
