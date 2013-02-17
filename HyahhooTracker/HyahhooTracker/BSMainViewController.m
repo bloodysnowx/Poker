@@ -9,6 +9,7 @@
 #import "BSMainViewController.h"
 #import "BSMainTableCell.h"
 #import "BSPlayerData.h"
+#import "NSNumber+Increment.h"
 
 static const int SEAT_NUM = 10;
 #define ENTITY_NAME @"BSPlayerData"
@@ -222,16 +223,32 @@ static const int SEAT_NUM = 10;
         {
             switch (cell.actionControl.selectedSegmentIndex) {
                 case 0:
-                    cell.data.pfReRaiseCount = [NSNumber numberWithInteger:[cell.data.pfReRaiseCount integerValue] + 1];
+                    cell.data.pfReRaiseCount = [cell.data.pfReRaiseCount increment];
                 case 1:
-                    cell.data.pfRaiseCount = [NSNumber numberWithInteger:[cell.data.pfRaiseCount integerValue] + 1];
+                    cell.data.pfRaiseCount = [cell.data.pfRaiseCount increment];
                 case 2:
-                    cell.data.pfCallCount = [NSNumber numberWithInteger:[cell.data.pfCallCount integerValue] + 1];
+                    cell.data.pfCallCount = [cell.data.pfCallCount increment];
                 default:
-                    cell.data.handCount = [NSNumber numberWithInteger:[cell.data.handCount integerValue] + 1];
+                    cell.data.handCount = [cell.data.handCount increment];
                     break;
             }
             cell.actionControl.selectedSegmentIndex = 3;
+            switch (cell.actionControl2.selectedSegmentIndex) {
+                case 0:
+                    cell.data.flopCBCount = [cell.data.handCount increment];
+                case 1:
+                    cell.data.flopCBChance = [cell.data.flopCBChance increment];
+                    break;
+                case 2:
+                    cell.data.flopCalltoCB = [cell.data.flopCalltoCB increment];
+                    break;
+                case 3:
+                    cell.data.flopFoldtoCB = [cell.data.flopFoldtoCB increment];
+                    break;
+                default:
+                    break;
+            }
+            cell.actionControl2.selectedSegmentIndex = 4;
             [cell reloadData];
         }
     }
