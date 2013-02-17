@@ -30,6 +30,7 @@
 		0DD7676016C2A730009E8B99 /* BSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD7675E16C2A730009E8B99 /* BSMainViewController.xib */; };
 		0DD924D016D029470087AF93 /* BSPlayerStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924CE16D029470087AF93 /* BSPlayerStatsViewController.m */; };
 		0DD924D116D029470087AF93 /* BSPlayerStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD924CF16D029470087AF93 /* BSPlayerStatsViewController.xib */; };
+		0DD924D416D11C140087AF93 /* HandRangeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD924D316D11C140087AF93 /* HandRangeCalculator.m */; };
 		0DEB7AAA16C2AF8E00E2AA8A /* BSMainTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */; };
 		0DEB7AAD16C2B0A400E2AA8A /* BSMainTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */; };
 		0DEB7AB816C7FBBC00E2AA8A /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB7AB716C7FBBB00E2AA8A /* readme.txt */; };
@@ -80,6 +81,8 @@
 		0DD924CD16D029470087AF93 /* BSPlayerStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlayerStatsViewController.h; sourceTree = "<group>"; };
 		0DD924CE16D029470087AF93 /* BSPlayerStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlayerStatsViewController.m; sourceTree = "<group>"; };
 		0DD924CF16D029470087AF93 /* BSPlayerStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPlayerStatsViewController.xib; sourceTree = "<group>"; };
+		0DD924D216D11C140087AF93 /* HandRangeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandRangeCalculator.h; sourceTree = "<group>"; };
+		0DD924D316D11C140087AF93 /* HandRangeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandRangeCalculator.m; sourceTree = "<group>"; };
 		0DEB7AA916C2AF8E00E2AA8A /* BSMainTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableCell.xib; sourceTree = "<group>"; };
 		0DEB7AAB16C2B0A300E2AA8A /* BSMainTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMainTableCell.h; sourceTree = "<group>"; };
 		0DEB7AAC16C2B0A400E2AA8A /* BSMainTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMainTableCell.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				0D1AD1CC16BFEBB600E6A5BE /* AppDelegate.m */,
 				0D1AD1C316BFEBB600E6A5BE /* Supporting Files */,
 				0DEB7AB716C7FBBB00E2AA8A /* readme.txt */,
+				0DD924D216D11C140087AF93 /* HandRangeCalculator.h */,
+				0DD924D316D11C140087AF93 /* HandRangeCalculator.m */,
 			);
 			path = HyahhooTracker;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				0DEB7B1716C80C3E00E2AA8A /* BSPlayerData.m in Sources */,
 				0DB5B1C516CE7C5C00A80E3B /* BSPlayerSelectViewController.m in Sources */,
 				0DD924D016D029470087AF93 /* BSPlayerStatsViewController.m in Sources */,
+				0DD924D416D11C140087AF93 /* HandRangeCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
