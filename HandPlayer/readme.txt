@@ -25,6 +25,5 @@ g. memo
 
 Action
 a. Player
-b. play(fold, check, call, bet, raise, muck, show)
+b. play(fold, check, call, bet, raise, muck, show, collect)
 c. chips
-d. willShow()
