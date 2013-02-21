@@ -1,0 +1,788 @@
+﻿PokerStars Zoom Hand #84306939033:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:24:37 JST [2012/08/05 7:24:37 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: Gausdal ($26.67 in chips) 
+Seat 2: Holzdorf13 ($35.27 in chips) 
+Seat 3: chiyuki ($25 in chips) 
+Seat 4: RomarioJa ($8.75 in chips) 
+Seat 5: funzlboy ($25.15 in chips) 
+Seat 6: Djay ($26.81 in chips) 
+Seat 7: K_Ilunga ($25 in chips) 
+Seat 8: shpritsz ($29.54 in chips) 
+Seat 9: johan75a ($33.58 in chips) 
+Holzdorf13: posts small blind $0.10
+chiyuki: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [3c 9c]
+RomarioJa: folds 
+funzlboy: folds 
+Djay: folds 
+K_Ilunga: raises $0.50 to $0.75
+shpritsz: folds 
+johan75a: folds 
+Gausdal: folds 
+Holzdorf13: folds 
+chiyuki: folds 
+Uncalled bet ($0.50) returned to K_Ilunga
+K_Ilunga collected $0.60 from pot
+K_Ilunga: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.60 | Rake $0 
+Seat 1: Gausdal (button) folded before Flop (didn't bet)
+Seat 2: Holzdorf13 (small blind) folded before Flop
+Seat 3: chiyuki (big blind) folded before Flop
+Seat 4: RomarioJa folded before Flop (didn't bet)
+Seat 5: funzlboy folded before Flop (didn't bet)
+Seat 6: Djay folded before Flop (didn't bet)
+Seat 7: K_Ilunga collected ($0.60)
+Seat 8: shpritsz folded before Flop (didn't bet)
+Seat 9: johan75a folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306949004:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:24:57 JST [2012/08/05 7:24:57 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: konst1978 ($45.18 in chips) 
+Seat 2: chiyuki ($24.75 in chips) 
+Seat 3: MuttleyInOz ($41.95 in chips) 
+Seat 4: AA PacMan AA ($17.97 in chips) 
+Seat 5: 21KH114U ($25.39 in chips) 
+Seat 6: magc45 ($25 in chips) 
+Seat 7: jodzsi0007 ($23.35 in chips) 
+Seat 8: magistr71 ($12.65 in chips) 
+Seat 9: Djay ($38.58 in chips) 
+chiyuki: posts small blind $0.10
+MuttleyInOz: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [Qs Jd]
+AA PacMan AA: folds 
+21KH114U: folds 
+magc45: folds 
+jodzsi0007: calls $0.25
+magistr71: folds 
+Djay: folds 
+konst1978: folds 
+chiyuki: calls $0.15
+MuttleyInOz: checks 
+*** FLOP *** [9s 9h As]
+chiyuki: checks 
+MuttleyInOz: checks 
+jodzsi0007: checks 
+*** TURN *** [9s 9h As] [Ac]
+chiyuki: checks 
+MuttleyInOz: checks 
+jodzsi0007: bets $0.50
+chiyuki: folds 
+MuttleyInOz: folds 
+Uncalled bet ($0.50) returned to jodzsi0007
+jodzsi0007 collected $0.72 from pot
+jodzsi0007: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.75 | Rake $0.03 
+Board [9s 9h As Ac]
+Seat 1: konst1978 (button) folded before Flop (didn't bet)
+Seat 2: chiyuki (small blind) folded on the Turn
+Seat 3: MuttleyInOz (big blind) folded on the Turn
+Seat 4: AA PacMan AA folded before Flop (didn't bet)
+Seat 5: 21KH114U folded before Flop (didn't bet)
+Seat 6: magc45 folded before Flop (didn't bet)
+Seat 7: jodzsi0007 collected ($0.72)
+Seat 8: magistr71 folded before Flop (didn't bet)
+Seat 9: Djay folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306980981:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:02 JST [2012/08/05 7:26:02 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: simonimus ($24.65 in chips) 
+Seat 2: EMmPl ($55.35 in chips) 
+Seat 3: Nos_VRN ($26.24 in chips) 
+Seat 4: Brownie1989 ($37.62 in chips) 
+Seat 5: tradu1 ($28.46 in chips) 
+Seat 6: 88Grushka88 ($12.50 in chips) 
+Seat 7: anogiata ($13.27 in chips) 
+Seat 8: chiyuki ($24.50 in chips) 
+Seat 9: risekuku468 ($31.77 in chips) 
+EMmPl: posts small blind $0.10
+Nos_VRN: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [8s Ah]
+Brownie1989: raises $0.50 to $0.75
+tradu1: folds 
+88Grushka88: folds 
+anogiata: folds 
+chiyuki: folds 
+risekuku468: folds 
+simonimus: folds 
+EMmPl: folds 
+Nos_VRN: folds 
+Uncalled bet ($0.50) returned to Brownie1989
+Brownie1989 collected $0.60 from pot
+Brownie1989: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.60 | Rake $0 
+Seat 1: simonimus (button) folded before Flop (didn't bet)
+Seat 2: EMmPl (small blind) folded before Flop
+Seat 3: Nos_VRN (big blind) folded before Flop
+Seat 4: Brownie1989 collected ($0.60)
+Seat 5: tradu1 folded before Flop (didn't bet)
+Seat 6: 88Grushka88 folded before Flop (didn't bet)
+Seat 7: anogiata folded before Flop (didn't bet)
+Seat 8: chiyuki folded before Flop (didn't bet)
+Seat 9: risekuku468 folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306976970:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:25:54 JST [2012/08/05 7:25:54 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: kylma ($39.97 in chips) 
+Seat 2: Lasutchik ($6.97 in chips) 
+Seat 3: K_Ilunga ($25.46 in chips) 
+Seat 4: Ashoka82 ($20.29 in chips) 
+Seat 5: robbyvanhees ($34.58 in chips) 
+Seat 6: Nils_ua ($12.81 in chips) 
+Seat 7: Soziopath ($28.42 in chips) 
+Seat 8: W's Waka4uka ($12.50 in chips) 
+Seat 9: chiyuki ($24.50 in chips) 
+Lasutchik: posts small blind $0.10
+K_Ilunga: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [3s 7s]
+Ashoka82: folds 
+robbyvanhees: folds 
+Nils_ua: folds 
+Soziopath: folds 
+W's Waka4uka: folds 
+chiyuki: folds 
+kylma: raises $0.37 to $0.62
+Lasutchik: folds 
+K_Ilunga: folds 
+Uncalled bet ($0.37) returned to kylma
+kylma collected $0.60 from pot
+kylma: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.60 | Rake $0 
+Seat 1: kylma (button) collected ($0.60)
+Seat 2: Lasutchik (small blind) folded before Flop
+Seat 3: K_Ilunga (big blind) folded before Flop
+Seat 4: Ashoka82 folded before Flop (didn't bet)
+Seat 5: robbyvanhees folded before Flop (didn't bet)
+Seat 6: Nils_ua folded before Flop (didn't bet)
+Seat 7: Soziopath folded before Flop (didn't bet)
+Seat 8: W's Waka4uka folded before Flop (didn't bet)
+Seat 9: chiyuki folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306979001:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:25:58 JST [2012/08/05 7:25:58 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: LondiniumXXX ($20.22 in chips) 
+Seat 2: Sharks_Nica ($33.19 in chips) 
+Seat 3: freeeric ($51.46 in chips) 
+Seat 4: ARDJ10 B ($15.66 in chips) 
+Seat 5: IvanBakh ($15.06 in chips) 
+Seat 6: chiyuki ($24.50 in chips) 
+Seat 7: 88Grushka88 ($12.50 in chips) 
+Seat 8: _predje448_ ($31.76 in chips) 
+Seat 9: eyesJeJa ($27.23 in chips) 
+Sharks_Nica: posts small blind $0.10
+freeeric: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [5h 3s]
+ARDJ10 B: folds 
+IvanBakh: folds 
+chiyuki: folds 
+88Grushka88: folds 
+_predje448_: folds 
+eyesJeJa: folds 
+LondiniumXXX: calls $0.25
+Sharks_Nica: raises $1 to $1.25
+freeeric: folds 
+LondiniumXXX: folds 
+Uncalled bet ($1) returned to Sharks_Nica
+Sharks_Nica collected $0.75 from pot
+Sharks_Nica: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.75 | Rake $0 
+Seat 1: LondiniumXXX (button) folded before Flop
+Seat 2: Sharks_Nica (small blind) collected ($0.75)
+Seat 3: freeeric (big blind) folded before Flop
+Seat 4: ARDJ10 B folded before Flop (didn't bet)
+Seat 5: IvanBakh folded before Flop (didn't bet)
+Seat 6: chiyuki folded before Flop (didn't bet)
+Seat 7: 88Grushka88 folded before Flop (didn't bet)
+Seat 8: _predje448_ folded before Flop (didn't bet)
+Seat 9: eyesJeJa folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306969400:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:25:38 JST [2012/08/05 7:25:38 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: chiyuki ($24.50 in chips) 
+Seat 2: mishaazaleea ($17.08 in chips) 
+Seat 3: playara18 ($27.32 in chips) 
+Seat 4: Sharks_Nica ($28.51 in chips) 
+Seat 5: aleksfred ($40.04 in chips) 
+Seat 6: tommek636 ($32.59 in chips) 
+Seat 7: tuvallo ($24.30 in chips) 
+Seat 8: johan75a ($32.49 in chips) 
+Seat 9: W's Waka4uka ($12.50 in chips) 
+mishaazaleea: posts small blind $0.10
+playara18: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [8c 7s]
+Sharks_Nica: folds 
+aleksfred: folds 
+tommek636: folds 
+tuvallo has timed out
+tuvallo: folds 
+johan75a: raises $0.50 to $0.75
+W's Waka4uka: folds 
+chiyuki: folds 
+mishaazaleea: folds 
+playara18: folds 
+Uncalled bet ($0.50) returned to johan75a
+johan75a collected $0.60 from pot
+johan75a: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.60 | Rake $0 
+Seat 1: chiyuki (button) folded before Flop (didn't bet)
+Seat 2: mishaazaleea (small blind) folded before Flop
+Seat 3: playara18 (big blind) folded before Flop
+Seat 4: Sharks_Nica folded before Flop (didn't bet)
+Seat 5: aleksfred folded before Flop (didn't bet)
+Seat 6: tommek636 folded before Flop (didn't bet)
+Seat 7: tuvallo folded before Flop (didn't bet)
+Seat 8: johan75a collected ($0.60)
+Seat 9: W's Waka4uka folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306985868:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:12 JST [2012/08/05 7:26:12 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: aleksfred ($27.82 in chips) 
+Seat 2: 88Grushka88 ($12.50 in chips) 
+Seat 3: chiyuki ($24.50 in chips) 
+Seat 4: EMmPl ($44.95 in chips) 
+Seat 5: kolua13 ($12.36 in chips) 
+Seat 6: ntgochujang ($61.82 in chips) 
+Seat 7: CERGEJ57 ($26.67 in chips) 
+Seat 8: Boeje2811 ($23.22 in chips) 
+Seat 9: MixaNiko ($14.41 in chips) 
+88Grushka88: posts small blind $0.10
+chiyuki: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [3d 6d]
+EMmPl: folds 
+kolua13: folds 
+ntgochujang: folds 
+CERGEJ57: folds 
+Boeje2811: folds 
+MixaNiko: raises $0.35 to $0.60
+aleksfred: folds 
+88Grushka88: folds 
+chiyuki: folds 
+Uncalled bet ($0.35) returned to MixaNiko
+MixaNiko collected $0.60 from pot
+MixaNiko: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.60 | Rake $0 
+Seat 1: aleksfred (button) folded before Flop (didn't bet)
+Seat 2: 88Grushka88 (small blind) folded before Flop
+Seat 3: chiyuki (big blind) folded before Flop
+Seat 4: EMmPl folded before Flop (didn't bet)
+Seat 5: kolua13 folded before Flop (didn't bet)
+Seat 6: ntgochujang folded before Flop (didn't bet)
+Seat 7: CERGEJ57 folded before Flop (didn't bet)
+Seat 8: Boeje2811 folded before Flop (didn't bet)
+Seat 9: MixaNiko collected ($0.60)
+
+
+
+PokerStars Zoom Hand #84306982451:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:05 JST [2012/08/05 7:26:05 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: venÕm ($25.85 in chips) 
+Seat 2: Djay ($26.06 in chips) 
+Seat 3: boubusfo ($18.53 in chips) 
+Seat 4: robbyvanhees ($34.58 in chips) 
+Seat 5: TimNowak ($13.63 in chips) 
+Seat 6: Kozyavkin ($44.11 in chips) 
+Seat 7: chiyuki ($24.50 in chips) 
+Seat 8: _predje448_ ($31.76 in chips) 
+Seat 9: KeLevro0 ($7.90 in chips) 
+Djay: posts small blind $0.10
+boubusfo: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [Ah 3c]
+robbyvanhees: folds 
+TimNowak: folds 
+Kozyavkin: folds 
+chiyuki: folds 
+_predje448_: raises $0.75 to $1
+KeLevro0: folds 
+venÕm: calls $1
+Djay: folds 
+boubusfo: folds 
+*** FLOP *** [Ad Jh 3h]
+_predje448_: bets $0.75
+venÕm: calls $0.75
+*** TURN *** [Ad Jh 3h] [Kc]
+_predje448_: bets $1.50
+venÕm: raises $3.50 to $5
+_predje448_: folds 
+Uncalled bet ($3.50) returned to venÕm
+venÕm collected $6.54 from pot
+venÕm: doesn't show hand 
+*** SUMMARY ***
+Total pot $6.85 | Rake $0.31 
+Board [Ad Jh 3h Kc]
+Seat 1: venÕm (button) collected ($6.54)
+Seat 2: Djay (small blind) folded before Flop
+Seat 3: boubusfo (big blind) folded before Flop
+Seat 4: robbyvanhees folded before Flop (didn't bet)
+Seat 5: TimNowak folded before Flop (didn't bet)
+Seat 6: Kozyavkin folded before Flop (didn't bet)
+Seat 7: chiyuki folded before Flop (didn't bet)
+Seat 8: _predje448_ folded on the Turn
+Seat 9: KeLevro0 folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306983913:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:08 JST [2012/08/05 7:26:08 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: jodzsi0007 ($23.82 in chips) 
+Seat 2: AUGH-AUGH ($32.92 in chips) 
+Seat 3: K_Ilunga ($25.35 in chips) 
+Seat 4: chiyuki ($24.50 in chips) 
+Seat 5: Antipidorg ($12.50 in chips) 
+Seat 6: DayUdied ($14.32 in chips) 
+Seat 7: Sevill1989 ($44.17 in chips) 
+Seat 8: richvold ($21.03 in chips) 
+Seat 9: IvanBakh ($12.50 in chips) 
+AUGH-AUGH: posts small blind $0.10
+K_Ilunga: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [8h Ks]
+chiyuki: folds 
+Antipidorg: folds 
+DayUdied: calls $0.25
+Sevill1989: folds 
+richvold: folds 
+IvanBakh: folds 
+jodzsi0007: folds 
+AUGH-AUGH: folds 
+K_Ilunga: checks 
+*** FLOP *** [9d 9h 6h]
+K_Ilunga: checks 
+DayUdied: bets $0.50
+K_Ilunga: calls $0.50
+*** TURN *** [9d 9h 6h] [Td]
+K_Ilunga: checks 
+DayUdied: bets $1
+K_Ilunga: calls $1
+*** RIVER *** [9d 9h 6h Td] [Jd]
+K_Ilunga: checks 
+DayUdied: checks 
+*** SHOW DOWN ***
+K_Ilunga: shows [7d 7c] (two pair, Nines and Sevens)
+DayUdied: shows [Kc Qs] (a straight, Nine to King)
+DayUdied collected $3.44 from pot
+*** SUMMARY ***
+Total pot $3.60 | Rake $0.16 
+Board [9d 9h 6h Td Jd]
+Seat 1: jodzsi0007 (button) folded before Flop (didn't bet)
+Seat 2: AUGH-AUGH (small blind) folded before Flop
+Seat 3: K_Ilunga (big blind) showed [7d 7c] and lost with two pair, Nines and Sevens
+Seat 4: chiyuki folded before Flop (didn't bet)
+Seat 5: Antipidorg folded before Flop (didn't bet)
+Seat 6: DayUdied showed [Kc Qs] and won ($3.44) with a straight, Nine to King
+Seat 7: Sevill1989 folded before Flop (didn't bet)
+Seat 8: richvold folded before Flop (didn't bet)
+Seat 9: IvanBakh folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307002410:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:45 JST [2012/08/05 7:26:45 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: Kevikraze ($24.75 in chips) 
+Seat 2: tommek636 ($32.34 in chips) 
+Seat 3: simonimus ($24.65 in chips) 
+Seat 4: Immortar ($25 in chips) 
+Seat 5: chiyuki ($24.15 in chips) 
+Seat 6: playara18 ($34.33 in chips) 
+Seat 7: magc45 ($25 in chips) 
+Seat 8: Ganesh Kurup ($13.37 in chips) 
+Seat 9: eyesJeJa ($30.25 in chips) 
+tommek636: posts small blind $0.10
+simonimus: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [Ks 6d]
+Immortar: folds 
+chiyuki: folds 
+playara18: folds 
+magc45: folds 
+Ganesh Kurup: folds 
+eyesJeJa: folds 
+Kevikraze: folds 
+tommek636: raises $0.25 to $0.50
+simonimus: folds 
+Uncalled bet ($0.25) returned to tommek636
+tommek636 collected $0.50 from pot
+tommek636: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.50 | Rake $0 
+Seat 1: Kevikraze (button) folded before Flop (didn't bet)
+Seat 2: tommek636 (small blind) collected ($0.50)
+Seat 3: simonimus (big blind) folded before Flop
+Seat 4: Immortar folded before Flop (didn't bet)
+Seat 5: chiyuki folded before Flop (didn't bet)
+Seat 6: playara18 folded before Flop (didn't bet)
+Seat 7: magc45 folded before Flop (didn't bet)
+Seat 8: Ganesh Kurup folded before Flop (didn't bet)
+Seat 9: eyesJeJa folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307004405:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:49 JST [2012/08/05 7:26:49 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: chiyuki ($24.15 in chips) 
+Seat 2: aleksfred ($27.57 in chips) 
+Seat 3: Blondiface ($25 in chips) 
+Seat 4: gatoulis73 ($16.57 in chips) 
+Seat 5: StaceOP ($31.62 in chips) 
+Seat 6: ntgochujang ($33.75 in chips) 
+Seat 7: tecnicocosta ($37.52 in chips) 
+Seat 8: garegino ($28.61 in chips) 
+Seat 9: robbyvanhees ($25 in chips) 
+aleksfred: posts small blind $0.10
+Blondiface: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [2c Qd]
+gatoulis73: folds 
+StaceOP: folds 
+ntgochujang: folds 
+tecnicocosta: folds 
+garegino: raises $0.50 to $0.75
+robbyvanhees: folds 
+chiyuki: folds 
+aleksfred: calls $0.65
+Blondiface: folds 
+*** FLOP *** [7s 5d Ah]
+aleksfred: checks 
+garegino: bets $0.75
+aleksfred: folds 
+Uncalled bet ($0.75) returned to garegino
+garegino collected $1.67 from pot
+garegino: doesn't show hand 
+*** SUMMARY ***
+Total pot $1.75 | Rake $0.08 
+Board [7s 5d Ah]
+Seat 1: chiyuki (button) folded before Flop (didn't bet)
+Seat 2: aleksfred (small blind) folded on the Flop
+Seat 3: Blondiface (big blind) folded before Flop
+Seat 4: gatoulis73 folded before Flop (didn't bet)
+Seat 5: StaceOP folded before Flop (didn't bet)
+Seat 6: ntgochujang folded before Flop (didn't bet)
+Seat 7: tecnicocosta folded before Flop (didn't bet)
+Seat 8: garegino collected ($1.67)
+Seat 9: robbyvanhees folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307011593:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:27:04 JST [2012/08/05 7:27:04 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: eyesJeJa ($26.88 in chips) 
+Seat 2: johan1853 ($12.27 in chips) 
+Seat 3: StaceOP ($31.62 in chips) 
+Seat 4: kolua13 ($12.01 in chips) 
+Seat 5: chiyuki ($24.15 in chips) 
+Seat 6: TimNowak ($13.28 in chips) 
+Seat 7: Immortar ($25 in chips) 
+Seat 8: ImN0Shark ($25.11 in chips) 
+Seat 9: Brownie1989 ($23.62 in chips) 
+johan1853: posts small blind $0.10
+StaceOP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [4h 6s]
+kolua13: calls $0.25
+chiyuki: folds 
+TimNowak: folds 
+Immortar: folds 
+ImN0Shark: folds 
+Brownie1989: folds 
+eyesJeJa: calls $0.25
+johan1853: raises $1 to $1.25
+StaceOP: folds 
+kolua13: calls $1
+eyesJeJa: folds 
+*** FLOP *** [5d Kh 7h]
+johan1853: bets $1.25
+kolua13: folds 
+Uncalled bet ($1.25) returned to johan1853
+johan1853 collected $2.86 from pot
+johan1853: doesn't show hand 
+*** SUMMARY ***
+Total pot $3 | Rake $0.14 
+Board [5d Kh 7h]
+Seat 1: eyesJeJa (button) folded before Flop
+Seat 2: johan1853 (small blind) collected ($2.86)
+Seat 3: StaceOP (big blind) folded before Flop
+Seat 4: kolua13 folded on the Flop
+Seat 5: chiyuki folded before Flop (didn't bet)
+Seat 6: TimNowak folded before Flop (didn't bet)
+Seat 7: Immortar folded before Flop (didn't bet)
+Seat 8: ImN0Shark folded before Flop (didn't bet)
+Seat 9: Brownie1989 folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307009538:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:27:00 JST [2012/08/05 7:27:00 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: K_Ilunga ($25.11 in chips) 
+Seat 2: SemmiGold ($13.07 in chips) 
+Seat 3: Sharks_Nica ($47.74 in chips) 
+Seat 4: Silv1A ($25.08 in chips) 
+Seat 5: ImN0Shark ($25.11 in chips) 
+Seat 6: Djay ($40.13 in chips) 
+Seat 7: eyesJeJa ($30.25 in chips) 
+Seat 8: dinarishe1 ($9.32 in chips) 
+Seat 9: chiyuki ($24.15 in chips) 
+SemmiGold: posts small blind $0.10
+Sharks_Nica: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [Kd 3d]
+Silv1A: folds 
+ImN0Shark: folds 
+Djay: folds 
+eyesJeJa: folds 
+dinarishe1: folds 
+chiyuki: folds 
+K_Ilunga: folds 
+SemmiGold: raises $0.75 to $1
+Sharks_Nica: calls $0.75
+*** FLOP *** [2d 7c 7s]
+SemmiGold: checks 
+Sharks_Nica: bets $1.05
+SemmiGold: folds 
+Uncalled bet ($1.05) returned to Sharks_Nica
+Sharks_Nica collected $1.91 from pot
+Sharks_Nica: doesn't show hand 
+*** SUMMARY ***
+Total pot $2 | Rake $0.09 
+Board [2d 7c 7s]
+Seat 1: K_Ilunga (button) folded before Flop (didn't bet)
+Seat 2: SemmiGold (small blind) folded on the Flop
+Seat 3: Sharks_Nica (big blind) collected ($1.91)
+Seat 4: Silv1A folded before Flop (didn't bet)
+Seat 5: ImN0Shark folded before Flop (didn't bet)
+Seat 6: Djay folded before Flop (didn't bet)
+Seat 7: eyesJeJa folded before Flop (didn't bet)
+Seat 8: dinarishe1 folded before Flop (didn't bet)
+Seat 9: chiyuki folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307005914:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:53 JST [2012/08/05 7:26:53 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: xiaxia209 ($12.15 in chips) 
+Seat 2: ImN0Shark ($50.24 in chips) 
+Seat 3: Ashoka82 ($13.60 in chips) 
+Seat 4: chiyuki ($24.15 in chips) 
+Seat 5: Kickbacks ($12.55 in chips) 
+Seat 6: johan75a ($29.83 in chips) 
+Seat 7: Nos_VRN ($33.56 in chips) 
+Seat 8: RomarioJa ($12.50 in chips) 
+Seat 9: richvold ($20.93 in chips) 
+ImN0Shark: posts small blind $0.10
+Ashoka82: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [6s 8h]
+chiyuki: folds 
+Kickbacks: folds 
+johan75a: calls $0.25
+Nos_VRN: folds 
+RomarioJa: folds 
+richvold: folds 
+xiaxia209: folds 
+ImN0Shark: folds 
+Ashoka82: checks 
+*** FLOP *** [8s 6h Kh]
+Ashoka82: checks 
+johan75a: checks 
+*** TURN *** [8s 6h Kh] [Ts]
+Ashoka82: bets $0.75
+johan75a: calls $0.75
+*** RIVER *** [8s 6h Kh Ts] [Qc]
+Ashoka82: checks 
+johan75a: bets $0.75
+Ashoka82: calls $0.75
+*** SHOW DOWN ***
+johan75a: shows [Kd Ah] (a pair of Kings)
+Ashoka82: mucks hand 
+johan75a collected $3.44 from pot
+*** SUMMARY ***
+Total pot $3.60 | Rake $0.16 
+Board [8s 6h Kh Ts Qc]
+Seat 1: xiaxia209 (button) folded before Flop (didn't bet)
+Seat 2: ImN0Shark (small blind) folded before Flop
+Seat 3: Ashoka82 (big blind) mucked [Qh Jc]
+Seat 4: chiyuki folded before Flop (didn't bet)
+Seat 5: Kickbacks folded before Flop (didn't bet)
+Seat 6: johan75a showed [Kd Ah] and won ($3.44) with a pair of Kings
+Seat 7: Nos_VRN folded before Flop (didn't bet)
+Seat 8: RomarioJa folded before Flop (didn't bet)
+Seat 9: richvold folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307014117:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:27:09 JST [2012/08/05 7:27:09 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: Cupuyc921 ($27.85 in chips) 
+Seat 2: konst1978 ($45.72 in chips) 
+Seat 3: freeeric ($25.95 in chips) 
+Seat 4: rantertx ($30.20 in chips) 
+Seat 5: tradu1 ($27.61 in chips) 
+Seat 6: a_tasmanian ($67.15 in chips) 
+Seat 7: t1aon2 ($12.94 in chips) 
+Seat 8: chiyuki ($24.15 in chips) 
+Seat 9: venÕm ($45.15 in chips) 
+konst1978: posts small blind $0.10
+freeeric: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [Th Ts]
+rantertx: folds 
+tradu1: folds 
+a_tasmanian: folds 
+t1aon2: folds 
+chiyuki: raises $0.50 to $0.75
+venÕm: folds 
+Cupuyc921: folds 
+konst1978: calls $0.65
+freeeric: folds 
+*** FLOP *** [3c 3h Js]
+konst1978: checks 
+chiyuki: checks 
+*** TURN *** [3c 3h Js] [Qh]
+konst1978: bets $0.83
+chiyuki: calls $0.83
+*** RIVER *** [3c 3h Js Qh] [2h]
+konst1978: bets $0.75
+chiyuki: calls $0.75
+*** SHOW DOWN ***
+konst1978: shows [Ks Ac] (a pair of Threes)
+chiyuki: shows [Th Ts] (two pair, Tens and Threes)
+chiyuki collected $4.69 from pot
+*** SUMMARY ***
+Total pot $4.91 | Rake $0.22 
+Board [3c 3h Js Qh 2h]
+Seat 1: Cupuyc921 (button) folded before Flop (didn't bet)
+Seat 2: konst1978 (small blind) showed [Ks Ac] and lost with a pair of Threes
+Seat 3: freeeric (big blind) folded before Flop
+Seat 4: rantertx folded before Flop (didn't bet)
+Seat 5: tradu1 folded before Flop (didn't bet)
+Seat 6: a_tasmanian folded before Flop (didn't bet)
+Seat 7: t1aon2 folded before Flop (didn't bet)
+Seat 8: chiyuki showed [Th Ts] and won ($4.69) with two pair, Tens and Threes
+Seat 9: venÕm folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84306998396:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:26:37 JST [2012/08/05 7:26:37 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: RomarioJa ($12.15 in chips) 
+Seat 2: chiyuki ($24.25 in chips) 
+Seat 3: oh no JJ ($14.55 in chips) 
+Seat 4: johan75a ($32.84 in chips) 
+Seat 5: Nos_VRN ($33.56 in chips) 
+Seat 6: shpritsz ($26.06 in chips) 
+Seat 7: MixaNiko ($13.40 in chips) 
+Seat 8: YouFaiil ($25 in chips) 
+Seat 9: venÕm ($45.15 in chips) 
+chiyuki: posts small blind $0.10
+oh no JJ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [3d Td]
+johan75a: folds 
+Nos_VRN: folds 
+shpritsz: folds 
+MixaNiko: folds 
+YouFaiil: raises $0.50 to $0.75
+venÕm: folds 
+RomarioJa: raises $1.10 to $1.85
+chiyuki: folds 
+oh no JJ: folds 
+YouFaiil: calls $1.10
+*** FLOP *** [8d 3h Tc]
+YouFaiil: checks 
+RomarioJa: checks 
+*** TURN *** [8d 3h Tc] [4h]
+YouFaiil: bets $2.12
+RomarioJa: calls $2.12
+*** RIVER *** [8d 3h Tc 4h] [Ks]
+YouFaiil: bets $2.75
+RomarioJa: raises $5.43 to $8.18 and is all-in
+YouFaiil: calls $5.43
+*** SHOW DOWN ***
+RomarioJa: shows [3c Ac] (a pair of Threes)
+YouFaiil: shows [Jd Kd] (a pair of Kings)
+YouFaiil collected $23.54 from pot
+*** SUMMARY ***
+Total pot $24.65 | Rake $1.11 
+Board [8d 3h Tc 4h Ks]
+Seat 1: RomarioJa (button) showed [3c Ac] and lost with a pair of Threes
+Seat 2: chiyuki (small blind) folded before Flop
+Seat 3: oh no JJ (big blind) folded before Flop
+Seat 4: johan75a folded before Flop (didn't bet)
+Seat 5: Nos_VRN folded before Flop (didn't bet)
+Seat 6: shpritsz folded before Flop (didn't bet)
+Seat 7: MixaNiko folded before Flop (didn't bet)
+Seat 8: YouFaiil showed [Jd Kd] and won ($23.54) with a pair of Kings
+Seat 9: venÕm folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #84307037086:  Hold'em No Limit ($0.10/$0.25) - 2012/08/05 20:27:55 JST [2012/08/05 7:27:55 ET]
+Table 'Whirlpool' 9-max Seat #1 is the button
+Seat 1: MurMurRu ($25 in chips) 
+Seat 2: VetaDevado ($58.20 in chips) 
+Seat 3: Zosiaczek1 ($70.79 in chips) 
+Seat 4: Brownie1989 ($35.87 in chips) 
+Seat 5: freeeric ($25.60 in chips) 
+Seat 6: Silv1A ($27.57 in chips) 
+Seat 7: chiyuki ($26.51 in chips) 
+Seat 8: MixaNiko ($12.78 in chips) 
+Seat 9: johan75a ($31.52 in chips) 
+VetaDevado: posts small blind $0.10
+Zosiaczek1: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to chiyuki [2d 3d]
+Brownie1989: raises $0.50 to $0.75
+freeeric: folds 
+Silv1A: folds 
+chiyuki: folds 
+MixaNiko: folds 
+johan75a: folds 
+MurMurRu: folds 
+VetaDevado: calls $0.65
+Zosiaczek1: folds 
+*** FLOP *** [5h 4h 5s]
+VetaDevado: checks 
+Brownie1989: bets $1
+VetaDevado: folds 
+Uncalled bet ($1) returned to Brownie1989
+Brownie1989 collected $1.67 from pot
+Brownie1989: doesn't show hand 
+*** SUMMARY ***
+Total pot $1.75 | Rake $0.08 
+Board [5h 4h 5s]
+Seat 1: MurMurRu (button) folded before Flop (didn't bet)
+Seat 2: VetaDevado (small blind) folded on the Flop
+Seat 3: Zosiaczek1 (big blind) folded before Flop
+Seat 4: Brownie1989 collected ($1.67)
+Seat 5: freeeric folded before Flop (didn't bet)
+Seat 6: Silv1A folded before Flop (didn't bet)
+Seat 7: chiyuki folded before Flop (didn't bet)
+Seat 8: MixaNiko folded before Flop (didn't bet)
+Seat 9: johan75a folded before Flop (didn't bet)
+
+
+
