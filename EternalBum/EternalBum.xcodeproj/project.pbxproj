@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D14668F16C8A90F00162487 /* EternalBum */ = {
+		0D14668F16C8A90F00162487 /* eternalbum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D1466C816C8A91000162487 /* Build configuration list for PBXNativeTarget "EternalBum" */;
+			buildConfigurationList = 0D1466C816C8A91000162487 /* Build configuration list for PBXNativeTarget "eternalbum" */;
 			buildPhases = (
 				0D14668C16C8A90F00162487 /* Sources */,
 				0D14668D16C8A90F00162487 /* Frameworks */,
@@ -303,7 +303,7 @@
 			);
 			dependencies = (
 			);
-			name = EternalBum;
+			name = eternalbum;
 			productName = EternalBum;
 			productReference = 0D14669016C8A90F00162487 /* EternalBum.app */;
 			productType = "com.apple.product-type.application";
@@ -349,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D14668F16C8A90F00162487 /* EternalBum */,
+				0D14668F16C8A90F00162487 /* eternalbum */,
 				0D1466B516C8A91000162487 /* EternalBumTests */,
 			);
 		};
@@ -448,7 +448,7 @@
 /* Begin PBXTargetDependency section */
 		0D1466BC16C8A91000162487 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D14668F16C8A90F00162487 /* EternalBum */;
+			target = 0D14668F16C8A90F00162487 /* eternalbum */;
 			targetProxy = 0D1466BB16C8A91000162487 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -493,7 +493,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 淳史 岩佐 (V39DEWXK9P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 淳史 岩佐 (V39DEWXK9P)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -506,8 +507,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -524,17 +527,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: LIFE CODE Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LIFE CODE Inc.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Atsushi Iwasa";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Atsushi Iwasa";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "4D0861F4-32CD-4D85-A0FA-56052FC502FC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4D0861F4-32CD-4D85-A0FA-56052FC502FC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -608,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D1466C816C8A91000162487 /* Build configuration list for PBXNativeTarget "EternalBum" */ = {
+		0D1466C816C8A91000162487 /* Build configuration list for PBXNativeTarget "eternalbum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D1466C916C8A91000162487 /* Debug */,
