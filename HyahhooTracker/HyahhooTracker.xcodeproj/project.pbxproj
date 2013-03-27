@@ -23,6 +23,7 @@
 		0D1AD1FC16BFEBB600E6A5BE /* HyahhooTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */; };
 		0D4355CD16CDB68100F091C7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CC16CDB68100F091C7 /* Icon.png */; };
 		0D4355CF16CDB68600F091C7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D4355CE16CDB68600F091C7 /* Icon@2x.png */; };
+		0D932E2116F53C8300C01233 /* BSHandRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D932E2016F53C8300C01233 /* BSHandRange.m */; };
 		0DA6B85416CD12900006C390 /* BSMainTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */; };
 		0DB5B1C516CE7C5C00A80E3B /* BSPlayerSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5B1C316CE7C5C00A80E3B /* BSPlayerSelectViewController.m */; };
 		0DB5B1C616CE7C5C00A80E3B /* BSPlayerSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB5B1C416CE7C5C00A80E3B /* BSPlayerSelectViewController.xib */; };
@@ -72,6 +73,8 @@
 		0D1AD1FB16BFEBB600E6A5BE /* HyahhooTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HyahhooTrackerTests.m; sourceTree = "<group>"; };
 		0D4355CC16CDB68100F091C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0D4355CE16CDB68600F091C7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		0D932E1F16F53C8200C01233 /* BSHandRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSHandRange.h; sourceTree = "<group>"; };
+		0D932E2016F53C8300C01233 /* BSHandRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSHandRange.m; sourceTree = "<group>"; };
 		0DA6B85316CD12900006C390 /* BSMainTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSMainTableHeader.xib; sourceTree = "<group>"; };
 		0DB5B1C216CE7C5C00A80E3B /* BSPlayerSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlayerSelectViewController.h; sourceTree = "<group>"; };
 		0DB5B1C316CE7C5C00A80E3B /* BSPlayerSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlayerSelectViewController.m; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				0DD924D316D11C140087AF93 /* HandRangeCalculator.m */,
 				0DD924D516D11F210087AF93 /* NSNumber+Increment.h */,
 				0DD924D616D11F210087AF93 /* NSNumber+Increment.m */,
+				0D932E1F16F53C8200C01233 /* BSHandRange.h */,
+				0D932E2016F53C8300C01233 /* BSHandRange.m */,
 			);
 			path = HyahhooTracker;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				0DD924D016D029470087AF93 /* BSPlayerStatsViewController.m in Sources */,
 				0DD924D416D11C140087AF93 /* HandRangeCalculator.m in Sources */,
 				0DD924D716D11F210087AF93 /* NSNumber+Increment.m in Sources */,
+				0D932E2116F53C8300C01233 /* BSHandRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
