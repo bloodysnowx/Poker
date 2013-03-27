@@ -12,8 +12,9 @@ TableData
 - int MaxSeatNum
 - int BB
 - int SB
-- string Ante
-- hero_pos Structure
+- int Ante
+- int hero_pos
+- string Structure
 - string heroName
 - int[] seats
 - string[] positions
