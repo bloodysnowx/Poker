@@ -44,5 +44,9 @@ var TableData = {
         var count = 0;
         for(var i = 0; i < this.chips.length; ++i) if(this.chips[i] > 0) ++count;
         return count;
+    },
+    getIndexFromName:function(name) {
+        for(var i = 0; i < this.MaxSeatNum; ++i) if(name == this.playerNames[i]) return i;
+        return null;
     }
 };
