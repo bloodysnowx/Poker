@@ -120,9 +120,23 @@ TestCase("PSHandReaderTest", {
         assertEquals(false, result);
     },
     "test calcUncalledPayment true": function() {
-        var result = this.reader.calcUncalledPayment(this.tableData, "");
+        var result = this.reader.calcUncalledPayment(this.tableData, "Uncalled bet (350) returned to SLIMEE_11");
         assertEquals(true, result);
+        assertEquals([850, 500, 500, 500, 500, 500], this.tableData.chips);
+        assertEquals(-350, this.tableData.pot);
+    },
+
+    "test calcCollectPayment false": function() {
+        var result = this.reader.calcCollectPayment(this.tableData, "ElenaDenisov: folds");
+        assertEquals(false, result);
+    },
+    "test calcCollectPayment true": function() {
+        var result = this.reader.calcCollectPayment(this.tableData, "SLIMEE_11 collected 165 from pot");
+        assertEquals(true, result);
+        assertEquals([665, 500, 500, 500, 500, 500], this.tableData.chips);
+        assertEquals(-165, this.tableData.pot);
     }
+
 
 
 });

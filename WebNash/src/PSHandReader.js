@@ -37,9 +37,9 @@ var PSHandReader = {
         {
             if(hh[line + i + 1].match(/Seat¥s([0-9]+):¥s(.+)¥s¥(([0-9]+)¥sin¥schips¥)/))
             {
-                result.seats[i] = RegExp.$1;
+                result.seats[i] = parseInt(RegExp.$1);
                 result.playerNames[i] = RegExp.$2;
-                result.chips[i] = RegExp.$3;
+                result.chips[i] = parseInt(RegExp.$3);
                 result.posted[i] = 0;
             }
             else return i;
@@ -110,13 +110,21 @@ var PSHandReader = {
     calcUncalledPayment:function(result, line) {
         if(line.match(/Uncalled¥sbet¥s¥(([0-9]+)¥)¥sreturned¥sto¥s(.+)/)) {
             var i = result.getIndexFromName(RegExp.$2);
-            result.chips[i] += RegExp.$1;
+            result.chips[i] += parseInt(RegExp.$1);
             result.pot -= RegExp.$1;
             return true;
         }
         return false;
     },
-    calcCollectPayment:function(result, line) { },
+    calcCollectPayment:function(result, line) {
+        if(line.match(/(.+)¥scollected¥s([0-9]+)¥sfrom¥s/)) {
+            var i = result.getIndexFromName(RegExp.$1);
+            result.chips[i] += parseInt(RegExp.$2);
+            result.pot -= parseInt(RegExp.$2);
+            return true;
+        }
+        return false;
+    },
     readNow: function(history) { },
     readNext: function(history) { }
 };
