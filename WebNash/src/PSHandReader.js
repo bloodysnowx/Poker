@@ -125,6 +125,8 @@ var PSHandReader = {
         }
         return false;
     },
-    readNow: function(history) { },
-    readNext: function(history) { }
+    readNow: function(hh) {
+    },
+    readNext: function(hh) {
+    }
 };
