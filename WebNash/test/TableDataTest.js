@@ -87,5 +87,15 @@ TestCase("TableDataTest", {
     "test getLivePlayerCount = 7": function() {
         this.tableData.chips = [ 100, 0, 100, 0, 100, 100, 100, 100, 100 ];
         assertEquals(7, this.tableData.getLivePlayerCount());
+    },
+
+    "test calcBBIndex": function() {
+        var BBIndex = this.tableData.calcBBIndex();
+        assertEquals(2, BBIndex);
+    },
+
+    "test calcPositions": function() {
+        this.tableData.calcPositions();
+        assertEquals([7, 8, 9, 1, 2, 3, 4, 5, 6], this.tableData.positions);
     }
 });

@@ -6,6 +6,13 @@ function main()
     var reader = Object.create(PSHandReader);
     var tableData = Object.create(TableData);
     reader.readNext(tableData, hh);
-    alert(tableData.chips);
-    // window.open("http://bloodysnow.com");
+    tableData.calcPositions();
+    var url = "http://www.holdemresources.net/hr/sngs/icmcalculator.html?action=calculate&bb=";
+    url += tableData.BB;
+    url += "&sb=" + tableData.SB;
+    url += "&ante=" + tableData.Ante;
+    url += "&structure=" + Structure;
+    for(var i = 0; i <= tableData.MaxSeatNum; ++i)
+        if(tableData.chips[i] > 0) url += "&s" + tableData.positions[i] + "=" + tableData.chips[i];
+    window.open(url);
 }

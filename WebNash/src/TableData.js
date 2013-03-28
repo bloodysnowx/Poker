@@ -48,5 +48,43 @@ var TableData = {
     getIndexFromName:function(name) {
         for(var i = 0; i < this.MaxSeatNum; ++i) if(name == this.playerNames[i]) return i;
         return null;
+    },
+    getIndexFromSeat:function(seat) {
+        for(var i = 0; i < this.MaxSeatNum; ++i) if(seat == this.seats[i]) return i;
+        return null;
+    },
+    calcBBIndex:function() {
+        var livePlayerCount = this.getLivePlayerCount();
+        var BBIndex = -1;
+        var buttonIndex = this.getIndexFromSeat(this.buttonPos);
+        if(livePlayerCount < 3)
+        {
+            for(var i = 1; i < this.MaxSeatNum; ++i)
+                if(this.chips[(buttonIndex + i) % this.chips.length] > 0) { BBIndex = (buttonIndex + i) % this.chips.length; break; }
+        }
+        else
+        {
+            var count = 0;
+            for(var i = 1; i < this.MaxSeatNum; ++i)
+            {
+                if(this.chips[(buttonIndex + i) % this.chips.length] > 0)
+                {
+
+                    if(++count == 2) { BBIndex = (buttonIndex + i) % this.chips.length; break; }
+                }
+            }
+        }
+        return BBIndex;
+    },
+    calcPositions:function() {
+        var BBIndex = this.calcBBIndex();
+        var posNum = 1;
+        for(var i = 1; i <= this.chips.length; ++i)
+        {
+            if(this.chips[(BBIndex + i) % this.chips.length] > 0)
+            {
+                this.positions[(BBIndex + i) % this.chips.length] = posNum++;
+            }
+        }
     }
 };

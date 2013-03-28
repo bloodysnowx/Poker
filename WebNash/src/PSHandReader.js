@@ -14,7 +14,7 @@ var PSHandReader = {
         {
             if(hh[i].match(/Seat[ ]([0-9]+):[ ](.+)[ ][(]([0-9]+)[ ]in[ ]chips[)]/) && RegExp.$2 == heroName)
             {
-                ret = RegExp.$3;
+                ret = parseInt(RegExp.$3);
                 break;
             }
         }
@@ -25,15 +25,15 @@ var PSHandReader = {
     setBBSB:function(data, line) {
         if(line.match(/[(]([0-9]+)[/]+([0-9]+)[)]/))
         {
-            data.SB = RegExp.$1;
-            data.BB = RegExp.$2;
+            data.SB = parseInt(RegExp.$1);
+            data.BB = parseInt(RegExp.$2);
             return true;
         }
         return false;
     },
     getButtonPos:function(line) {
         line.match(/Seat[ ]#([0-9]+)[ ]is[ ]the[ ]button/);
-        return RegExp.$1;
+        return parseInt(RegExp.$1);
     },
     getStartSituation:function(result, hh, line) {
         for(var i = 0; i < result.MaxSeatNum; ++i)
@@ -56,7 +56,7 @@ var PSHandReader = {
             {
                 var j = result.getIndexFromName(RegExp.$1);
                 result.Ante = Math.max(result.Ante, RegExp.$2);
-                result.chips[j] -= RegExp.$2;
+                result.chips[j] -= parseInt(RegExp.$2);
                 result.pot += parseInt(RegExp.$2);
             }
             else return i;
@@ -69,7 +69,7 @@ var PSHandReader = {
         {
             var i = result.getIndexFromName(RegExp.$1);
             result.posted[i] = parseInt(RegExp.$2);
-            result.chips[i] -= result.posted[i];
+            result.chips[i] -= parseInt(result.posted[i]);
             result.pot += result.posted[i];
             return 1;
         }
@@ -83,9 +83,9 @@ var PSHandReader = {
     calcBetPayment:function(result, line) {
         if(line.match(/(.+):[ ]bets[ ]([0-9]+)/)) {
             var i = result.getIndexFromName(RegExp.$1);
-            result.chips[i] -= RegExp.$2;
-            result.pot += RegExp.$2;
-            result.posted[i] += RegExp.$2;
+            result.chips[i] -= parseInt(RegExp.$2);
+            result.pot += parseInt(RegExp.$2);
+            result.posted[i] += parseInt(RegExp.$2);
             return true;
         }
         return false;
@@ -94,8 +94,8 @@ var PSHandReader = {
         if(line.match(/(.+):[ ]calls[ ]([0-9]+)/)) {
             var i = result.getIndexFromName(RegExp.$1);
             result.chips[i] -= RegExp.$2;
-            result.pot += RegExp.$2;
-            result.posted[i] += RegExp.$2;
+            result.pot += parseInt(RegExp.$2);
+            result.posted[i] += parseInt(RegExp.$2);
             return true;
         }
         return false;
@@ -104,7 +104,7 @@ var PSHandReader = {
         if(line.match(/(.+):[ ]raises[ ]([0-9]+)[ ]to[ ]([0-9]+)/)) {
             var i = result.getIndexFromName(RegExp.$1);
             result.chips[i] -= RegExp.$3 - result.posted[i];
-            result.pot += RegExp.$3 - result.posted[i];
+            result.pot += parseInt(RegExp.$3) - result.posted[i];
             result.posted[i] = parseInt(RegExp.$3);
             return true;
         }
@@ -143,8 +143,6 @@ var PSHandReader = {
         var line = this.readNow(tableData, hh);
         line += this.calcAntePayment(tableData, hh, line);
         line += this.calcBlindsPayment(tableData, hh, line);
-        alert(tableData.chips);
-        alert(tableData.pot);
         
         for(line; line < hh.length; ++line)
         {
@@ -154,9 +152,9 @@ var PSHandReader = {
             if (this.calcUncalledPayment(tableData, hh[line])) continue;
             if (this.calcCollectPayment(tableData, hh[line])) continue;
 
-            if (hh[line].match(/***[ ](FLOP|TURN|RIVER)[ ]***/))
+            if (hh[line].indexOf("*** FLOP ***") >= 0 || hh[line].indexOf("*** TURN ***") >= 0 || hh[line].indexOf("*** RIVER ***") >= 0)
                 tableData.posted = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-            else if (hh[line].match("*** SUMMARY ***")) break;
+            else if (hh[line].indexOf("*** SUMMARY ***") >= 0) break;
         }
         tableData.nextButton();
 
