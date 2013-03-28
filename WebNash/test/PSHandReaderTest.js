@@ -18,12 +18,19 @@ TestCase("PSHandReaderTest", {
         assertEquals(1000, this.reader.getStartingChip("HERO", ["Seat 6: HERO (1000 in chips)"], 500));
     },
 
-    "test setBBSB": function() {
+    "test setBBSB false": function() {
+        var result = this.reader.setBBSB(this.tableData, "");
+        assertEquals(false, result);
+    },
+    "test setBBSB true": function() {
         assertEquals(10, this.tableData.SB);
         assertEquals(20, this.tableData.BB);
-        this.reader.setBBSB(this.tableData, "PokerStars Hand #92440992009: Tournament #674374357, $9.07+$0.18 USD Hold'em No Limit - Level I (25/50) - 2013/01/16 22:11:08 JST [2013/01/16 8:11:08 ET]");
+        var result = this.reader.setBBSB(this.tableData, "PokerStars Hand #92440992009: Tournament #674374357, $9.07+$0.18 USD Hold'em No Limit - Level I (25/50) - 2013/01/16 22:11:08 JST [2013/01/16 8:11:08 ET]");
+        assertEquals(true, result);
         assertEquals(25, this.tableData.SB);
         assertEquals(50, this.tableData.BB);
+        result = this.reader.setBBSB(this.tableData, "");
+        assertEquals(false, result);
     },
 
     "test getButtonPos": function() {
