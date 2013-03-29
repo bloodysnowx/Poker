@@ -1,3 +1,11 @@
+var PlayerData = {
+    seat: 0,
+    position: "",
+    playerName: "",
+    chip: 0,
+    posted: 0
+};
+
 var TableData = {
     MaxSeatNum: 9,
     BB: 20,
@@ -80,7 +88,6 @@ var TableData = {
         }
     }
 };
-
 var PSHandReader = {
     DefaultStartingChip:1500,
     getHeroName:function(hh) {
@@ -244,7 +251,6 @@ var PSHandReader = {
         return tableData;
     }
 };
-
 function main(Structure, Content, isNext)
 {
     var hh = Content.split(/\r\n|\r|\n/);
