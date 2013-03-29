@@ -1,11 +1,12 @@
-function main()
+function main(isNext)
 {
     var Structure = document.HandHistory.Structure.value;
     var Content = document.HandHistory.Content.value;
     var hh = Content.split(/\r\n|\r|\n/);
     var reader = Object.create(PSHandReader);
     var tableData = Object.create(TableData);
-    reader.readNext(tableData, hh);
+    if(isNext) reader.readNext(tableData, hh);
+    else reader.readNow(tableData, hh);
     tableData.calcPositions();
     var url = "http://www.holdemresources.net/hr/sngs/icmcalculator.html?action=calculate&bb=";
     url += tableData.BB;
