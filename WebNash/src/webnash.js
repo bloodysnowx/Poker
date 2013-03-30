@@ -1,3 +1,11 @@
+var CheckHeroName = {
+    whiteList: ["chiyuki"],
+    check: function(name) {
+        for(var i = 0; i < this.whiteList.length; ++i) if(name == this.whiteList[i]) return true;
+        return false;
+    }
+};
+
 var PlayerData = {
     seat: 0,
     position: "",
@@ -256,8 +264,10 @@ function main(Structure, Content, isNext)
     var hh = Content.split(/\r\n|\r|\n/);
     var reader = Object.create(PSHandReader);
     var tableData = Object.create(TableData);
+    var checker = Object.create(CheckHeroName);
     if(isNext) reader.readNext(tableData, hh);
     else reader.readNow(tableData, hh);
+    if(checker.check(tableData.heroName) == false) return '/error';
     tableData.calcPositions();
     var url = "http://www.holdemresources.net/hr/sngs/icmcalculator.html?action=calculate&bb=";
     url += tableData.BB;

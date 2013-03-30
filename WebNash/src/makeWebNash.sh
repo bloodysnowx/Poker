@@ -1,1 +1,1 @@
-cat TableData.js PSHandReader.js webnashOrg.js > webnash.js
+cat CheckHeroName.js TableData.js PSHandReader.js webnashOrg.js > webnash.js

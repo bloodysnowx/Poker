@@ -1,4 +1,4 @@
-var portNum = 3000;
+var portNum = process.env.PORT || 3000;
 var http = require('http');
 var url = require("url");
 
@@ -18,9 +18,9 @@ function start(route, handle) {
         });
     }
 
-    http.createServer(onRequest).listen(portNum, "127.0.0.1");
+    http.createServer(onRequest).listen(portNum);
  
-    console.log('Server running at http://127.0.0.1:' + portNum + '/');
+    console.log('Server running at' + portNum + '/');
 }
 
 exports.start = start;
