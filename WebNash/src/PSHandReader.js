@@ -138,26 +138,5 @@ var PSHandReader = {
         line += this.getStartSituation(tableData, hh, line);
 
         return line;
-    },
-    readNext: function(tableData, hh) {
-        var line = this.readNow(tableData, hh);
-        line += this.calcAntePayment(tableData, hh, line);
-        line += this.calcBlindsPayment(tableData, hh, line);
-        
-        for(line; line < hh.length; ++line)
-        {
-            if (this.calcBetPayment(tableData, hh[line])) continue;
-            if (this.calcCallPayment(tableData, hh[line])) continue;
-            if (this.calcRaisePayment(tableData, hh[line])) continue;
-            if (this.calcUncalledPayment(tableData, hh[line])) continue;
-            if (this.calcCollectPayment(tableData, hh[line])) continue;
-
-            if (hh[line].indexOf("*** FLOP ***") >= 0 || hh[line].indexOf("*** TURN ***") >= 0 || hh[line].indexOf("*** RIVER ***") >= 0)
-                tableData.posted = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-            else if (hh[line].indexOf("*** SUMMARY ***") >= 0) break;
-        }
-        tableData.nextButton();
-
-        return tableData;
     }
 };
