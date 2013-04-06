@@ -7,7 +7,7 @@ var PlayerData = {
 };
 
 var TableData = {
-    MaxSeatNum: 9,
+    MaxSeatNum: 10,
     BB: 20,
     SB: 10,
     Ante: 0,

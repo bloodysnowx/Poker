@@ -3,15 +3,78 @@
   <script type="text/javascript" src="TableData.js"></script>
   <script type="text/javascript" src="PSHandReader.js"></script>
   <script type="text/javascript" src="main.js"></script>
-  <head></head>
+
+  <head>
+    <title>ハンド履歴分析</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- stylesheets -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/colour.css" rel="stylesheet" type="text/css" />
+    <!-- modernizr enables HTML5 elements and feature detects -->
+    <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  </head>
+
   <body>
-    <form name="HandHistory">
-      <p>Structure<br /><input type="text" name="Structure" style="width : 99%;" value="5,3,2"/></p>
-      <p><input type="button" value="Hyper Sat 6-Max" onClick="document.HandHistory.Structure.value='1,1'"/>
-      <input type="button" value="normal" onClick="document.HandHistory.Structure.value='5,3,2'"/></p>
-      <p>Content<br /><textarea type="text" name="Content" cols="100" rows="10" style="width : 99%;"></textarea></p>
-      <p><input type="button" value="Now Hand" onClick="main(false)" style="width : 99%;"/></p>
-      <p><input type="button" value="Next Hand" onClick="main(true)" style="width : 99%;"/></p>
-    </form>
+    <div id="main">
+
+    <!-- begin header -->
+    <header>
+      <div id="logo"><h1>PHOTO<a href="#">ART</a>WORK 2_reverse</h1></div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="index.html">home</a></li>
+          <li class="selected"><a href="main.html">web nash</a></li>
+          <li><a href="about.html">about me</a></li>
+          <li><a href="#">my portfolio</a>
+            <ul>
+              <li><a href="portfolio_one.html">portfolio_one</a></li>
+              <li><a href="portfolio_two.html">portfolio_two</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- begin content -->
+    <div id="site_content">
+      <form name="HandHistory">
+        <div class="form_settings">
+          <p><span>賞品ストラクチャ</span><input class="contact" type="text" name="Structure" value="5,3,2" style="width: 60%;"/></p>
+          <p><input class="submit" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/>
+            <input class="submit" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
+          <p><input class="submit" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/>
+            <input class="submit" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
+          <p><span>ハンド履歴</span><textarea type="text" name="Content" cols="100" rows="10" style="width: 60%;"></textarea></p>
+          <p><input class="submit" type="button" value="履歴を分析" onClick="main(false)" style="width: 60%;font-size: 18px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
+          <p><input class="submit" type="button" value="プレイ中のハンドを分析" onClick="main(true)" style="width: 60%;font-size: 18px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
+        </div>
+      </form>
+    </div>
+    <!-- end content -->
+
+    <!-- begin footer -->
+    <footer>
+    <p>Copyright &copy; 2012 PhotoArtWork2_reverse. All Rights Reserved. <a href="http://www.css3templates.co.uk">Design from css3templates.co.uk</a>, downloaded from <a href="http://css4free.com/" title="free web site css designs">CSS4Free</a></p>
+      <p><img src="images/twitter.png" alt="twitter" />&nbsp;<img src="images/facebook.png" alt="facebook" />&nbsp;<img src="images/rss.png" alt="rss" /></p>
+    </footer>
+    <!-- end footer -->
+    </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <!-- initialise sooperfish menu -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+
   </body>
 </html>
