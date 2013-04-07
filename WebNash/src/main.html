@@ -12,6 +12,12 @@
     <!-- stylesheets -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/colour.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      body { background: #282828 url(./images/dark2.png); }
+      ul#nav li a { padding: 3px 18px 6px 18px; }
+      .submit.button { font-size: 14px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+      width: 150px; }
+    </style>
     <!-- modernizr enables HTML5 elements and feature detects -->
     <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
   </head>
@@ -21,9 +27,15 @@
 
     <!-- begin header -->
     <header>
-      <div id="logo"><h1>ハンド履歴分析</h1></div>
+      <div id="logo"><a href="http://jbbs.livedoor.jp/game/15823/"><img src="http://hyahhoopoker.com/pics/Hyahhoo.png" border="0"></a></div>
       <nav>
         <ul class="sf-menu" id="nav">
+          <li><a href="../">攻略</a></li>
+          <li><a href="../main/douga">動画</a></li>
+          <li><a href="../main/FAQ">ＦＡＱ</a></li>
+          <li><a href="../main/onlinepoker">オンラインポーカー</a></li>
+          <li><a href="../main/koushin-poker-main">更新ブログ</a></li>
+          <li><a href="http://jbbs.livedoor.jp/game/15823/">掲示板</a></li>
           <li class="selected"><a href="main.html">ハンド履歴分析</a></li>
         </ul>
       </nav>
@@ -34,13 +46,13 @@
     <div id="site_content">
       <form name="HandHistory">
         <div class="form_settings">
-          <p><span>賞品ストラクチャ</span><input class="contact" type="text" name="Structure" value="5,3,2" style="width: 60%;"/></p>
-          <p><input class="submit" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/>
-            <input class="submit" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
-          <p><input class="submit" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/>
-            <input class="submit" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="font-size: 10px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
-          <p><span>ハンド履歴</span><textarea type="text" name="Content" cols="100" rows="10" style="width: 60%;"></textarea></p>
-          <p><input class="submit" type="button" value="履歴を分析" onClick="main(false)" style="width: 60%;font-size: 18px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;"/></p>
+          <p><span>賞品ストラクチャ</span><input class="contact" type="text" name="Structure" value="1" style="width: 60%;"/></p>
+          <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style=""/>
+            <input class="submit button" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="margin-left: 20px;"/>
+            <input class="submit button" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="margin-left: 20px;"/>
+            <input class="submit button" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="margin-left: 20px;"/></p>
+          <p><span>ハンド履歴</span><textarea type="text" name="Content" cols="100" rows="10" placeholder="ここにハンド履歴をコピー＆ペースト" style="width: 60%;"></textarea></p>
+          <p><input class="submit button" type="button" value="履歴を分析" onClick="main(false)" style="width: 60%;font-size: 18px;"/></p>
         </div>
       </form>
     </div>
