@@ -49,6 +49,16 @@ var PSHandReader = {
         }
         return result.MaxSeatNum;
     },
+    getAnte:function(result, hh, line) {
+        for(var i = 0; i < result.MaxSeatNum; ++i)
+        {
+            if(hh[line + i + 1].match(/(.+):[ ]posts[ ]the[ ]ante[ ]([0-9]+)/))
+            {
+                var j = result.getIndexFromName(RegExp.$1);
+                result.Ante = Math.max(result.Ante, RegExp.$2);
+            }
+        }
+    },
     calcAntePayment:function(result, hh, line) {
         for(var i = 0; i < result.MaxSeatNum; ++i)
         {
@@ -136,6 +146,7 @@ var PSHandReader = {
         while(ret == false) ret = this.setBBSB(tableData, hh[line++]);
         tableData.buttonPos = this.getButtonPos(hh[line]);
         line += this.getStartSituation(tableData, hh, line);
+        this.getAnte(tableData, hh, line);
 
         return line;
     },
