@@ -138,7 +138,7 @@ var PSHandReader = {
         }
         return false;
     },
-    readNow: function(tableData, hh) {
+    readNowWithoutAnte: function(tableData, hh) {
         tableData.heroName = this.getHeroName(hh);
         tableData.StartingChip = this.getStartingChip(tableData.heroName, hh, this.DefaultStartingChip);
         var line = 0;
@@ -146,12 +146,15 @@ var PSHandReader = {
         while(ret == false) ret = this.setBBSB(tableData, hh[line++]);
         tableData.buttonPos = this.getButtonPos(hh[line]);
         line += this.getStartSituation(tableData, hh, line);
-        this.getAnte(tableData, hh, line);
 
         return line;
     },
+    readNow: function(tableData, hh) {
+        var line = this.readNowWithoutAnte(tableData, hh);
+        this.getAnte(tableData, hh, line);
+    },
     readNext: function(tableData, hh) {
-        var line = this.readNow(tableData, hh);
+        var line = this.readNowWithoutAnte(tableData, hh);
         line += this.calcAntePayment(tableData, hh, line);
         line += this.calcBlindsPayment(tableData, hh, line);
         
