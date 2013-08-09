@@ -4,10 +4,7 @@ var querystring = require("querystring");
 var webnash = require('./webnash');
 
 function main(response, postData) {
-    console.log("Request handler 'main' was called.");
-    response.writeHead(200, {"Content-Type": "text/html"});
-    response.write(fs.readFileSync('./main.html' ));
-    response.end();
+    printFile('./main.html', 'text/html', response);
 }
 
 function postHand(response, postData) {
@@ -29,5 +26,53 @@ function postHand(response, postData) {
     }
 }
 
+function printFile(fileName, contentType, response)
+{
+    response.writeHead(200, {"Content-Type": contentType});
+    response.write(fs.readFileSync(fileName));
+    response.end();
+}
+
+function cssStyleCss(response, postData) {
+    printFile("./css/style.css", "text/css", response);
+}
+
+function cssColourCss(response, postData) {
+    printFile("./css/colour.css", "text/css", response);
+}
+
+function jsModernizrJs(response, postData) {
+    printFile("./js/modernizr-1.5.min.js", "text/javascript", response);
+}
+
+function jsJqueryJs(response, postData) {
+    printFile("./js/jquery.min.js", "text/javascript", response);
+}
+
+function jsJquerySooperfishJs(response, postData) {
+    printFile("./js/jquery.sooperfish.js", "text/javascript", response);
+}
+
+function jsJqueryEasingsooperJs(response, postData) {
+    printFile("./js/jquery.easing-sooper.js", "text/javascript", response);
+}
+
+function jsImagefadeJs(response, postData) {
+    printFile("./js/image_fade.js", "text/javascript", response);
+}
+
+function imagesDark2Png(response, postData) {
+    printFile("./images/dark2.png", "image/png", response);
+}
+
 exports.main = main;
 exports.postHand = postHand;
+exports.printFile = printFile;
+exports.cssStyleCss = cssStyleCss;
+exports.cssColourCss = cssColourCss;
+exports.jsModernizrJs = jsModernizrJs;
+exports.jsJqueryJs = jsJqueryJs;
+exports.jsJquerySooperfishJs = jsJquerySooperfishJs;
+exports.jsJqueryEasingsooperJs = jsJqueryEasingsooperJs;
+exports.jsImagefadeJs = jsImagefadeJs;
+exports.imageDark2Png = imagesDark2Png;
