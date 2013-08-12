@@ -1,8 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
-  <script type="text/javascript" src="TableData.js"></script>
-  <script type="text/javascript" src="PSHandReader.js"></script>
-  <script type="text/javascript" src="main.js"></script>
   <head>
     <title>ハンド履歴分析</title>
     <meta name="description" content="website description" />
@@ -22,7 +19,6 @@
   </head>
   <body>
     <div id="main">
-
     <!-- begin header -->
     <header>
       <div id="logo"><h1>ハンド履歴分析</h1></div>
@@ -33,10 +29,9 @@
       </nav>
     </header>
     <!-- end header -->
-
     <!-- begin content -->
     <div id="site_content">
-      <form name="HandHistory">
+      <form name="HandHistory" action="/postHand" method="post">
         <div class="form_settings">
           <p><span>賞金ストラクチャ</span><input class="contact" type="text" name="Structure" value="1" style="width: 60%;"/></p>
           <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style=""/>
@@ -44,13 +39,12 @@
             <input class="submit button" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="margin-left: 20px;"/>
             <input class="submit button" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="margin-left: 20px;"/></p>
           <p><span>ハンド履歴</span><textarea type="text" name="Content" cols="100" rows="10" placeholder="ここにハンド履歴をコピー＆ペースト" style="width: 60%;"></textarea></p>
-          <p><input class="submit button" type="button" value="履歴を分析" onClick="main(false)" style="width: 60%;font-size: 18px;"/></p>
-          <p><input class="submit" type="button" value="プレイ中のハンドを分析" onClick="main(true)" style="width: 60%;font-size: 18px;"/></p>
+          <p><input class="submit" type="submit" value="履歴を分析" name="submit" style="width: 60%;font-size: 18px;"/></p>
+          <p><input class="submit" type="submit" value="Next Hand" name="submit" style="width: 60%;font-size: 18px;"/></p>
         </div>
       </form>
     </div>
     <!-- end content -->
-
     <!-- begin footer -->
     <footer>
     <p>Copyright &copy; 2013 </p>

@@ -15,7 +15,7 @@ var PlayerData = {
 };
 
 var TableData = {
-    MaxSeatNum: 9,
+    MaxSeatNum: 10,
     BB: 20,
     SB: 10,
     Ante: 0,
@@ -147,6 +147,16 @@ var PSHandReader = {
         }
         return result.MaxSeatNum;
     },
+    getAnte:function(result, hh, line) {
+        for(var i = 0; i < result.MaxSeatNum; ++i)
+        {
+            if(hh[line + i + 1].match(/(.+):[ ]posts[ ]the[ ]ante[ ]([0-9]+)/))
+            {
+                var j = result.getIndexFromName(RegExp.$1);
+                result.Ante = Math.max(result.Ante, RegExp.$2);
+            }
+        }
+    },
     calcAntePayment:function(result, hh, line) {
         for(var i = 0; i < result.MaxSeatNum; ++i)
         {
@@ -226,7 +236,7 @@ var PSHandReader = {
         }
         return false;
     },
-    readNow: function(tableData, hh) {
+    readNowWithoutAnte: function(tableData, hh) {
         tableData.heroName = this.getHeroName(hh);
         tableData.StartingChip = this.getStartingChip(tableData.heroName, hh, this.DefaultStartingChip);
         var line = 0;
@@ -237,8 +247,12 @@ var PSHandReader = {
 
         return line;
     },
+    readNow: function(tableData, hh) {
+        var line = this.readNowWithoutAnte(tableData, hh);
+        this.getAnte(tableData, hh, line);
+    },
     readNext: function(tableData, hh) {
-        var line = this.readNow(tableData, hh);
+        var line = this.readNowWithoutAnte(tableData, hh);
         line += this.calcAntePayment(tableData, hh, line);
         line += this.calcBlindsPayment(tableData, hh, line);
         

@@ -75,4 +75,4 @@ exports.jsJqueryJs = jsJqueryJs;
 exports.jsJquerySooperfishJs = jsJquerySooperfishJs;
 exports.jsJqueryEasingsooperJs = jsJqueryEasingsooperJs;
 exports.jsImagefadeJs = jsImagefadeJs;
-exports.imageDark2Png = imagesDark2Png;
+exports.imagesDark2Png = imagesDark2Png;
