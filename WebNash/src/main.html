@@ -6,63 +6,36 @@
     <meta name="keywords" content="website keywords, website keywords" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <!-- stylesheets -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/colour.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      body { background: #282828 url(./images/dark2.png); }
-      ul#nav li a { padding: 3px 18px 6px 18px; }
-      .submit.button { font-size: 14px; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
-      width: 150px; }
-    </style>
-    <!-- modernizr enables HTML5 elements and feature detects -->
-    <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    <link href="faulkner/style.css" rel="stylesheet" type="text/css" media="screen" title="faulkner (style)" />
   </head>
   <body>
-    <div id="main">
-    <!-- begin header -->
-    <header>
-      <div id="logo"><h1>ハンド履歴分析</h1></div>
-      <nav>
-        <ul class="sf-menu" id="nav">
-          <li class="selected"><a href="main.html">ハンド履歴分析</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- end header -->
+    <div id="wrap">
+      <div id="header">
+        <h1><img src="faulkner/title_left.gif" alt="" />ハンド履歴分析<img src="faulkner/title_right.gif" alt="" /></h1>
+        <h2>PokerStarsのハンドヒストリからナッシュレンジを計算します</h2>
+        <div id="nav">
+          <ul>
+            <li><a href="./main.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
     <!-- begin content -->
-    <div id="site_content">
+    <div id="content">
       <form name="HandHistory" action="/postHand" method="post">
-        <div class="form_settings">
-          <p><span>賞金ストラクチャ</span><input class="contact" type="text" name="Structure" value="1" style="width: 60%;"/></p>
-          <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style=""/>
-            <input class="submit button" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="margin-left: 20px;"/>
-            <input class="submit button" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="margin-left: 20px;"/>
-            <input class="submit button" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="margin-left: 20px;"/></p>
-          <p><span>ハンド履歴</span><textarea type="text" name="Content" cols="100" rows="10" placeholder="ここにハンド履歴をコピー＆ペースト" style="width: 60%;"></textarea></p>
-          <p><input class="submit" type="submit" value="履歴を分析" name="submit" style="width: 60%;font-size: 18px;"/></p>
-          <p><input class="submit" type="submit" value="Next Hand" name="submit" style="width: 60%;font-size: 18px;"/></p>
+          <label>賞金ストラクチャ:</label><input class="text" type="text" name="Structure" value="1" style=""/></p>
+          <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style="margin-left: 100px;"/>
+            <input class="submit button" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="margin-left: 30px;"/>
+            <input class="submit button" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="margin-left: 30px;"/>
+            <input class="submit button" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="margin-left: 30px;"/></p>
+          <label>ハンド履歴</label><textarea type="text" name="Content" cols="100" rows="20" placeholder="ここにハンド履歴をコピー＆ペースト" style=""></textarea></p>
+          <p><input class="submit" type="submit" value="履歴を分析" name="submit" style="width: 100%;font-size: 18px;"/></p>
+          <p><input class="submit" type="submit" value="Next Hand" name="submit" style="width: 100%;font-size: 18px;"/></p>
         </div>
       </form>
     </div>
-    <!-- end content -->
-    <!-- begin footer -->
-    <footer>
-    <p>Copyright &copy; 2013 </p>
-      <!--<p><img src="images/twitter.png" alt="twitter" />&nbsp;<img src="images/facebook.png" alt="facebook" />&nbsp;<img src="images/rss.png" alt="rss" /></p>-->
-    </footer>
-    <!-- end footer -->
-    </div>
-  <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
-  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
-  <script type="text/javascript" src="js/image_fade.js"></script>
-  <!-- initialise sooperfish menu -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('ul.sf-menu').sooperfish();
-    });
-  </script>
-
-  </body>
+</div>
+<div id="footer">
+  <p>Copyright &copy; 2013 </p>
+</div>
+</body>
 </html>
