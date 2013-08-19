@@ -23,6 +23,23 @@ var TableData = {
     posted: [],
     StartingChip: 0,
     heroIndex: -1,
+    reset: function() {
+	this.BB = 20;
+	this.SB = 10;
+	this.Ante = 0;
+	this.Structure = "1,1",
+	this.heroPos = -1;
+	this.heroName = "";
+	this.seats = [];
+	this.positions = [];
+	this.playerNames = [];
+	this.chips = [];
+	this.buttonPos = -1;
+	this.pot = 0;
+	this.posted = [];
+	this.StartingChip = 0;
+	this.heroIndex = -1;
+    },
     getHeroIndex: function() { if (this.heroIndex < 0) this.heroIndex = this.calcHeroIndex(); return this.heroIndex; },
     calcHeroIndex: function() {
         var ret = 0;

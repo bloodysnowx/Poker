@@ -5,6 +5,7 @@ function main(isNext)
     var hh = Content.split(/\r\n|\r|\n/);
     var reader = Object.create(PSHandReader);
     var tableData = Object.create(TableData);
+    tableData.reset();
     if(isNext) reader.readNext(tableData, hh);
     else reader.readNow(tableData, hh);
     tableData.calcPositions();

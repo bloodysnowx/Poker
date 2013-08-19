@@ -5,6 +5,7 @@ var requestHandler = require("./requestHandler");
 var handle = {}
 handle["/"] = requestHandler.main;
 handle["/main"] = requestHandler.main;
+handle["/main.html"] = requestHandler.main;
 handle["/postHand"] = requestHandler.postHand;
 
 handle["/css/style.css"] = requestHandler.cssStyleCss;
