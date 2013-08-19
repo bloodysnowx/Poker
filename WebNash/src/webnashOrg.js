@@ -3,6 +3,7 @@ function main(Structure, Content, isNext)
     var hh = Content.split(/\r\n|\r|\n/);
     var reader = Object.create(PSHandReader);
     var tableData = Object.create(TableData);
+    tableData.reset();
     var checker = Object.create(CheckHeroName);
     if(isNext) reader.readNext(tableData, hh);
     else reader.readNow(tableData, hh);
