@@ -19,6 +19,10 @@ handle["/images/dark2.png"] = requestHandler.imagesDark2Png;
 handle["/faulkner/title_left.gif"] = requestHandler.faulknerTitleLeftGif;
 handle["/faulkner/title_right.gif"] = requestHandler.faulknerTitleRightGif;
 handle["/faulkner/style.css"] = requestHandler.faulknerStyleCss;
+handle["/faulkner/bg.jpg"] = requestHandler.faulknerBgJpg;
+handle["/faulkner/ornament.gif"] = requestHandler.faulknerOrnamentGif;
+handle["/faulkner/parchment.jpg"] = requestHandler.faulknerParchmentJpg;
+handle["/faulkner/foot.jpg"] = requestHandler.faulknerFootJpg;
 
 server.start(router.route, handle);
 

@@ -77,6 +77,22 @@ function faulknerTitleRightGif(response, postData) {
     printFile("./faulkner/title_right.gif", "image/gif", response);
 }
 
+function faulknerBgJpg(response, postData) {
+    printFile("./faulkner/bg.jpg", "image/jpeg", response);
+}
+
+function faulknerOrnamentGif(response, postData) {
+    printFile("./faulkner/ornament.gif", "image/gif", response);
+}
+
+function faulknerParchmentJpg(response, postData) {
+    printFile("./faulkner/parchment.jpg", "image/jpeg", response);
+}
+
+function faulknerFootJpg(response, postData) {
+    printFile("./faulkner/foot.jpg", "image/jpeg", response);
+}
+
 exports.main = main;
 exports.postHand = postHand;
 exports.printFile = printFile;
@@ -92,3 +108,7 @@ exports.imagesDark2Png = imagesDark2Png;
 exports.faulknerStyleCss = faulknerStyleCss;
 exports.faulknerTitleLeftGif = faulknerTitleLeftGif;
 exports.faulknerTitleRightGif = faulknerTitleRightGif;
+exports.faulknerBgJpg = faulknerBgJpg;
+exports.faulknerOrnamentGif = faulknerOrnamentGif;
+exports.faulknerParchmentJpg = faulknerParchmentJpg;
+exports.faulknerFootJpg = faulknerFootJpg;
