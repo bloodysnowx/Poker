@@ -65,6 +65,18 @@ function imagesDark2Png(response, postData) {
     printFile("./images/dark2.png", "image/png", response);
 }
 
+function faulknerStyleCss(response, postData) {
+    printFile("./faulkner/style.css", "text/css", response);
+}
+
+function faulknerTitleLeftGif(response, postData) {
+    printFile("./faulkner/title_left.gif", "image/gif", response);
+}
+
+function faulknerTitleRightGif(response, postData) {
+    printFile("./faulkner/title_right.gif", "image/gif", response);
+}
+
 exports.main = main;
 exports.postHand = postHand;
 exports.printFile = printFile;
@@ -76,3 +88,7 @@ exports.jsJquerySooperfishJs = jsJquerySooperfishJs;
 exports.jsJqueryEasingsooperJs = jsJqueryEasingsooperJs;
 exports.jsImagefadeJs = jsImagefadeJs;
 exports.imagesDark2Png = imagesDark2Png;
+
+exports.faulknerStyleCss = faulknerStyleCss;
+exports.faulknerTitleLeftGif = faulknerTitleLeftGif;
+exports.faulknerTitleRightGif = faulknerTitleRightGif;
