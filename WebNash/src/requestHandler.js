@@ -93,6 +93,10 @@ function faulknerFootJpg(response, postData) {
     printFile("./faulkner/foot.jpg", "image/jpeg", response);
 }
 
+function faulknerMenuhoverJpg(response, postData) {
+    printFile("./faulkner/menuhover.jpg", "image/jpeg", response);
+}
+
 exports.main = main;
 exports.postHand = postHand;
 exports.printFile = printFile;
@@ -112,3 +116,4 @@ exports.faulknerBgJpg = faulknerBgJpg;
 exports.faulknerOrnamentGif = faulknerOrnamentGif;
 exports.faulknerParchmentJpg = faulknerParchmentJpg;
 exports.faulknerFootJpg = faulknerFootJpg;
+exports.faulknerMenuhoverJpg = faulknerMenuhoverJpg;

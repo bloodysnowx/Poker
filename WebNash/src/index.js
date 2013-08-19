@@ -23,6 +23,7 @@ handle["/faulkner/bg.jpg"] = requestHandler.faulknerBgJpg;
 handle["/faulkner/ornament.gif"] = requestHandler.faulknerOrnamentGif;
 handle["/faulkner/parchment.jpg"] = requestHandler.faulknerParchmentJpg;
 handle["/faulkner/foot.jpg"] = requestHandler.faulknerFootJpg;
+handle["/faulkner/menuhover.jpg"] = requestHandler.faulknerMenuhoverJpg;
 
 server.start(router.route, handle);
 
