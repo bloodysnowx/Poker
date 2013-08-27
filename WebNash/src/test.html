@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+  <head></head>
+  <body>
+    <script language="JavaScript" type="text/javascript">
+      function createHttpRequest()
+      {
+          return new XMLHttpRequest();
+      }
+      var request;
+
+      function requestsorce(url)
+      {
+          request=createHttpRequest();
+          request.open("GET",url,true);
+          request.onreadystatechange=sorceget;
+          request.send(null);
+      }
+
+      function sorceget()
+      {
+          if (request.readyState == 4 && request.status == 200)
+          {
+              document.form1.sorce.value=request.responseText;
+          }
+      }
+    </script>
+    <form name="form1">
+      <input type="text" name="urlbox" size="40">
+      <input type="button" value="ソース取得" onclick="requestsorce(document.form1.urlbox.value)">
+      <textarea name="sorce" rows="120" cols="100">
+	ここにソースを表示
+      </textarea>
+  </body>
+</html>
