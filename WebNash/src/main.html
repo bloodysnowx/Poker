@@ -23,8 +23,9 @@
     <div id="content">
       <form name="HandHistory" action="/postHand" method="post">
           <label>賞金ストラクチャ:</label><input class="text" type="text" name="Structure" value="1" style=""/></p>
-          <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style="margin-left: 100px;"/>
+          <p><input class="submit button" type="button" value="MTT" onClick="document.HandHistory.Structure.value='1'" style="margin-left: 50px;"/>
             <input class="submit button" type="button" value="ハイパーサテ6人卓" onClick="document.HandHistory.Structure.value='1,1'" style="margin-left: 30px;"/>
+            <input class="submit button" type="button" value="SNG6人卓" onClick="document.HandHistory.Structure.value='65,35'" style="margin-left: 30px;"/>
             <input class="submit button" type="button" value="SNG9人卓" onClick="document.HandHistory.Structure.value='5,3,2'" style="margin-left: 30px;"/>
             <input class="submit button" type="button" value="Fifty50" onClick="document.HandHistory.Structure.value='6,1,1,1,1'" style="margin-left: 30px;"/></p>
           <label>ハンド履歴</label><textarea type="text" name="Content" cols="100" rows="20" placeholder="ここにハンド履歴をコピー＆ペースト" style=""></textarea></p>
