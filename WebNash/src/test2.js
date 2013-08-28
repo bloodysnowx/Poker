@@ -1,10 +1,6 @@
 function net_holdemresources_web_nashcalculator() {
-    var O = '',
-        vb = '" for "gwt:onLoadErrorFn"',
-        tb = '" for "gwt:onPropertyErrorFn"',
-        hb = '"><\/script>',
+    var 
         Y = '#',
-        Yb = '.cache.html',
         $ = '/',
         Rb = '207DB4F7345AA9E94A1B495974F8B073',
         Sb = '4DD487EBA5F682525A3683B29BC7B2B5',
@@ -72,7 +68,7 @@ function net_holdemresources_web_nashcalculator() {
             return l.__gwtStatsEvent(a)
         } : null,
         o = l.__gwtStatsSessionId ? l.__gwtStatsSessionId : null,
-        p, q, r, s = O,
+        p, q, r, s = '',
         t = {}, u = [],
         v = [],
         w = [],
@@ -138,7 +134,7 @@ function net_holdemresources_web_nashcalculator() {
                 c = a.length
             }
             var d = a.lastIndexOf($, Math.min(c, b));
-            return d >= 0 ? a.substring(0, d + 1) : O
+            return d >= 0 ? a.substring(0, d + 1) : ''
         }
 
         function f(a) {
@@ -155,7 +151,7 @@ function net_holdemresources_web_nashcalculator() {
             if (a != null) {
                 return a
             }
-            return O
+            return ''
         }
 
         function h() {
@@ -165,7 +161,7 @@ function net_holdemresources_web_nashcalculator() {
                     return e(a[b].src)
                 }
             }
-            return O
+            return ''
         }
 
         function i() {
@@ -173,7 +169,7 @@ function net_holdemresources_web_nashcalculator() {
             if (typeof isBodyLoaded == eb || !isBodyLoaded()) {
                 var b = fb;
                 var c;
-                m.write(gb + b + hb);
+                m.write(gb + b + '"><\/script>');
                 c = m.getElementById(b);
                 a = c && c.previousSibling;
                 while (a && a.tagName != ib) {
@@ -186,7 +182,7 @@ function net_holdemresources_web_nashcalculator() {
                     return e(a.src)
                 }
             }
-            return O
+            return ''
         }
 
         function j() {
@@ -194,19 +190,19 @@ function net_holdemresources_web_nashcalculator() {
             if (a.length > 0) {
                 return a[a.length - 1].href
             }
-            return O
+            return ''
         }
         var k = g();
-        if (k == O) {
+        if (k == '') {
             k = h()
         }
-        if (k == O) {
+        if (k == '') {
             k = i()
         }
-        if (k == O) {
+        if (k == '') {
             k = j()
         }
-        if (k == O) {
+        if (k == '') {
             k = e(m.location.href)
         }
         k = f(k);
@@ -221,7 +217,7 @@ function net_holdemresources_web_nashcalculator() {
                 f = e.getAttribute(lb),
                 g;
             if (f) {
-                f = f.replace(mb, O);
+                f = f.replace(mb, '');
                 if (f.indexOf(nb) >= 0) {
                     continue
                 }
@@ -234,7 +230,7 @@ function net_holdemresources_web_nashcalculator() {
                             h = g.substring(i + 1)
                         } else {
                             f = g;
-                            h = O
+                            h = ''
                         }
                         t[f] = h
                     }
@@ -244,7 +240,7 @@ function net_holdemresources_web_nashcalculator() {
                         try {
                             z = eval(g)
                         } catch (a) {
-                            alert(sb + g + tb)
+                            alert(sb + g + '" for "gwt:onPropertyErrorFn"')
                         }
                     }
                 } else if (f == ub) {
@@ -253,7 +249,7 @@ function net_holdemresources_web_nashcalculator() {
                         try {
                             y = eval(g)
                         } catch (a) {
-                            alert(sb + g + vb)
+                            alert(sb + g + '" for "gwt:onLoadErrorFn"')
                         }
                     }
                 }
@@ -387,7 +383,7 @@ function net_holdemresources_web_nashcalculator() {
             return
         }
         K = Pb;
-        J = O
+        J = ''
     }
     n && n({
         moduleName: P,
@@ -411,7 +407,7 @@ function net_holdemresources_web_nashcalculator() {
                 x = Number(J.substring(L + 1));
                 J = J.substring(0, L)
             }
-            K = J + Yb
+            K = J + '.cache.html'
         } catch (a) {
             return
         }
