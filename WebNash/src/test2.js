@@ -1,15 +1,9 @@
 function net_holdemresources_web_nashcalculator() {
     var 
         $ = '/',
-        R = 'bootstrap',
-        X = 'end',
-        T = 'gwt.codesvr=',
         U = 'gwt.hosted=',
         V = 'gwt.hybrid',
-        wb = 'iframe',
         _ = 'img',
-        xb = "javascript:''",
-        kb = 'meta',
         zb = 'moduleRequested',
         W = 'moduleStartup',
         lb = 'name',
@@ -51,7 +45,7 @@ function net_holdemresources_web_nashcalculator() {
         var b = false;
         try {
             var c = l.location.search;
-            return (c.indexOf(T) != -1 || (c.indexOf(U) != -1 || l.external && l.external.gwtOnLoad)) && c.indexOf(V) == -1
+            return (c.indexOf('gwt.codesvr=') != -1 || (c.indexOf(U) != -1 || l.external && l.external.gwtOnLoad)) && c.indexOf(V) == -1
         } catch (a) {}
         A = function () {
             return b
@@ -76,7 +70,7 @@ function net_holdemresources_web_nashcalculator() {
                 subSystem: Q,
                 evtGroup: W,
                 millis: (new Date).getTime(),
-                type: X
+                type: 'end'
             })
         }
     }
@@ -169,7 +163,7 @@ function net_holdemresources_web_nashcalculator() {
     }
 
     function D() {
-        var b = document.getElementsByTagName(kb);
+        var b = document.getElementsByTagName('meta');
         for (var c = 0, d = b.length; c < d; ++c) {
             var e = b[c],
                 f = e.getAttribute(lb),
@@ -248,8 +242,8 @@ function net_holdemresources_web_nashcalculator() {
     function I() {
         if (!H) {
             H = true;
-            var a = m.createElement(wb);
-            a.src = xb;
+            var a = m.createElement('iframe');
+            a.src = "javascript:''";
             a.id = P;
             a.style.cssText = yb;
             a.tabIndex = -1;
@@ -260,7 +254,7 @@ function net_holdemresources_web_nashcalculator() {
                 subSystem: Q,
                 evtGroup: W,
                 millis: (new Date).getTime(),
-                type: zb
+                type: 'moduleRequested'
             });
             a.contentWindow.location.replace(s + K)
         }
@@ -327,7 +321,7 @@ function net_holdemresources_web_nashcalculator() {
             subSystem: Q,
             evtGroup: 'loadExternalRefs',
             millis: (new Date).getTime(),
-            type: X
+            type: 'end'
         });
         B()
     };
@@ -402,7 +396,7 @@ function net_holdemresources_web_nashcalculator() {
         subSystem: Q,
         evtGroup: 'bootstrap',
         millis: (new Date).getTime(),
-        type: X
+        type: 'end'
     });
     n && n({
         moduleName: P,
