@@ -6,22 +6,12 @@ function net_holdemresources_web_nashcalculator() {
         bb = 'baseUrl',
         S = 'begin',
         R = 'bootstrap',
-        Db = 'chromeframe',
-        ab = 'clear.cache.gif',
-        pb = 'content',
         X = 'end',
-        Lb = 'gecko',
-        Mb = 'gecko1_8',
         T = 'gwt.codesvr=',
         U = 'gwt.hosted=',
         V = 'gwt.hybrid',
-        ub = 'gwt:onLoadErrorFn',
         rb = 'gwt:onPropertyErrorFn',
         ob = 'gwt:property',
-        Pb = 'hosted.html?net_holdemresources_web_nashcalculator',
-        Kb = 'ie6',
-        Jb = 'ie8',
-        Ib = 'ie9',
         wb = 'iframe',
         _ = 'img',
         xb = "javascript:''",
@@ -34,16 +24,12 @@ function net_holdemresources_web_nashcalculator() {
         P = 'net_holdemresources_web_nashcalculator',
         db = 'net_holdemresources_web_nashcalculator.nocache.js',
         mb = 'net_holdemresources_web_nashcalculator::',
-        Bb = 'opera',
         yb = 'position:absolute;width:0;height:0;border:none',
         Gb = 'safari',
         cb = 'script',
         Qb = 'selectingPermutation',
         Q = 'startup',
-        eb = 'undefined',
-        Nb = 'unknown',
-        Ab = 'user.agent',
-        Cb = 'webkit';
+        eb = 'undefined'
     var l = window,
         m = document,
         n = l.__gwtStatsEvent ? function (a) {
@@ -122,7 +108,7 @@ function net_holdemresources_web_nashcalculator() {
         function f(a) {
             if (a.match(/^\w+:\/\//)) {} else {
                 var b = m.createElement(_);
-                b.src = a + ab;
+                b.src = a + 'clear.cache.gif';
                 a = e(b.src)
             }
             return a
@@ -204,7 +190,7 @@ function net_holdemresources_web_nashcalculator() {
                     continue
                 }
                 if (f == ob) {
-                    g = e.getAttribute(pb);
+                    g = e.getAttribute('content');
                     if (g) {
                         var h, i = g.indexOf('=');
                         if (i >= 0) {
@@ -217,7 +203,7 @@ function net_holdemresources_web_nashcalculator() {
                         t[f] = h
                     }
                 } else if (f == rb) {
-                    g = e.getAttribute(pb);
+                    g = e.getAttribute('content');
                     if (g) {
                         try {
                             z = eval(g)
@@ -225,8 +211,8 @@ function net_holdemresources_web_nashcalculator() {
                             alert('Bad handler "' + g + '" for "gwt:onPropertyErrorFn"')
                         }
                     }
-                } else if (f == ub) {
-                    g = e.getAttribute(pb);
+                } else if (f == 'gwt:onLoadErrorFn') {
+                    g = e.getAttribute('content');
                     if (g) {
                         try {
                             y = eval(g)
@@ -289,17 +275,17 @@ function net_holdemresources_web_nashcalculator() {
             a.contentWindow.location.replace(s + K)
         }
     }
-    v[Ab] = function () {
+    v['user.agent'] = function () {
         var c = navigator.userAgent.toLowerCase();
         var d = function (a) {
             return parseInt(a[1]) * 1000 + parseInt(a[2])
         };
         if (function () {
-            return c.indexOf(Bb) != -1
-        }()) return Bb;
+            return c.indexOf('opera') != -1
+        }()) return 'opera';
         if (function () {
-            return c.indexOf(Cb) != -1 || function () {
-                if (c.indexOf(Db) != -1) {
+            return c.indexOf('webkit') != -1 || function () {
+                if (c.indexOf('chromeframe') != -1) {
                     return true
                 }
                 if (typeof window['ActiveXObject'] != eb) {
@@ -316,20 +302,20 @@ function net_holdemresources_web_nashcalculator() {
         }()) return Gb;
         if (function () {
             return c.indexOf(Hb) != -1 && m.documentMode >= 9
-        }()) return Ib;
+        }()) return 'ie9';
         if (function () {
             return c.indexOf(Hb) != -1 && m.documentMode >= 8
-        }()) return Jb;
+        }()) return 'ie8';
         if (function () {
             var a = /msie ([0-9]+)\.([0-9]+)/.exec(c);
             if (a && a.length == 3) return d(a) >= 6000
-        }()) return Kb;
+        }()) return 'ie6';
         if (function () {
-            return c.indexOf(Lb) != -1
-        }()) return Mb;
-        return Nb
+            return c.indexOf('gecko') != -1
+        }()) return 'gecko1_8';
+        return 'unknown'
     };
-    u[Ab] = {
+    u['user.agent'] = {
         gecko1_8: 0,
         ie6: 1,
         ie8: 2,
@@ -364,7 +350,7 @@ function net_holdemresources_web_nashcalculator() {
             l.location.reload();
             return
         }
-        K = Pb;
+        K = 'hosted.html?net_holdemresources_web_nashcalculator';
         J = ''
     }
     n && n({
@@ -377,13 +363,13 @@ function net_holdemresources_web_nashcalculator() {
     });
     if (!A()) {
         try {
-            F([Mb], '207DB4F7345AA9E94A1B495974F8B073');
-            F([Jb], '4DD487EBA5F682525A3683B29BC7B2B5');
-            F([Bb], '8E8626D310E6920B274DDCC79B72F2B9');
-            F([Ib], 'C79BC8DAFE99E0FFCA095727FC309EF0');
-            F([Kb], 'E0D150C81008EDF605E742D734929739');
+            F(['gecko1_8'], '207DB4F7345AA9E94A1B495974F8B073');
+            F(['ie8'], '4DD487EBA5F682525A3683B29BC7B2B5');
+            F(['opera'], '8E8626D310E6920B274DDCC79B72F2B9');
+            F(['ie9'], 'C79BC8DAFE99E0FFCA095727FC309EF0');
+            F(['ie6'], 'E0D150C81008EDF605E742D734929739');
             F([Gb], 'F37ACFE9B5111143DB5892184917D9FB');
-            J = w[G(Ab)];
+            J = w[G('user.agent')];
             var L = J.indexOf(':');
             if (L != -1) {
                 x = Number(J.substring(L + 1));
