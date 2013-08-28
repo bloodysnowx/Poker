@@ -2,34 +2,35 @@
 <html>
   <head></head>
   <body>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery.xdomainajax.js"></script>
     <script language="JavaScript" type="text/javascript">
-      function createHttpRequest()
+      function getSource(url)
       {
-          return new XMLHttpRequest();
-      }
-      var request;
-
-      function requestsorce(url)
-      {
-          request=createHttpRequest();
-          request.open("GET",url,true);
-          request.onreadystatechange=sorceget;
-          request.send(null);
-      }
-
-      function sorceget()
-      {
-          if (request.readyState == 4 && request.status == 200)
-          {
-              document.form1.sorce.value=request.responseText;
-          }
+          // $.get(url, function(data) { document.form1.sorce.value = data.responseText; });
+          $.ajax({
+              type: 'get',
+              url: url,
+              success: function(data, status, xhr) { 
+                  var result = data.responseText;
+                  result = result.replace(/href=\"\//g, "href=\"http://www.holdemresources.net/");
+                  result = result.replace(/src=\"\//g, "src=\"http://www.holdemresources.net/");
+                  result = result.replace(/\"\/h/g, "src=\"http://www.holdemresources.net/h/");
+                  result = result.replace(/\'\/h/g, "src=\'http://www.holdemresources.net/h/");
+                  result = result.replace(/\"\/net/g, "src=\"http://www.holdemresources.net/net/");
+                  result = result.replace(/<\/noscript>/, "</noscript><SCRIPT type=text/javascript src='http://www.holdemresources.net/net.holdemresources.web.nashcalculator/net_holdemresources_web_nashcalculator/net_holdemresources_web_nashcalculator.nocache.js'><\/SCRIPT><SCRIPT defer>net_holdemresources_web_nashcalculator.onInjectionDone('net_holdemresources_web_nashcalculator')<\/SCRIPT>");
+              document.form1.result.value=result;
+              document.frame1.document.body.innerHTML = result; }
+          });
       }
     </script>
     <form name="form1">
-      <input type="text" name="urlbox" size="40">
-      <input type="button" value="ソース取得" onclick="requestsorce(document.form1.urlbox.value)">
-      <textarea name="sorce" rows="120" cols="100">
-	ここにソースを表示
-      </textarea>
+      <input type="text" name="urlbox" size="40" />
+      <input type="button" value="ソース取得" onclick="getSource(document.form1.urlbox.value)" />
+      <input type="button" value="iframe" onclick="document.frame1.location.href=document.form1.urlbox.value" />
+      <textarea name="result" rows=120 cols=100>test</textarea>
+    </form>
+
+    <iframe name="frame1" width="100%" height=300></iframe>
   </body>
 </html>
