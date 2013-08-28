@@ -2,17 +2,7 @@ function net_holdemresources_web_nashcalculator() {
     var 
         Y = '#',
         $ = '/',
-        Rb = '207DB4F7345AA9E94A1B495974F8B073',
-        Sb = '4DD487EBA5F682525A3683B29BC7B2B5',
-        Tb = '8E8626D310E6920B274DDCC79B72F2B9',
-        Xb = ':',
-        nb = '::',
-        $b = '<script defer="defer">net_holdemresources_web_nashcalculator.onInjectionDone(\'net_holdemresources_web_nashcalculator\')<\/script>',
-        gb = '<script id="',
-        qb = '=',
         Z = '?',
-        Eb = 'ActiveXObject',
-        sb = 'Bad handler "',
         Ub = 'C79BC8DAFE99E0FFCA095727FC309EF0',
         Fb = 'ChromeTab.ChromeFrame',
         Zb = 'DOMContentLoaded',
@@ -169,7 +159,7 @@ function net_holdemresources_web_nashcalculator() {
             if (typeof isBodyLoaded == eb || !isBodyLoaded()) {
                 var b = fb;
                 var c;
-                m.write(gb + b + '"><\/script>');
+                m.write('<script id="' + b + '"><\/script>');
                 c = m.getElementById(b);
                 a = c && c.previousSibling;
                 while (a && a.tagName != ib) {
@@ -218,13 +208,13 @@ function net_holdemresources_web_nashcalculator() {
                 g;
             if (f) {
                 f = f.replace(mb, '');
-                if (f.indexOf(nb) >= 0) {
+                if (f.indexOf('::') >= 0) {
                     continue
                 }
                 if (f == ob) {
                     g = e.getAttribute(pb);
                     if (g) {
-                        var h, i = g.indexOf(qb);
+                        var h, i = g.indexOf('=');
                         if (i >= 0) {
                             f = g.substring(0, i);
                             h = g.substring(i + 1)
@@ -240,7 +230,7 @@ function net_holdemresources_web_nashcalculator() {
                         try {
                             z = eval(g)
                         } catch (a) {
-                            alert(sb + g + '" for "gwt:onPropertyErrorFn"')
+                            alert('Bad handler "' + g + '" for "gwt:onPropertyErrorFn"')
                         }
                     }
                 } else if (f == ub) {
@@ -249,7 +239,7 @@ function net_holdemresources_web_nashcalculator() {
                         try {
                             y = eval(g)
                         } catch (a) {
-                            alert(sb + g + '" for "gwt:onLoadErrorFn"')
+                            alert('Bad handler "' + g + '" for "gwt:onLoadErrorFn"')
                         }
                     }
                 }
@@ -320,7 +310,7 @@ function net_holdemresources_web_nashcalculator() {
                 if (c.indexOf(Db) != -1) {
                     return true
                 }
-                if (typeof window[Eb] != eb) {
+                if (typeof window['ActiveXObject'] != eb) {
                     try {
                         var b = new ActiveXObject(Fb);
                         if (b) {
@@ -395,14 +385,14 @@ function net_holdemresources_web_nashcalculator() {
     });
     if (!A()) {
         try {
-            F([Mb], Rb);
-            F([Jb], Sb);
-            F([Bb], Tb);
+            F([Mb], '207DB4F7345AA9E94A1B495974F8B073');
+            F([Jb], '4DD487EBA5F682525A3683B29BC7B2B5');
+            F([Bb], '8E8626D310E6920B274DDCC79B72F2B9');
             F([Ib], Ub);
             F([Kb], Vb);
             F([Gb], Wb);
             J = w[G(Ab)];
-            var L = J.indexOf(Xb);
+            var L = J.indexOf(':');
             if (L != -1) {
                 x = Number(J.substring(L + 1));
                 J = J.substring(0, L)
@@ -454,6 +444,6 @@ function net_holdemresources_web_nashcalculator() {
         millis: (new Date).getTime(),
         type: S
     });
-    m.write($b)
+    m.write('<script defer="defer">net_holdemresources_web_nashcalculator.onInjectionDone(\'net_holdemresources_web_nashcalculator\')<\/script>')
 }
 net_holdemresources_web_nashcalculator();
