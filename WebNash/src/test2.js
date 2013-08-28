@@ -1,33 +1,23 @@
 function net_holdemresources_web_nashcalculator() {
     var 
-        Y = '#',
         $ = '/',
-        Z = '?',
-        bb = 'baseUrl',
-        S = 'begin',
         R = 'bootstrap',
         X = 'end',
         T = 'gwt.codesvr=',
         U = 'gwt.hosted=',
         V = 'gwt.hybrid',
-        rb = 'gwt:onPropertyErrorFn',
-        ob = 'gwt:property',
         wb = 'iframe',
         _ = 'img',
         xb = "javascript:''",
-        Ob = 'loadExternalRefs',
         kb = 'meta',
         zb = 'moduleRequested',
         W = 'moduleStartup',
-        Hb = 'msie',
         lb = 'name',
         P = 'net_holdemresources_web_nashcalculator',
         db = 'net_holdemresources_web_nashcalculator.nocache.js',
         mb = 'net_holdemresources_web_nashcalculator::',
         yb = 'position:absolute;width:0;height:0;border:none',
-        Gb = 'safari',
         cb = 'script',
-        Qb = 'selectingPermutation',
         Q = 'startup',
         eb = 'undefined'
     var l = window,
@@ -46,9 +36,9 @@ function net_holdemresources_web_nashcalculator() {
         moduleName: P,
         sessionId: o,
         subSystem: Q,
-        evtGroup: R,
+        evtGroup: 'bootstrap',
         millis: (new Date).getTime(),
-        type: S
+        type: 'begin'
     });
     if (!l.__gwt_stylesLoaded) {
         l.__gwt_stylesLoaded = {}
@@ -93,11 +83,11 @@ function net_holdemresources_web_nashcalculator() {
 
     function C() {
         function e(a) {
-            var b = a.lastIndexOf(Y);
+            var b = a.lastIndexOf('#');
             if (b == -1) {
                 b = a.length
             }
-            var c = a.indexOf(Z);
+            var c = a.indexOf('?');
             if (c == -1) {
                 c = a.length
             }
@@ -189,7 +179,7 @@ function net_holdemresources_web_nashcalculator() {
                 if (f.indexOf('::') >= 0) {
                     continue
                 }
-                if (f == ob) {
+                if (f == 'gwt:property') {
                     g = e.getAttribute('content');
                     if (g) {
                         var h, i = g.indexOf('=');
@@ -202,7 +192,7 @@ function net_holdemresources_web_nashcalculator() {
                         }
                         t[f] = h
                     }
-                } else if (f == rb) {
+                } else if (f == 'gwt:onPropertyErrorFn') {
                     g = e.getAttribute('content');
                     if (g) {
                         try {
@@ -299,12 +289,12 @@ function net_holdemresources_web_nashcalculator() {
                 }
                 return false
             }()
-        }()) return Gb;
+        }()) return 'safari';
         if (function () {
-            return c.indexOf(Hb) != -1 && m.documentMode >= 9
+            return c.indexOf('msie') != -1 && m.documentMode >= 9
         }()) return 'ie9';
         if (function () {
-            return c.indexOf(Hb) != -1 && m.documentMode >= 8
+            return c.indexOf('msie') != -1 && m.documentMode >= 8
         }()) return 'ie8';
         if (function () {
             var a = /msie ([0-9]+)\.([0-9]+)/.exec(c);
@@ -335,7 +325,7 @@ function net_holdemresources_web_nashcalculator() {
             moduleName: P,
             sessionId: o,
             subSystem: Q,
-            evtGroup: Ob,
+            evtGroup: 'loadExternalRefs',
             millis: (new Date).getTime(),
             type: X
         });
@@ -357,9 +347,9 @@ function net_holdemresources_web_nashcalculator() {
         moduleName: P,
         sessionId: o,
         subSystem: Q,
-        evtGroup: R,
+        evtGroup: 'bootstrap',
         millis: (new Date).getTime(),
-        type: Qb
+        type: 'selectingPermutation'
     });
     if (!A()) {
         try {
@@ -368,7 +358,7 @@ function net_holdemresources_web_nashcalculator() {
             F(['opera'], '8E8626D310E6920B274DDCC79B72F2B9');
             F(['ie9'], 'C79BC8DAFE99E0FFCA095727FC309EF0');
             F(['ie6'], 'E0D150C81008EDF605E742D734929739');
-            F([Gb], 'F37ACFE9B5111143DB5892184917D9FB');
+            F(['safari'], 'F37ACFE9B5111143DB5892184917D9FB');
             J = w[G('user.agent')];
             var L = J.indexOf(':');
             if (L != -1) {
@@ -410,7 +400,7 @@ function net_holdemresources_web_nashcalculator() {
         moduleName: P,
         sessionId: o,
         subSystem: Q,
-        evtGroup: R,
+        evtGroup: 'bootstrap',
         millis: (new Date).getTime(),
         type: X
     });
@@ -418,9 +408,9 @@ function net_holdemresources_web_nashcalculator() {
         moduleName: P,
         sessionId: o,
         subSystem: Q,
-        evtGroup: Ob,
+        evtGroup: 'loadExternalRefs',
         millis: (new Date).getTime(),
-        type: S
+        type: 'begin'
     });
     m.write('<script defer="defer">net_holdemresources_web_nashcalculator.onInjectionDone(\'net_holdemresources_web_nashcalculator\')<\/script>')
 }
