@@ -1,9 +1,6 @@
 function net_holdemresources_web_nashcalculator() {
     var 
         $ = '/',
-        U = 'gwt.hosted=',
-        V = 'gwt.hybrid',
-        _ = 'img',
         zb = 'moduleRequested',
         W = 'moduleStartup',
         lb = 'name',
@@ -45,7 +42,7 @@ function net_holdemresources_web_nashcalculator() {
         var b = false;
         try {
             var c = l.location.search;
-            return (c.indexOf('gwt.codesvr=') != -1 || (c.indexOf(U) != -1 || l.external && l.external.gwtOnLoad)) && c.indexOf(V) == -1
+            return (c.indexOf('gwt.codesvr=') != -1 || (c.indexOf('gwt.hosted=') != -1 || l.external && l.external.gwtOnLoad)) && c.indexOf('gwt.hybrid') == -1
         } catch (a) {}
         A = function () {
             return b
@@ -91,7 +88,7 @@ function net_holdemresources_web_nashcalculator() {
 
         function f(a) {
             if (a.match(/^\w+:\/\//)) {} else {
-                var b = m.createElement(_);
+                var b = m.createElement('img');
                 b.src = a + 'clear.cache.gif';
                 a = e(b.src)
             }
